@@ -7,6 +7,24 @@ add
 
   ```sh
   brew install node
+  brew install yarn
+  yarn global add nativefier
+  nativefier "https://messenger.com" --title-bar-style hidden --inject style.css --internal-urls "https://www.facebook.com/checkpoint/.*"
+  ```
+  style.css
+  ```css
+._36ic._5l-3,
+._673w {
+  -webkit-app-region: drag;
+  margin-top: 8px;
+}
+
+._4kzu,
+._30yy._2oc8,
+._fl2,
+._5743 {
+  -webkit-app-region: no-drag;
+}
   ```
 
 - better explain quit shortcut
