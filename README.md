@@ -5,6 +5,10 @@ add
 - bitwarden
 - nativefier
 
+  ```sh
+  brew install node
+  ```
+
 - better explain quit shortcut
 
 - turn on macbook in finder
