@@ -13,3 +13,6 @@ defaults -currentHost write 'Apple Global Domain' com.apple.mouse.tapBehavior 1
 
 # Enable App Exposé gesture
 defaults write com.apple.dock showAppExposeGestureEnabled -bool true
+
+# Don't automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
