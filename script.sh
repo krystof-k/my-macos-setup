@@ -16,3 +16,11 @@ defaults write com.apple.dock showAppExposeGestureEnabled -bool true
 
 # Don't automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
+
+# Finder
+
+# Remove items from the Trash after 30 days
+defaults write com.apple.finder FXRemoveOldTrashItems -bool true
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
