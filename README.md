@@ -267,7 +267,7 @@ By pressing <kbd>cmd ⌘</kbd> + <kbd>tab ⇥</kbd>, you can switch apps on ma
 Go to _System Preferences_ → _Keyboard_ → _Keyboard Shortcuts_ → _Keyboard & Text input_ → _Move focus to next window in application_ and add this Windows-like shortcut.
 
 ```shell
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 '{ enabled = 1; value = { parameters = (65535,48,524288); type = standard; }; };'
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 '{ enabled = 1; value = { parameters = (65535,48,524288); type = standard; }; }'
 ```
 
 ### Change keyboard shortcut for quitting apps
