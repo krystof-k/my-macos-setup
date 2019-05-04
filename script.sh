@@ -9,3 +9,4 @@ defaults write com.apple.menuextra.battery ShowPercent YES
 
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write 'Apple Global Domain' com.apple.mouse.tapBehavior 1
