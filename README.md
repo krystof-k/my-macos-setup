@@ -35,6 +35,11 @@ add
 logitech options for mx master 2s
 Logitech Control Center for performance mx
 
+```
+sudo scutil --set ComputerName 'Kryštof's MacBook Pro'
+sudo scutil --set LocalHostName 'krystofs-macbook-pro'
+```
+
 # My macOS setup
 
 ---
