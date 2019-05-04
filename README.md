@@ -266,6 +266,10 @@ By pressing <kbd>cmd ⌘</kbd> + <kbd>tab ⇥</kbd>, you can switch apps on ma
 
 Go to _System Preferences_ → _Keyboard_ → _Keyboard Shortcuts_ → _Keyboard & Text input_ → _Move focus to next window in application_ and add this Windows-like shortcut.
 
+```shell
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 '{ enabled = 1; value = { parameters = (65535,48,524288); type = standard; }; };'
+```
+
 ### Change keyboard shortcut for quitting apps
 
 You can quit apps with <kbd>command ⌘</kbd> + <kbd>Q</kbd> on macOS by default, which is quite close to <kbd>command ⌘</kbd> + <kbd>W</kbd> you close just one window. Chrome for example has nice _Warn Before Quitting_ option, but other apps don't: so for apps you don't want to lose data accidentialy, it is a good idea to override this shortcut in _System Preferences_ → _Keyboard_ → _Keyboard Shortcuts_ → _Application Shortcuts_ with <kbd>command ⌘</kbd> + <kbd>option ⌥</kbd> + <kbd>Q</kbd> for example.
