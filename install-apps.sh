@@ -30,9 +30,12 @@ fi
 brew cask install google-chrome               # Google Chrome
 brew cask install visual-studio-code          # VSCode
 brew cask install keka                        # Keka
-echo "Install Bitwarden manually"             # Bitwarden
+
+# Bitwarden
+printf "\n\nInstall Bitwarden manually"
 sleep 15
 read -p "Press enter after installation completes to continue."
+
 mas install 441258766                         # Magnet
 mas install 1000808993                        # Coca
 brew cask install atext                       # aText
@@ -41,22 +44,32 @@ brew cask install flux                        # Flux
 brew cask install lunar                       # Lunar
 brew cask install slack                       # Slack
 brew cask install telegram                    # Telegram
-echo "Install Microsoft OneNote manually"     # Microsoft OneNote
+
+# Microsoft OneNote
+printf "\n\nPlease install Microsoft OneNote manually."
 sleep 15
 read -p "Press enter after installation completes to continue."
-echo "Install Microsoft Office manually"      # Microsoft Office
+
+# Microsoft Office
+printf "\n\nPlease install Microsoft Office manually."
 sleep 15
 read -p "Press enter after installation completes to continue."
-echo "Install Adobe Creative Cloud manually"  # Adobe Creative Cloud
+
+# Adobe Creative Cloud
+printf "\n\nPlease install Adobe Creative Cloud manually."
 sleep 15
 read -p "Press enter after installation completes to continue."
+
 mas install 409201541                         # Pages
 mas install 409203825                         # Numbers
 mas install 409183694                         # Keynote
 brew cask install telegram                    # Telegram
-echo "Install Sketch manually"                # Sketch
+
+# Sketch
+printf "\n\nPlease install Sketch manually."
 sleep 15
 read -p "Press enter after installation completes to continue."
+
 brew cask install cyberduck                   # Cyberduck
 brew cask install gifox                       # Gifox
 brew cask install sourcetree                  # Sourcetree
