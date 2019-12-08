@@ -17,5 +17,11 @@ brew update
 brew upgrade
 
 # Install drivers in the order from README.md
+printf "\n\nInstallation of Logi Options will continue."
+printf "Be aware of pop-up windows and special permissions to finish the installation."
+sleep 3
 brew cask install logitech-options        # Logi Options
+printf "\n\nInstallation of Logitech Control Center will continue."
+printf "Be aware of pop-up windows and special permissions to finish the installation."
+sleep 3
 brew cask install logitech-control-center # Logitech Control Center
