@@ -5,6 +5,7 @@ add
 - better explain quit shortcut
 
 - turn on macbook in finder
+- resolution
 
 
 # My macOS setup
