@@ -83,18 +83,6 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
   
   > Cool tool that can control brightness of external displays through DDC protocol. I used to use [NativeDisplayBrightness](https://github.com/Bensge/NativeDisplayBrightness), but this seems much better.
 
-- [ ] :tv: [**Duet Display**](https://www.duetdisplay.com)  
-  
-  **`second display`** `$$`
-  
-  > Turn your dusty iPad into second display. But to be honest, I don't use this anymore.
-
-- [ ] :clipboard: [**tyke**](https://tyke.app)  
-  
-  **`scratch paper`** `free`
-  
-  > The closest thing to Notepad I found.
-
 ### Communication
 
 - [ ] :busts_in_silhouette: [**Slack**](https://slack.com)  
