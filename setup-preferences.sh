@@ -8,7 +8,8 @@ defaults write com.apple.menuextra.battery ShowPercent YES
 # Enable tap to click
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write 'Apple Global Domain' com.apple.mouse.tapBehavior 1
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Enable App Exposé gesture
 defaults write com.apple.dock showAppExposeGestureEnabled -bool true
