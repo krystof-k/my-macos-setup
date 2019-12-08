@@ -311,8 +311,10 @@ yarn global add nativefier
 Now let's create for example [Messenger](#messenger) app:
 
 ```shell
-nativefier "https://messenger.com" --title-bar-style hidden --inject 'https://raw.githubusercontent.com/krystof-k/my-macos-setup/master/nativefier/messenger.js' --internal-urls 'https://www.facebook.com/checkpoint/.*'
+curl 'https://raw.githubusercontent.com/krystof-k/my-macos-setup/master/nativefier/messenger.js' -o messenger.js
+nativefier "https://messenger.com" --title-bar-style hidden --inject messenger.js --internal-urls 'https://www.facebook.com/checkpoint/.*'
 mv Messenger-darwin-x64/Messenger.app /Applications/Messenger.app
+rm messenger.js
 ```
 
 ---
