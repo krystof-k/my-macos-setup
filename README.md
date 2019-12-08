@@ -32,8 +32,6 @@ add
 - turn on macbook in finder
 - autoempty trash
 
-logitech options for mx master 2s
-Logitech Control Center for performance mx
 
 ```
 sudo scutil --set ComputerName 'Kryštof's MacBook Pro'
@@ -232,6 +230,12 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
   **`what's playing`** `free`
   
   > What's playing at the café?
+
+---
+
+## Drivers
+
+I need mainly Logitech drivers for my mouses and keyboards. Unfortunately, Logitech is a bit chaotic, so I need two apps: [Logitech Options](https://support.logi.com/hc/en-us/articles/360025297893) for MX Master 2S and [Logitech Control Center](https://support.logi.com/hc/en-us/articles/360025297833) for Performance MX.
 
 ---
 
