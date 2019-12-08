@@ -2,8 +2,8 @@
 xcode-select -p
 if [[ $? != 0 ]]; then
   xcode-select --install
-  echo "Waiting for Xcode Command Line Tools to be installed."
-  sleep 10
+  printf "\n\nWaiting for Xcode Command Line Tools to be installed."
+  sleep 15
   read -p "Press enter after installation completes to continue."
 fi
 
@@ -19,9 +19,10 @@ brew upgrade
 brew install mas
 mas account
 if [[ $? != 0 ]]; then
-  echo "Please sign into the Mac App Store manually."
+  printf "\n\nPlease sign into the Mac App Store manually."
+  sleep 3
   open -a "App Store"
-  sleep 10
+  sleep 15
   read -p "Press enter to continue."
 fi
 
