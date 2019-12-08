@@ -235,7 +235,7 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
 
 ## Drivers
 
-I need mainly Logitech drivers for my mouses and keyboards. Unfortunately, Logitech is a bit chaotic, so I need two apps: [Logitech Options](https://support.logi.com/hc/en-us/articles/360025297893) for MX Master 2S and [Logitech Control Center](https://support.logi.com/hc/en-us/articles/360025297833) for Performance MX.
+I need mainly Logitech drivers for my mouses and keyboards. Unfortunately, Logitech is a bit chaotic, so I need two apps: [Logi Options](https://support.logi.com/hc/en-us/articles/360025297893) for MX Master 2S and [Logitech Control Center](https://support.logi.com/hc/en-us/articles/360025297833) for Performance MX.
 
 ---
 
