@@ -126,11 +126,11 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
   
   > Slack for work…
 
-- [ ] :speech_balloon: [**Caprine**](https://sindresorhus.com/caprine)  
+- [ ] :speech_balloon: [**Messenger**](https://messenger.com)  
   
-  **`messenger`** `open source`
+  **`messenger`** `DIY`
   
-  > …and Messenger for personal communication.
+  > …and Messenger for personal communication, wrapped by [Nativefier](https://github.com/jiahaog/nativefier) into a desktop app (see [below](#app-from-any-web)).
 
 - [ ] :speech_balloon: [**Telegram**](https://telegram.org)  
   
