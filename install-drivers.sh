@@ -14,7 +14,6 @@ if [[ $? != 0 ]]; then
 fi
 brew tap homebrew/cask-drivers
 brew update
-brew upgrade
 
 # Install drivers in the order from README.md
 
