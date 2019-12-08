@@ -182,7 +182,7 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
 
 ### Media
 
-- [x] :musical_note: [**Spotify**](https://www.spotify.com)  
+- [ ] :musical_note: [**Spotify**](https://www.spotify.com)  
   
   **`music`** `free / $`
   
