@@ -311,16 +311,15 @@ yarn global add nativefier
 Now let's create for example [Messenger](#messenger) app. Create `style.css` file with the following content:
 
 ```css
-._36ic._5l-3,
-._673w {
+._6-xk,
+._673w._6ynl {
   -webkit-app-region: drag;
   margin-top: 8px;
 }
 
-._4kzu,
-._30yy._2oc8,
-._fl2,
-._5743 {
+._6-xk ._6ymu._7iq4,
+._6-xk a,
+._673w._6ynl ._fl2._6ymr {
   -webkit-app-region: no-drag;
 }
 ```
