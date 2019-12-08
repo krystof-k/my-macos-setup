@@ -43,6 +43,15 @@ brew cask install vanilla                     # Vanilla
 brew cask install flux                        # Flux
 brew cask install lunar                       # Lunar
 brew cask install slack                       # Slack
+
+# Messenger through Nativefier
+brew install yarn
+yarn global add nativefier
+curl 'https://raw.githubusercontent.com/krystof-k/my-macos-setup/master/nativefier/messenger.js' -o messenger.js
+nativefier "https://messenger.com" --title-bar-style hidden --inject messenger.js --internal-urls 'https://www.facebook.com/checkpoint/.*'
+mv Messenger-darwin-x64/Messenger.app /Applications/Messenger.app
+rm -r Messenger-darwin-x64 messenger.js
+
 brew cask install telegram                    # Telegram
 
 # Microsoft OneNote
