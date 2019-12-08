@@ -1,3 +1,6 @@
+# Install Xcode Command Line Tools
+xcode-select --install
+
 # Install & update Homebrew
 which -s brew
 if [[ $? != 0 ]]; then
