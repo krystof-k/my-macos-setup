@@ -212,7 +212,7 @@ I need mainly Logitech drivers for my mouses and keyboards. Unfortunately, Logit
 
 ### Keyboard shortcuts
 
-macOS has a tons of useful keyboard shortcuts. Here are my favorites:
+macOS has tons of useful keyboard shortcuts. Here are my favorites:
 
 - <kbd>cmd ⌘</kbd> + <kbd>option ⌥</kbd> + <kbd>shift ⇧</kbd> + <kbd>V</kbd>  
   paste and match style
