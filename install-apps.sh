@@ -1,7 +1,8 @@
 # Install Xcode Command Line Tools
 xcode-select --install
 echo "Waiting for Xcode Command Line Tools to be installed."
-read -p "Please press enter after installation completes to continue."
+sleep 10
+read -p "Press enter after installation completes to continue."
 
 # Install & update Homebrew
 which -s brew
@@ -13,6 +14,13 @@ brew upgrade
 
 # Install Mac App Store CLI
 brew install mas
+mas account
+if [[ $? != 0 ]]; then
+  echo "Please sign into the Mac App Store manually."
+  open -a "App Store"
+  sleep 10
+  read -p "Press enter to continue."
+fi
 
 # Install apps in the order from README.md
 brew cask install google-chrome               # Google Chrome
