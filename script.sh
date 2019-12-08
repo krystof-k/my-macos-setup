@@ -1,6 +1,5 @@
-
 # Rename computer
-sudo scutil --set ComputerName 'Kryštof's MacBook Pro'
+sudo scutil --set ComputerName "Kryštof's MacBook Pro"
 sudo scutil --set LocalHostName 'krystofs-macbook-pro'
 
 # Show battery percentage
