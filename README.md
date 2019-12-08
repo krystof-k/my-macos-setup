@@ -98,7 +98,7 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
   
   > Hide icons in menu bar. Unforunatelly a bit buggy but [Bartender](https://www.macbartender.com) is too expensive.
 
-- [ ] :sun: [**Flux**](https://justgetflux.com)  
+- [ ] :sunny: [**Flux**](https://justgetflux.com)  
   
   **`blue light reducer`** `free`
   
