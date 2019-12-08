@@ -3,27 +3,7 @@ todo
 add
 - nativefier
 
-  ```sh
-  brew install node
-  brew install yarn
-  yarn global add nativefier
-  nativefier "https://messenger.com" --title-bar-style hidden --inject style.css --internal-urls "https://www.facebook.com/checkpoint/.*"
-  ```
-  style.css
-  ```css
-  ._36ic._5l-3,
-  ._673w {
-    -webkit-app-region: drag;
-    margin-top: 8px;
-  }
-  
-  ._4kzu,
-  ._30yy._2oc8,
-  ._fl2,
-  ._5743 {
-    -webkit-app-region: no-drag;
-  }
-  ```
+
 
 - better explain quit shortcut
 
@@ -318,6 +298,39 @@ Open a network drive in Finder: click _Go → Connect to Server_ and don't forge
 ### Symlink iTunes backups to NAS
 
 After you had done the previous step, you can symlink iTunes backup folder to NAS. Simply go to terminal and run `ln -s "/Volumes/YourNAS/Backup/Folder" "~/Library/Application Support/MobileSync/Backup"`.
+
+### App from any web
+
+Thanks to [Nativefier](https://github.com/jiahaog/nativefier), you can pretty easily turn any web into a desktop app. First, install Nativefier (assuming you have [Homebrew](#homebrew) already installed):
+
+```shell
+brew install yarn
+yarn global add nativefier
+```
+
+Now let's create for example [Messenger](#messenger) app. Create `style.css` file with the following content:
+
+```css
+._36ic._5l-3,
+._673w {
+  -webkit-app-region: drag;
+  margin-top: 8px;
+}
+
+._4kzu,
+._30yy._2oc8,
+._fl2,
+._5743 {
+  -webkit-app-region: no-drag;
+}
+```
+
+And then run:
+
+```shell
+nativefier "https://messenger.com" --title-bar-style hidden --inject style.css --internal-urls "https://www.facebook.com/checkpoint/.*"
+mv Messenger-darwin-x64/Messenger.app /Applications/Messenger.app
+```
 
 ---
 
