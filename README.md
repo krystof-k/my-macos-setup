@@ -48,7 +48,7 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
 
 ### Essentials
 
-- [x] :earth_africa: [**Google Chrome**](https://www.google.com/chrome)  
+- [ ] :earth_africa: [**Google Chrome**](https://www.google.com/chrome)  
   
   **`browser`** `free`
   
@@ -66,21 +66,27 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
   
   > Maybe a better alternative to [The Unarchiver](https://theunarchiver.com)?
 
+- [ ] :closed_lock_with_key: [**Bitwarden**](https://bitwarden.com)  
+  
+  **`password manager`**
+  
+  > Maybe a better alternative to [The Unarchiver](https://theunarchiver.com)?
+
 ### Productivity :rocket:
 
-- [x] :pushpin: [**Magnet**](http://magnet.crowdcafe.com/)  
+- [ ] :pushpin: [**Magnet**](http://magnet.crowdcafe.com/)  
   
   **`window management`** _`must have`_ `$`
   
   > Resize windows like a breeze.
 
-- [x] :coffee: [**Coca**](http://kindred.one/coca)  
+- [ ] :coffee: [**Coca**](http://kindred.one/coca)  
   
   **`prevent sleep`** _`must have`_ `free / $`
   
   > Give your Mac some cocaine & prevent it from sleeping.
 
-- [x] :capital_abcd: [**aText**](http://www.trankynam.com/atext)  
+- [ ] :capital_abcd: [**aText**](http://www.trankynam.com/atext)  
   
   **`text expander`** _`must have`_ `$`
   
@@ -92,13 +98,13 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
   
   > Hide icons in menu bar. Unforunatelly a bit buggy but [Bartender](https://www.macbartender.com) is too expensive.
 
-- [x] :last_quarter_moon_with_face: [**Flux**](https://justgetflux.com)  
+- [ ] :sun: [**Flux**](https://justgetflux.com)  
   
   **`blue light reducer`** `free`
   
   > Thanks to native Night Shift not a must have anymore, but I still prefer Flux.
 
-- [x] :last_quarter_moon_with_face: [**Lunar**](https://lunarapp.site)  
+- [ ] :last_quarter_moon_with_face: [**Lunar**](https://lunarapp.site)  
   
   **`external display brightness`** `free`
   
@@ -130,7 +136,7 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
   
   > …and Messenger for personal communication.
 
-- [x] :speech_balloon: [**Telegram**](https://telegram.org)  
+- [ ] :speech_balloon: [**Telegram**](https://telegram.org)  
   
   **`another chat`** `open source`
   
@@ -139,13 +145,13 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
 ### Office
 
 
-- [x] :memo: [**Microsoft OneNote**](https://www.onenote.com)  
+- [ ] :memo: [**Microsoft OneNote**](https://www.onenote.com)  
   
   **`notes`** `free`
   
   > I can't imagine my digital existence without two things: Gmail and OneNote.
 
-- [x] :paperclip: [**Microsoft Office for Mac**](https://products.office.com/mac/microsoft-office-for-mac)  
+- [ ] :paperclip: [**Microsoft Office for Mac**](https://products.office.com/mac/microsoft-office-for-mac)  
   
   **`office`** `$$$`
   
@@ -157,7 +163,7 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
   
   > …and Adobe too _(especially Photoshop, Illustrator, InDesign & Acrobat)_.
 
-- [x] :bar_chart: **[Pages](https://itunes.apple.com/us/app/pages/id409201541), [Numbers](https://itunes.apple.com/us/app/numbers/id409203825) & [Keynote](https://itunes.apple.com/us/app/keynote/id409183694)**  
+- [ ] :bar_chart: **[Pages](https://itunes.apple.com/us/app/pages/id409201541), [Numbers](https://itunes.apple.com/us/app/numbers/id409203825) & [Keynote](https://itunes.apple.com/us/app/keynote/id409183694)**  
   
   **`office`** `free`
   
@@ -201,7 +207,7 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
   
   > Because sometimes, you need Windows.
 
-- [ ] :closed_lock_with_key: [**Tunnelblick**](https://tunnelblick.net)  
+- [ ] :metro: [**Tunnelblick**](https://tunnelblick.net)  
   
   **`OpenVPN client`** `open source`
   
