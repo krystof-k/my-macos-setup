@@ -308,26 +308,10 @@ brew install yarn
 yarn global add nativefier
 ```
 
-Now let's create for example [Messenger](#messenger) app. Create `style.css` file with the following content:
-
-```css
-._6-xk,
-._673w._6ynl {
-  -webkit-app-region: drag;
-  margin-top: 8px;
-}
-
-._6-xk ._6ymu._7iq4,
-._6-xk a,
-._673w._6ynl ._fl2._6ymr {
-  -webkit-app-region: no-drag;
-}
-```
-
-And then run:
+Now let's create for example [Messenger](#messenger) app:
 
 ```shell
-nativefier "https://messenger.com" --title-bar-style hidden --inject style.css --internal-urls "https://www.facebook.com/checkpoint/.*"
+nativefier "https://messenger.com" --title-bar-style hidden --inject 'https://raw.githubusercontent.com/krystof-k/my-macos-setup/master/nativefier/messenger.js' --internal-urls 'https://www.facebook.com/checkpoint/.*'
 mv Messenger-darwin-x64/Messenger.app /Applications/Messenger.app
 ```
 
