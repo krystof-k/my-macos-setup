@@ -16,10 +16,8 @@ defaults write com.apple.dock showAppExposeGestureEnabled -bool true
 # Don't automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
-# 50 recent items
+# Set recent items limit to 50
 defaults write NSGlobalDomain NSRecentDocumentsLimit -int 50
-
-# Finder
 
 # Empty the trash after 30 days
 defaults write com.apple.finder FXRemoveOldTrashItems -bool true
