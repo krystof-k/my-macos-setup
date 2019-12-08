@@ -27,3 +27,6 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # Display extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Disable startup chime
+sudo nvram SystemAudioVolume=" "
