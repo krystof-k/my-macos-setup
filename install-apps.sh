@@ -1,8 +1,11 @@
 # Install Xcode Command Line Tools
-xcode-select --install
-echo "Waiting for Xcode Command Line Tools to be installed."
-sleep 10
-read -p "Press enter after installation completes to continue."
+xcode-select -p
+if [[ $? != 0 ]]; then
+  xcode-select --install
+  echo "Waiting for Xcode Command Line Tools to be installed."
+  sleep 10
+  read -p "Press enter after installation completes to continue."
+fi
 
 # Install & update Homebrew
 which -s brew
