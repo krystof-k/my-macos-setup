@@ -1,8 +1,6 @@
 todo
 
 add
-- homebrew
-- bitwarden
 - nativefier
 
   ```sh
@@ -174,6 +172,12 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
   > When you need to draw something.
 
 ### Useful tools
+
+- [ ] :wrench: [**Homebrew**](https://brew.sh/)  
+  
+  **`package manager`** `open source`
+  
+  > _The missing package manager for macOS._ Can be used to install (almost) all of this with one script.
 
 - [ ] :baby_chick: [**Cyberduck**](https://cyberduck.io)  
   
