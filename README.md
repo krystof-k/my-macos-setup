@@ -1,9 +1,6 @@
 todo
 
 add
-- nativefier
-
-
 
 - better explain quit shortcut
 
