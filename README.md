@@ -229,7 +229,7 @@ macOS has tons of useful keyboard shortcuts. Here are my favorites:
 
 Here are some of my favorite snippets for aText.
 
-Note you can also use native expansion function (go _System Preferences_ → _Keyboard_ → _Text_), which are synced by iCloud also to your other devices, what is super handy for some of the shortcuts (especially for characters like … you cannot type with default keyboard on iOS at all). But those expansions aren't working in all situations as aText is, so I keep using it for all those I want to use on Mac.
+Note: you can also use the native expansion function (go _System Preferences_ → _Keyboard_ → _Text_), where the expansions are synced by iCloud also to your other devices, what is super handy for some of the shortcuts (especially for characters like … you cannot type with default keyboard on iOS at all). But those expansions aren't working in all situations as aText is, so I keep using it for all those I want to use on Mac.
 
 - **Superscript & subscript numbers**  
   Add all the superscript (`⁰¹²³⁴⁵⁶⁷⁸⁹`) and subscript (`₀₁₂₃₄₅₆₇₈₉`) Unicode number characters as e.g. `2superscript` abbreviations.
