@@ -13,7 +13,6 @@ if [[ $? != 0 ]]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 brew update
-brew upgrade
 
 # Install Mac App Store CLI
 brew install mas
