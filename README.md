@@ -68,9 +68,9 @@ sudo scutil --set LocalHostName 'krystofs-macbook-pro'
 
 - [ ] :closed_lock_with_key: [**Bitwarden**](https://bitwarden.com)  
   
-  **`password manager`**
+  **`password manager`** `free / $`
   
-  > Maybe a better alternative to [The Unarchiver](https://theunarchiver.com)?
+  > Great multiplatform, open source and (hopefully) secure password manager.
 
 ### Productivity :rocket:
 
