@@ -5,7 +5,6 @@ add
 - better explain quit shortcut
 
 - turn on macbook in finder
-- autoempty trash
 
 
 # My macOS setup
