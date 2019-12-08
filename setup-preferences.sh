@@ -26,6 +26,9 @@ defaults write com.apple.finder FXRemoveOldTrashItems -bool true
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
+# Display path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
 # Display extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
