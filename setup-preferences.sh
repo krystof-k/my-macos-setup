@@ -17,6 +17,11 @@ defaults write com.apple.dock showAppExposeGestureEnabled -bool true
 # Don't automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
+# Set Windows-like keyboard shortcut for switching app windows
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:27:value:parameters:0 65535" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:27:value:parameters:1 48" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:27:value:parameters:2 524288" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
 # Set recent items limit to 50
 defaults write NSGlobalDomain NSRecentDocumentsLimit -int 50
 
