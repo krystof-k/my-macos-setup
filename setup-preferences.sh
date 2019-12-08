@@ -28,5 +28,12 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # Display extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# Disable autocorrect, autocapitalization, etc.
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
 # Disable startup chime
 sudo nvram SystemAudioVolume=" "
