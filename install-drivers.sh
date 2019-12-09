@@ -19,12 +19,12 @@ brew update
 
 # Logi Options
 echo " Installation of Logi Options will continue."
-echo "Be aware of pop-up windows and special permissions to finish the installation."
+echo " Be aware of pop-up windows and special permissions to finish the installation."
 sleep 3
 brew cask install logitech-options
 
 # Logitech Control Center
 echo " Installation of Logitech Control Center will continue."
-echo "Be aware of pop-up windows and special permissions to finish the installation."
+echo " Be aware of pop-up windows and special permissions to finish the installation."
 sleep 3
 brew cask install logitech-control-center
