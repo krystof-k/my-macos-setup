@@ -2,7 +2,7 @@
 xcode-select -p
 if [[ $? != 0 ]]; then
   xcode-select --install
-  printf "\n\nWaiting for Xcode Command Line Tools to be installed."
+  printf "\nWaiting for Xcode Command Line Tools to be installed.\n"
   sleep 15
   read -p "Press enter after installation completes to continue."
 fi
@@ -18,7 +18,7 @@ brew update
 brew install mas
 mas account
 if [[ $? != 0 ]]; then
-  printf "\n\nPlease sign into the Mac App Store manually."
+  printf "\nPlease sign into the Mac App Store manually.\n"
   sleep 3
   open -a "App Store"
   sleep 15
@@ -31,7 +31,7 @@ brew cask install visual-studio-code          # VSCode
 brew cask install keka                        # Keka
 
 # Bitwarden
-printf "\n\nInstall Bitwarden manually"
+printf "\nInstall Bitwarden manually\n"
 sleep 15
 read -p "Press enter after installation completes to continue."
 
@@ -54,17 +54,17 @@ rm -r Messenger-darwin-x64 messenger.js
 brew cask install telegram                    # Telegram
 
 # Microsoft OneNote
-printf "\n\nPlease install Microsoft OneNote manually."
+printf "\nPlease install Microsoft OneNote manually.\n"
 sleep 15
 read -p "Press enter after installation completes to continue."
 
 # Microsoft Office
-printf "\n\nPlease install Microsoft Office manually."
+printf "\nPlease install Microsoft Office manually.\n"
 sleep 15
 read -p "Press enter after installation completes to continue."
 
 # Adobe Creative Cloud
-printf "\n\nPlease install Adobe Creative Cloud manually."
+printf "\nPlease install Adobe Creative Cloud manually.\n"
 sleep 15
 read -p "Press enter after installation completes to continue."
 
@@ -74,7 +74,7 @@ mas install 409183694                         # Keynote
 brew cask install telegram                    # Telegram
 
 # Sketch
-printf "\n\nPlease install Sketch manually."
+printf "\nPlease install Sketch manually.\n"
 sleep 15
 read -p "Press enter after installation completes to continue."
 
