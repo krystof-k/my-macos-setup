@@ -71,7 +71,6 @@ read -p " Press enter after installation completes to continue."
 mas install 409201541                         # Pages
 mas install 409203825                         # Numbers
 mas install 409183694                         # Keynote
-brew cask install telegram                    # Telegram
 
 # Sketch
 echo " Please install Sketch manually."
@@ -79,6 +78,7 @@ sleep 15
 read -p " Press enter after installation completes to continue."
 
 brew cask install cyberduck                   # Cyberduck
+brew cask install appcleaner                  # AppCleaner
 brew cask install gifox                       # Gifox
 brew cask install sourcetree                  # Sourcetree
 mas install 1295203466                        # Microsoft Remote Desktop
