@@ -2,9 +2,9 @@
 xcode-select -p
 if [[ $? != 0 ]]; then
   xcode-select --install
-  printf "\nWaiting for Xcode Command Line Tools to be installed.\n"
+  echo " Waiting for Xcode Command Line Tools to be installed."
   sleep 15
-  read -p "Press enter after installation completes to continue."
+  read -p " Press enter after installation completes to continue."
 fi
 
 # Install & update Homebrew
@@ -18,11 +18,11 @@ brew update
 brew install mas
 mas account
 if [[ $? != 0 ]]; then
-  printf "\nPlease sign into the Mac App Store manually.\n"
+  echo " Please sign into the Mac App Store manually."
   sleep 3
   open -a "App Store"
   sleep 15
-  read -p "Press enter to continue."
+  read -p " Press enter to continue."
 fi
 
 # Install apps in the order from README.md
@@ -31,9 +31,9 @@ brew cask install visual-studio-code          # VSCode
 brew cask install keka                        # Keka
 
 # Bitwarden
-printf "\nInstall Bitwarden manually\n"
+echo " Install Bitwarden manually."
 sleep 15
-read -p "Press enter after installation completes to continue."
+read -p " Press enter after installation completes to continue."
 
 mas install 441258766                         # Magnet
 mas install 1000808993                        # Coca
@@ -54,19 +54,19 @@ rm -r Messenger-darwin-x64 messenger.js
 brew cask install telegram                    # Telegram
 
 # Microsoft OneNote
-printf "\nPlease install Microsoft OneNote manually.\n"
+echo " Please install Microsoft OneNote manually."
 sleep 15
-read -p "Press enter after installation completes to continue."
+read -p " Press enter after installation completes to continue."
 
 # Microsoft Office
-printf "\nPlease install Microsoft Office manually.\n"
+echo " Please install Microsoft Office manually."
 sleep 15
-read -p "Press enter after installation completes to continue."
+read -p " Press enter after installation completes to continue."
 
 # Adobe Creative Cloud
-printf "\nPlease install Adobe Creative Cloud manually.\n"
+echo " Please install Adobe Creative Cloud manually."
 sleep 15
-read -p "Press enter after installation completes to continue."
+read -p " Press enter after installation completes to continue."
 
 mas install 409201541                         # Pages
 mas install 409203825                         # Numbers
@@ -74,9 +74,9 @@ mas install 409183694                         # Keynote
 brew cask install telegram                    # Telegram
 
 # Sketch
-printf "\nPlease install Sketch manually.\n"
+echo " Please install Sketch manually."
 sleep 15
-read -p "Press enter after installation completes to continue."
+read -p " Press enter after installation completes to continue."
 
 brew cask install cyberduck                   # Cyberduck
 brew cask install gifox                       # Gifox
