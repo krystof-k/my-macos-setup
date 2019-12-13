@@ -28,18 +28,11 @@ defaults write com.apple.dock mru-spaces -bool false
 /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:27:value:parameters:1 integer 48" ~/Library/Preferences/com.apple.symbolichotkeys.plist
 /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:27:value:parameters:2 integer 524288" ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
-# Set recent items limit to 50
-defaults write NSGlobalDomain NSRecentDocumentsLimit -int 50
-
 # Empty the trash after 30 days
 defaults write com.apple.finder FXRemoveOldTrashItems -bool true
 
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
-
-# Display folder sizes
-/usr/libexec/PlistBuddy -c 'Set :StandardViewSettings:ListViewSettings:calculateAllSizes true' ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c 'Set :StandardViewSettings:ExtendedListViewSettingsV2:calculateAllSizes true' ~/Library/Preferences/com.apple.finder.plist
 
 # Display path bar
 defaults write com.apple.finder ShowPathbar -bool true
@@ -60,3 +53,18 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Disable startup chime
 sudo nvram SystemAudioVolume=" "
+
+
+
+# Not sure it works
+
+
+# Display folder sizes
+/usr/libexec/PlistBuddy -c 'Set :StandardViewSettings:ListViewSettings:calculateAllSizes true' ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c 'Set :StandardViewSettings:ExtendedListViewSettingsV2:calculateAllSizes true' ~/Library/Preferences/com.apple.finder.plist
+#/usr/libexec/PlistBuddy -c 'Set :FK_StandardViewSettings:ListViewSettings:calculateAllSizes true' ~/Library/Preferences/com.apple.finder.plist
+#/usr/libexec/PlistBuddy -c 'Set :FK_StandardViewSettings:ExtendedListViewSettingsV2:calculateAllSizes true' ~/Library/Preferences/com.apple.finder.plist
+
+
+# Set recent items limit to 50
+defaults write NSGlobalDomain NSRecentDocumentsLimit -int 50
