@@ -239,6 +239,7 @@ You can quit apps with <kbd>command ⌘</kbd> + <kbd>Q</kbd> on macOS by defau
 <kbd>option ⌥</kbd> key is magic. Try to press it all the time and watch the options changes. Here are my favorites:
 
 - When switching desktops in Mission Control, press <kbd>option ⌥</kbd> to display all close buttons immediately.
+- When opening an unsigned app, then right click the file and click open while holding  <kbd>option ⌥</kbd>: voilà, you can start the app now. So now you can launch probably the [only useful app for Touch Bar](https://github.com/avatsaev/touchbar_nyancat) on your Mac.
 
 ### Finder tweaks
 
@@ -248,10 +249,6 @@ You can quit apps with <kbd>command ⌘</kbd> + <kbd>Q</kbd> on macOS by defau
 ### Spotlight shortcuts
 
 I used to use [Alfred](https://www.alfredapp.com), which has useful commands for quickly shutting down or locking your Mac. If you want something similar for Spotlight, take a look [there](https://github.com/siong1987/shortcuts).
-
-### Opening unsigned apps
-
-When opening an unsigned app, then right click the file and click open: voilà you can start the app now. So that you can launch probably the [only useful app for Touch Bar](https://github.com/avatsaev/touchbar_nyancat) on your Mac.
 
 ### Auto mount network drives
 
