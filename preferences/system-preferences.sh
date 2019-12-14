@@ -67,6 +67,9 @@ defaults write com.apple.dock mru-spaces -bool false
 
 # Security & Privacy
 
+# Set ask for password deplay to 5 seconds
+echo " Set ask for password delay to 5 seconds manually in Preferences / Security & Privacy."
+
 
 
 # Software Update
