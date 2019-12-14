@@ -97,6 +97,13 @@ defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextr
 
 # Keyboard
 
+# Disable autocorrect, autocapitalization, etc.
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write -g NSAutomaticCapitalizationEnabled -bool false
+defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
+
 
 
 # Trackpad
@@ -118,7 +125,14 @@ defaults write com.apple.dock showAppExposeGestureEnabled -bool true
 
 # Energy Saver
 
+
+
 # Date & Time
+
+# Set nearest NTP server
+sudo systemsetup -setnetworktimeserver ntp.nic.cz
+
+
 
 # Sharing
 
