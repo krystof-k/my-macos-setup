@@ -94,5 +94,5 @@ defaults write NSGlobalDomain NSNavRecentPlacesLimit -int 50
 # Show battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string YES
 
-
-
+# disable caps
+hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000000}]}'
