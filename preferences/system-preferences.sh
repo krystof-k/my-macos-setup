@@ -49,26 +49,59 @@ defaults write com.apple.dock mru-spaces -bool false
 
 # Siri
 
+# Hide Siri from menu bar
+defaults write com.apple.Siri StatusMenuVisible -bool false
+
+
+
 # Spotlight
+
+
 
 # Language & Region
 
+
+
 # Notifications
+
+
 
 # Internet Accounts
 
+
+
 # Users & Groups
+
+# Allow input selection
+sudo defaults write /Library/Preferences/com.apple.loginwindow.plist showInputMenu -bool true
+
+
 
 # Accessibility
 
+# Download enhanced voice
+echo " Download enhanced voice manually manually in Preferences / Accessibility / Speech."
+
+# Type to Siri
+defaults write com.apple.Siri TypeToSiriEnabled -bool true
+
+
+
 # Screen Time
 
+
+
 # Extensions
+
+
 
 # Security & Privacy
 
 # Set ask for password deplay to 5 seconds
-echo " Set ask for password delay to 5 seconds manually in Preferences / Security & Privacy."
+echo " Set ask for password delay to 5 seconds manually in Preferences / Security & Privacy / General."
+
+# Turn on encryption
+echo " Don't forget to turn on encryption in Preferences / Security & Privacy / FileVault."
 
 # Turn on firewall
 sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
@@ -89,6 +122,9 @@ sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist Critical
 
 # Network
 
+# Set NetBIOS name
+# defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $HOSTNAME
+
 
 
 # Bluetooth
@@ -97,11 +133,23 @@ sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist Critical
 /usr/libexec/PlistBuddy -c "Add :menuExtras: string '/System/Library/CoreServices/Menu Extras/Bluetooth.menu'" ~/Library/Preferences/com.apple.systemuiserver.plist
 defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -bool true
 
+
+
 # Sound
+
+# Disable sound effects
+defaults write -g com.apple.sound.uiaudio.enabled -bool false
+
+
 
 # Printers & Scanners
 
+
+
 # Keyboard
+
+# Turn off keyboard backlight after 30 seconds
+echo " Set keyboard backlight limit to 30 seconds manually in Preferences / Keyboard / Keyboard."
 
 # Disable autocorrect, autocapitalization, etc.
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
@@ -109,6 +157,9 @@ defaults write -g NSAutomaticCapitalizationEnabled -bool false
 defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
 defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# Enable dictation
+defaults write com.apple.HIToolbox AppleDictationAutoEnable -bool true
 
 
 
@@ -127,7 +178,12 @@ defaults write com.apple.dock showAppExposeGestureEnabled -bool true
 
 # Mouse
 
+
+
 # Displays
+
+# Adjust resolution to more space
+echo " Set resolution to more space manually in Preferences / Displays / Display."
 
 
 
@@ -151,6 +207,9 @@ sudo pmset -a disksleep 0
 # Set nearest NTP server
 sudo systemsetup -setnetworktimeserver ntp.nic.cz
 
+# Show date in the menu bar
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d. M. H:mm"
+
 
 
 # Sharing
@@ -162,5 +221,7 @@ sudo systemsetup -setlocalsubnetname "krystofs-macbook-pro"
 
 
 # Time Machine
+
+
 
 # Startup Disk
