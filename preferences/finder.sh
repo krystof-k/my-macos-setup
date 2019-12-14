@@ -55,3 +55,6 @@ echo " Manually display Library folder in home folder preferences." | tee -a 
 
 # Show Quit Finder menu option
 defaults write com.apple.finder QuitMenuItem -bool true
+
+# Hide icons on desktop
+defaults write com.apple.finder CreateDesktop -bool false
