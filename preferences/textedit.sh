@@ -1,9 +1,12 @@
-"com.apple.TextEdit" =     {
-        CheckSpellingWhileTyping = 0;
-        CorrectSpellingAutomatically = 0;
-        RichText = 0;
-        SmartCopyPaste = 0;
-        SmartDashes = 0;
-        SmartQuotes = 0;
-        SmartSubstitutionsEnabledInRichTextOnly = 0;
-    };
+#!/usr/bin/env bash
+
+# Plaintext as default
+defaults write com.apple.TextEdit RichText -bool false
+
+# Disable smart*
+defaults write com.apple.TextEdit CheckSpellingWhileTyping -bool false
+defaults write com.apple.TextEdit CorrectSpellingAutomatically -bool false
+defaults write com.apple.TextEdit SmartCopyPaste -bool false
+defaults write com.apple.TextEdit SmartDashes -bool false
+defaults write com.apple.TextEdit SmartQuotes -bool false
+defaults write com.apple.TextEdit SmartSubstitutionsEnabledInRichTextOnly -bool false
