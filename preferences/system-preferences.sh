@@ -110,7 +110,7 @@ echo " Set ask for password delay to 5 seconds manually in Preferences / Secu
 echo " Don't forget to turn on encryption in Preferences / Security & Privacy / FileVault." | tee -a to-do.txt
 
 # Turn on firewall
-sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
 
 
