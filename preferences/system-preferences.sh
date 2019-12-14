@@ -165,10 +165,7 @@ defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Enable dictation
-defaults write com.apple.HIToolbox AppleDictationAutoEnable -bool true
-defaults write com.apple.assistant.support "Assistant Enabled" -bool true
-defaults write com.apple.assistant.support "Dictation Enabled" -bool true
-defaults write com.apple.assistant.support "Siri Data Sharing Opt-In Status" -int 2
+echo " Enable dictation 50 manually in Preferences / Keyboard / Dictation." | tee -a to-do.txt
 
 
 
