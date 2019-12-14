@@ -28,4 +28,4 @@ bash ./setup-preferences.sh
 killall cfprefsd
 
 # Reboot
-reboot
+sudo reboot
