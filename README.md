@@ -1,17 +1,3 @@
-todo
-
-add
-
-- better explain quit shortcut
-
-- turn on macbook in finder
-- resolution
-
-
-```sh
-source <(curl -s https://raw.githubusercontent.com/krystof-k/my-macos-setup/master/setup.sh)
-```
-
 # My macOS setup
 
 ---
@@ -300,3 +286,13 @@ rm messenger.js
 - **A great Markdown editor.** I've been using [Typora](https://typora.io), now I'm trying [Caret](https://caret.io), but still not happy about either.
 
 - **Notepad.** The only app from Windows I miss every single day. TextEdit launches sooo slowly and you have to hit <kbd>⌘</kbd> + <kbd>N</kbd> every time, VSCode is even worse and [tyke](https://tyke.app) is only in the menu bar.
+
+---
+
+## Setup script
+
+To set up everything, just copy-paste following into your freshly reinstalled Mac's terminal:
+
+```sh
+source <(curl -s https://raw.githubusercontent.com/krystof-k/my-macos-setup/master/setup.sh)
+```
