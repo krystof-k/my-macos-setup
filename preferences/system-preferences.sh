@@ -166,6 +166,9 @@ defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Enable dictation
 defaults write com.apple.HIToolbox AppleDictationAutoEnable -bool true
+defaults write com.apple.assistant.support "Assistant Enabled" -bool true
+defaults write com.apple.assistant.support "Dictation Enabled" -bool true
+defaults write com.apple.assistant.support "Siri Data Sharing Opt-In Status" -int 2
 
 
 
