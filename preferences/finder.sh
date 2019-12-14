@@ -11,7 +11,7 @@ defaults write com.apple.finder NewWindowTarget -string PfHm
 defaults write com.apple.finder NewWindowTargetPath -string '~/.'
 
 # Display home folder in sidebar
-echo " Manually show home folder in sidebar."
+echo " Manually show home folder in sidebar." | tee -a to-do.txt
 
 # Display extensions
 defaults write -g AppleShowAllExtensions -bool true
@@ -48,7 +48,7 @@ defaults write com.apple.finder FXPreferredGroupBy -string 'Date Added'
 /usr/libexec/PlistBuddy -c 'Set :FK_StandardViewSettings:ListViewSettings:calculateAllSizes true' ~/Library/Preferences/com.apple.finder.plist
 
 # Display home folder in sidebar
-echo " Manually display Library folder in home folder preferences."
+echo " Manually display Library folder in home folder preferences." | tee -a to-do.txt
 
 
 # Other
