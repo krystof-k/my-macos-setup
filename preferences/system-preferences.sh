@@ -149,6 +149,12 @@ sudo systemsetup -setnetworktimeserver ntp.nic.cz
 
 # Sharing
 
+# Rename computer
+sudo systemsetup -setcomputername "Kryštof's MacBook Pro"
+sudo systemsetup -setlocalsubnetname 'krystofs-macbook-pro'
+
+
+
 # Time Machine
 
 # Startup Disk
