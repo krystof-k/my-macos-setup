@@ -19,3 +19,5 @@ mkdir -p ~/Git
 echo " Cloning the repository into ~/Git folder."
 cd ~/Git
 git clone git@github.com:krystof-k/my-macos-setup.git
+
+# Bla
