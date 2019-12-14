@@ -27,3 +27,10 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Prolong standby delay to 5 hours – faster wake
 sudo pmset -a standbydelay 18000
+
+
+
+# Run all scripts in ./preferences
+for script in ./preferences/*.sh; do
+  bash "$script"
+done
