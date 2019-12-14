@@ -31,9 +31,7 @@ brew cask install visual-studio-code          # VSCode
 brew cask install keka                        # Keka
 
 # Bitwarden
-echo " Install Bitwarden manually."
-sleep 15
-read -p " Press enter after installation completes to continue."
+echo " Install Bitwarden manually." | tee -a to-do.txt
 
 mas install 441258766                         # Magnet
 mas install 1000808993                        # Coca
@@ -54,28 +52,20 @@ rm -r Messenger-darwin-x64 messenger.js
 brew cask install telegram                    # Telegram
 
 # Microsoft OneNote
-echo " Please install Microsoft OneNote manually."
-sleep 15
-read -p " Press enter after installation completes to continue."
+echo " Please install Microsoft OneNote manually." | tee -a to-do.txt
 
 # Microsoft Office
-echo " Please install Microsoft Office manually."
-sleep 15
-read -p " Press enter after installation completes to continue."
+echo " Please install Microsoft Office manually." | tee -a to-do.txt
 
 # Adobe Creative Cloud
-echo " Please install Adobe Creative Cloud manually."
-sleep 15
-read -p " Press enter after installation completes to continue."
+echo " Please install Adobe Creative Cloud manually." | tee -a to-do.txt
 
 mas install 409201541                         # Pages
 mas install 409203825                         # Numbers
 mas install 409183694                         # Keynote
 
 # Sketch
-echo " Please install Sketch manually."
-sleep 15
-read -p " Press enter after installation completes to continue."
+echo " Please install Sketch manually." | tee -a to-do.txt
 
 brew cask install cyberduck                   # Cyberduck
 brew cask install appcleaner                  # AppCleaner
