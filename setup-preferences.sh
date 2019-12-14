@@ -31,6 +31,11 @@ sudo pmset -a standbydelay 18000
 # Don't offer new disks for TimeMachine backup
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
+# Display host info after clicking clock on login screen
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+
+
 # Run all scripts in ./preferences
 for script in ./preferences/*.sh; do
   bash "$script"
