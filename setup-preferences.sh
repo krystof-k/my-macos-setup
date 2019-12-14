@@ -9,6 +9,9 @@ hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x70
 # Show battery percentage in the menu bar
 defaults write com.apple.menuextra.battery ShowPercent -string YES
 
+# Increase window resize speed
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
 # Expand save and print panels by default
 defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
 defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
