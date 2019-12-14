@@ -1,5 +1,8 @@
 
 
+# Display extensions
+defaults write -g AppleShowAllExtensions -bool true
+
 # Display path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
