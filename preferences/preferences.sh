@@ -7,12 +7,16 @@ defaults write -g AppleInterfaceStyleSwitchesAutomatically -bool true
 defaults write -g NSTableViewDefaultSizeMode -int 1
 
 # Set recent items limit to 50
-echo " Set recent items limit to 50 manually."
+echo " Set recent items limit to 50 manually in Preferences / General."
+
+
 
 # Desktop & Screen Saver
 
 # Turn off screen saver
 defaults -currentHost write com.apple.screensaver idleTime -int 0
+
+
 
 # Dock
 
@@ -34,10 +38,14 @@ defaults write com.apple.dock size-immutable -bool true
 # + Clean dock apps
 defaults delete com.apple.dock persistent-apps
 
+
+
 # Mission Control
 
 # Don't automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
+
+
 
 # Siri
 
@@ -59,6 +67,8 @@ defaults write com.apple.dock mru-spaces -bool false
 
 # Security & Privacy
 
+
+
 # Software Update
 
 # Enable only automatic check & critical updates
@@ -69,7 +79,11 @@ sudo defaults write /Library/Preferences/com.apple.commerce.plist AutoUpdate -bo
 sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist ConfigDataInstall -bool true
 sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist CriticalUpdateInstall -bool true
 
+
+
 # Network
+
+
 
 # Bluetooth
 
@@ -83,6 +97,8 @@ defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextr
 
 # Keyboard
 
+
+
 # Trackpad
 
 # Enable tap to click
@@ -93,6 +109,8 @@ defaults -currentHost write -g com.apple.mouse.tapBehavior -bool true
 
 # Enable App Exposé gesture
 defaults write com.apple.dock showAppExposeGestureEnabled -bool true
+
+
 
 # Mouse
 
@@ -107,5 +125,3 @@ defaults write com.apple.dock showAppExposeGestureEnabled -bool true
 # Time Machine
 
 # Startup Disk
-
-
