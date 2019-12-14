@@ -7,7 +7,7 @@ if [[ $? != 0 ]]; then
   xcode-select --install
   sleep 15
   echo " Waiting for Xcode Command Line Tools to be installed."
-  sleep 15
+  sleep 60
   read -p " Press enter after installation completes to continue."
 fi
 
