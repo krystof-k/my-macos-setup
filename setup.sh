@@ -21,6 +21,12 @@ cd ~/Git
 git clone https://github.com/krystof-k/my-macos-setup.git
 cd ./my-macos-setup
 
+# Install apps
+bash ./install-apps.sh
+
+# Install drivers
+bash ./install-drivers.sh
+
 # Setup preferences
 bash ./setup-preferences.sh
 
