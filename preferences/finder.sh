@@ -47,6 +47,8 @@ defaults write com.apple.finder FXPreferredGroupBy -string 'Date Added'
 /usr/libexec/PlistBuddy -c 'Set :FK_StandardViewSettings:ExtendedListViewSettingsV2:calculateAllSizes true' ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c 'Set :FK_StandardViewSettings:ListViewSettings:calculateAllSizes true' ~/Library/Preferences/com.apple.finder.plist
 
+# Display home folder in sidebar
+echo " Manually display Library folder in home folder preferences."
 
 
 # Other
