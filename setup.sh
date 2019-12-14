@@ -29,5 +29,6 @@ killall cfprefsd
 
 # Reboot
 echo " Setup complete. Rebooting in 15 seconds."
+echo " Open ~/Git/my-macos-setup/to-do.txt and proceeed with manual steps after reboot."
 sleep 15
 sudo reboot
