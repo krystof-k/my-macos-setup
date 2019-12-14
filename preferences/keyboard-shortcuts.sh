@@ -8,5 +8,3 @@
 /usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value:parameters:0 integer 65535' ~/Library/Preferences/com.apple.symbolichotkeys.plist
 /usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value:parameters:1 integer 48' ~/Library/Preferences/com.apple.symbolichotkeys.plist
 /usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value:parameters:2 integer 524288' ~/Library/Preferences/com.apple.symbolichotkeys.plist
-defaults write com.apple.symbolichotkeys PurgeCache -bool true
-defaults delete com.apple.symbolichotkeys PurgeCache
