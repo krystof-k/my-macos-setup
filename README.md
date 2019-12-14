@@ -9,7 +9,7 @@ add
 
 
 ```sh
-source < (curl -s https://raw.githubusercontent.com/krystof-k/my-macos-setup/master/setup.sh)
+source <(curl -s https://raw.githubusercontent.com/krystof-k/my-macos-setup/master/setup.sh)
 ```
 
 # My macOS setup
