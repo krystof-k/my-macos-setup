@@ -70,8 +70,6 @@ defaults write NSGlobalDomain NSNavRecentPlacesLimit -int 50
 # Show battery percentage in the menu bar
 defaults write com.apple.menuextra.battery ShowPercent -string YES
 
-# Show date in the menu bar
-defaults write com.apple.menuextra.clock DateFormat -string "EEE d. M. H:mm"
 
 # disable caps
 hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000000}]}'
