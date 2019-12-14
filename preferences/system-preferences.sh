@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # General
 
 # Set dark mode automatically
