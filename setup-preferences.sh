@@ -6,14 +6,6 @@ sudo systemsetup -setlocalsubnetname 'krystofs-macbook-pro'
 
 
 
-
-# Disable autocorrect, autocapitalization, etc.
-defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
-defaults write -g NSAutomaticCapitalizationEnabled -bool false
-defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
-defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
-defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
-
 # Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
@@ -34,7 +26,7 @@ defaults write -g NSDocumentSaveNewDocumentsToCloud -bool false
 
 
 
-systemsetup -setnetworktimeserver ntp.nic.cz
+
 
 
 mkdir -p ~/Screenshots
