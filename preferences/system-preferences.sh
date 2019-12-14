@@ -123,7 +123,20 @@ defaults write com.apple.dock showAppExposeGestureEnabled -bool true
 
 # Displays
 
+
+
 # Energy Saver
+
+# Put display to sleep after 1 minutes
+sudo pmset -b displaysleep 1
+sudo pmset -c displaysleep 1
+
+# Put computer to sleep after 2 minutes on battery and 30 minutes on power
+sudo pmset -b sleep 2
+sudo pmset -c sleep 30
+
+# Turn off disk sleep
+sudo pmset -a disksleep 0
 
 
 
