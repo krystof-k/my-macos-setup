@@ -96,7 +96,3 @@ defaults write com.apple.menuextra.battery ShowPercent -string YES
 
 
 
-# Display Bluetooth in menu bar
-defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -bool true
-/usr/libexec/PlistBuddy -c "Add :menuExtras: string '/System/Library/CoreServices/Menu Extras/Bluetooth.menu'" ~/Library/Preferences/com.apple.systemuiserver.plist
-
