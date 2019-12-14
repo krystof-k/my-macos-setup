@@ -40,6 +40,10 @@ defaults write com.apple.dock size-immutable -bool true
 # + Clean dock apps
 defaults delete com.apple.dock persistent-apps
 
+# + Speed up autohide
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.5
+
 
 
 # Mission Control
