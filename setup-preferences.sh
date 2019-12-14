@@ -28,7 +28,8 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Prolong standby delay to 5 hours – faster wake
 sudo pmset -a standbydelay 18000
 
-
+# Don't offer new disks for TimeMachine backup
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Run all scripts in ./preferences
 for script in ./preferences/*.sh; do
