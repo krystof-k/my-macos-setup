@@ -20,3 +20,6 @@ echo " Cloning the repository into ~/Git folder."
 cd ~/Git
 git clone https://github.com/krystof-k/my-macos-setup.git
 cd ./my-macos-setup
+
+# Purge cache
+killall cfprefsd
