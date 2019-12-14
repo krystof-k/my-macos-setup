@@ -9,7 +9,7 @@ defaults write -g AppleInterfaceStyleSwitchesAutomatically -bool true
 defaults write -g NSTableViewDefaultSizeMode -int 1
 
 # Set recent items limit to 50
-echo " Set recent items limit to 50 manually in Preferences / General."
+echo " Set recent items limit to 50 manually in Preferences / General." | tee -a to-do.txt
 
 
 
@@ -82,7 +82,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow.plist showInputMe
 # Accessibility
 
 # Download enhanced voice
-echo " Download enhanced voice manually manually in Preferences / Accessibility / Speech."
+echo " Download enhanced voice manually manually in Preferences / Accessibility / Speech." | tee -a to-do.txt
 
 # Type to Siri
 defaults write com.apple.Siri TypeToSiriEnabled -bool true
@@ -100,10 +100,10 @@ defaults write com.apple.Siri TypeToSiriEnabled -bool true
 # Security & Privacy
 
 # Set ask for password deplay to 5 seconds
-echo " Set ask for password delay to 5 seconds manually in Preferences / Security & Privacy / General."
+echo " Set ask for password delay to 5 seconds manually in Preferences / Security & Privacy / General." | tee -a to-do.txt
 
 # Turn on encryption
-echo " Don't forget to turn on encryption in Preferences / Security & Privacy / FileVault."
+echo " Don't forget to turn on encryption in Preferences / Security & Privacy / FileVault." | tee -a to-do.txt
 
 # Turn on firewall
 sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
@@ -137,7 +137,7 @@ defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextr
 # Sound
 
 # Disable sound effects
-echo " Disable UI sound effects 50 manually in Preferences / Sound."
+echo " Disable UI sound effects 50 manually in Preferences / Sound." | tee -a to-do.txt
 
 # Display sound control in the menu bar
 /usr/libexec/PlistBuddy -c "Add :menuExtras: string '/System/Library/CoreServices/Menu Extras/Volume.menu'" ~/Library/Preferences/com.apple.systemuiserver.plist
@@ -151,7 +151,7 @@ defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextr
 # Keyboard
 
 # Turn off keyboard backlight after 30 seconds
-echo " Set keyboard backlight limit to 30 seconds manually in Preferences / Keyboard / Keyboard."
+echo " Set keyboard backlight limit to 30 seconds manually in Preferences / Keyboard / Keyboard." | tee -a to-do.txt
 
 # Disable autocorrect, autocapitalization, etc.
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
@@ -185,7 +185,7 @@ defaults write com.apple.dock showAppExposeGestureEnabled -bool true
 # Displays
 
 # Adjust resolution to more space
-echo " Set resolution to more space manually in Preferences / Displays / Display."
+echo " Set resolution to more space manually in Preferences / Displays / Display." | tee -a to-do.txt
 
 
 
