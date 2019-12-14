@@ -21,5 +21,11 @@ cd ~/Git
 git clone https://github.com/krystof-k/my-macos-setup.git
 cd ./my-macos-setup
 
+# Setup preferences
+bash ./setup-preferences.sh
+
 # Purge cache
 killall cfprefsd
+
+# Reboot
+reboot
