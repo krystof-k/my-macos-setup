@@ -122,9 +122,6 @@ sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist Critical
 
 # Network
 
-# Set NetBIOS name
-# defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $HOSTNAME
-
 
 
 # Bluetooth
