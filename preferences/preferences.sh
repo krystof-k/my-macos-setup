@@ -73,9 +73,9 @@ sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist Critical
 
 # Bluetooth
 
-# Display Bluetooth in the menu bar
-defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -bool true
+# Display Bluetooth in the menu bar (order matters: defaults write purges cache of com.apple.systemuiserver)
 /usr/libexec/PlistBuddy -c "Add :menuExtras: string '/System/Library/CoreServices/Menu Extras/Bluetooth.menu'" ~/Library/Preferences/com.apple.systemuiserver.plist
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -bool true
 
 # Sound
 
