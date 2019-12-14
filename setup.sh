@@ -28,4 +28,6 @@ bash ./setup-preferences.sh
 killall cfprefsd
 
 # Reboot
+echo " Setup complete. Rebooting in 15 seconds."
+sleep 15
 sudo reboot
