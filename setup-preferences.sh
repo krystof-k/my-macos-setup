@@ -34,20 +34,6 @@ defaults write com.apple.screencapture location ~/Screenshots
 
 defaults write com.apple.screencapture disable-shadow -bool true
 
-# Put display to sleep after 2 minutes
-sudo pmset displaysleep 2
-systemsetup -setdisplaysleep 2
-
-# Put computer to sleep after 5 minutes
-sudo pmset sleep 5
-systemsetup -setcomputersleep 5
-
-sudo pmset -b displaysleep 30
-sudo pmset -c displaysleep 30
-sudo pmset -b sleep 30
-sudo pmset -c sleep 30
-
-sudo pmset -a disksleep 0
 
 
 echo "Speeding up wake from sleep to 24 hours from an hour"
