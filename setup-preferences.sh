@@ -45,19 +45,10 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # Not sure it works
 
 
-# Display folder sizes
-/usr/libexec/PlistBuddy -c 'Set :StandardViewSettings:ListViewSettings:calculateAllSizes true' ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c 'Set :StandardViewSettings:ExtendedListViewSettingsV2:calculateAllSizes true' ~/Library/Preferences/com.apple.finder.plist
-#/usr/libexec/PlistBuddy -c 'Set :FK_StandardViewSettings:ListViewSettings:calculateAllSizes true' ~/Library/Preferences/com.apple.finder.plist
-#/usr/libexec/PlistBuddy -c 'Set :FK_StandardViewSettings:ExtendedListViewSettingsV2:calculateAllSizes true' ~/Library/Preferences/com.apple.finder.plist
 
 
-# Set recent items limit to 50
-defaults write NSGlobalDomain NSRecentDocumentsLimit -int 50
-defaults write NSGlobalDomain NSNavRecentPlacesLimit -int 50
-
-
-
+# disable caps
+hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000000}]}'
 
 
 
@@ -69,7 +60,3 @@ defaults write NSGlobalDomain NSNavRecentPlacesLimit -int 50
 
 # Show battery percentage in the menu bar
 defaults write com.apple.menuextra.battery ShowPercent -string YES
-
-
-# disable caps
-hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000000}]}'
