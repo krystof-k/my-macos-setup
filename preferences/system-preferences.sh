@@ -135,8 +135,11 @@ defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextr
 # Sound
 
 # Disable sound effects
-defaults write -g com.apple.sound.uiaudio.enabled -bool false
+echo " Disable UI sound effects 50 manually in Preferences / Sound."
 
+# Display sound control in the menu bar
+/usr/libexec/PlistBuddy -c "Add :menuExtras: string '/System/Library/CoreServices/Menu Extras/Volume.menu'" ~/Library/Preferences/com.apple.systemuiserver.plist
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -bool true
 
 
 # Printers & Scanners
