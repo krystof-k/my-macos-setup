@@ -85,9 +85,6 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow.plist showInputMe
 
 # Accessibility
 
-# Download enhanced voice
-echo " Download enhanced voice manually manually in Preferences / Accessibility / Speech." | tee -a to-do.txt
-
 # Type to Siri
 defaults write com.apple.Siri TypeToSiriEnabled -bool true
 
@@ -141,7 +138,7 @@ defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextr
 # Sound
 
 # Disable sound effects
-echo " Disable UI sound effects 50 manually in Preferences / Sound." | tee -a to-do.txt
+echo " Disable UI sound effects manually in Preferences / Sound." | tee -a to-do.txt
 
 # Display sound control in the menu bar
 /usr/libexec/PlistBuddy -c "Add :menuExtras: string '/System/Library/CoreServices/Menu Extras/Volume.menu'" ~/Library/Preferences/com.apple.systemuiserver.plist
