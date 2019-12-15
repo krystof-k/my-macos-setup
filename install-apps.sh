@@ -23,7 +23,8 @@ if [[ $? != 0 ]]; then
   sleep 3
   open -a "App Store"
   sleep 15
-  read -p " Press enter to continue."
+  echo " Press enter to continue."
+  read _
 fi
 
 # Install apps in the order from README.md
