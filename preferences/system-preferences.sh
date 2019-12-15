@@ -154,6 +154,9 @@ defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextr
 # Turn off keyboard backlight after 30 seconds
 echo " Set keyboard backlight limit to 30 seconds manually in Preferences / Keyboard / Keyboard." | tee -a to-do.txt
 
+# Disable Caps Lock
+echo " Disable Caps Lock on all keyboards manually in Preferences / Keyboard / Modification keys." | tee -a to-do.txt
+
 # Disable autocorrect, autocapitalization, etc.
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write -g NSAutomaticCapitalizationEnabled -bool false
