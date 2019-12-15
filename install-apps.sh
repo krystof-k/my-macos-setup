@@ -53,10 +53,7 @@ rm -r Messenger-darwin-x64 messenger.js
 
 brew cask install telegram                    # Telegram
 
-# Microsoft OneNote
-echo " Please install Microsoft OneNote manually." | tee -a to-do.txt
-
-# Microsoft Office
+# Microsoft OneNote & Office
 echo " Please install Microsoft Office manually." | tee -a to-do.txt
 
 # Adobe Creative Cloud
