@@ -4,7 +4,8 @@ if [[ $? != 0 ]]; then
   xcode-select --install
   echo " Waiting for Xcode Command Line Tools to be installed."
   sleep 15
-  read -p " Press enter after installation completes to continue."
+  echo " Press enter after installation completes to continue."
+  read _
 fi
 
 # Install & update Homebrew
