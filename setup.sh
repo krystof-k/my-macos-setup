@@ -8,7 +8,8 @@ if [[ $? != 0 ]]; then
   sleep 15
   echo " Waiting for Xcode Command Line Tools to be installed."
   sleep 60
-  read -p " Press enter after installation completes to continue."
+  echo " Press enter after installation completes to continue."
+  read _
 fi
 
 # Create Git folder
