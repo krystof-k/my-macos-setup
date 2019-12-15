@@ -31,6 +31,10 @@ bash ./install-drivers.sh
 # Setup preferences
 bash ./setup-preferences.sh
 
+# Setup Git defaults
+git config --global user.name 'Kryštof Korb'
+git config --global user.email 'krystof@korb.cz'
+
 # Purge cache
 killall cfprefsd
 
