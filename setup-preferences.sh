@@ -3,9 +3,6 @@
 # Disable startup chime
 sudo nvram SystemAudioVolume=" "
 
-# Disable Caps Lock
-hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000000}]}'
-
 # Show battery percentage in the menu bar
 defaults write com.apple.menuextra.battery ShowPercent -string YES
 
