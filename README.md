@@ -246,6 +246,27 @@ You can quit apps with <kbd>command ⌘</kbd> + <kbd>Q</kbd> on macOS by defau
 - **Display opened path.** Click _View_ → _Show Path Bar_. Now you can <kbd>option ⌥</kbd> or <kbd>command ⌘</kbd> double click to open a folder in new window/tab.
 - **Show folders size.** Click _View_ → _Show View Options_ and tick _Calculate all sizes_.
 
+### Add spacer to dock
+
+To add spacer between apps in dock, run:
+
+```sh
+defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
+```
+
+To add spacer between files, run:
+
+```sh
+defaults write com.apple.dock persistent-others -array-add '{"tile-data" = {}; "tile-type"="spacer-tile";}'
+```
+
+To add small spacer, use `small-spacer-tile`:
+
+```sh
+defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}'
+defaults write com.apple.dock persistent-others -array-add '{"tile-data" = {}; "tile-type"="small-spacer-tile";}'
+```
+
 ### Spotlight shortcuts
 
 I used to use [Alfred](https://www.alfredapp.com), which has useful commands for quickly shutting down or locking your Mac. If you want something similar for Spotlight, take a look [there](https://github.com/siong1987/shortcuts).
