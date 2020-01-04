@@ -50,12 +50,6 @@
   
   > A quick way to write special characters, often used phrases or signatures. Also see [my favorite snippets](#my-favorite-snippets-for-atext).
 
-- [ ] :eyes: [**Vanilla**](https://matthewpalmer.net/vanilla)  
-  
-  **`hide menu bar icons`** `free / $`
-  
-  > Hide icons in menu bar. Unforunatelly a bit buggy but [Bartender](https://www.macbartender.com) is too expensive.
-
 - [ ] :sunny: [**Flux**](https://justgetflux.com)  
   
   **`blue light reducer`** `free`
@@ -304,6 +298,8 @@ rm messenger.js
 - **A great Markdown editor.** I've been using [Typora](https://typora.io), now I'm trying [Caret](https://caret.io), but still not happy about either.
 
 - **Notepad.** The only app from Windows I miss every single day. TextEdit launches sooo slowly and you have to hit <kbd>⌘</kbd> + <kbd>N</kbd> every time, VSCode is even worse and [tyke](https://tyke.app) is only in the menu bar.
+
+- **Menu bar icons management.** I've been using [Vanilla](https://matthewpalmer.net/vanilla), but it is so buggy and [Bartender](https://www.macbartender.com) is too expensive.
 
 ---
 
