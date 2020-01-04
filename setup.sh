@@ -14,11 +14,11 @@ fi
 
 # Create Git folder
 echo " Creating ~/Git folder."
-mkdir -p ~/Git
+mkdir -p ~/Git/krystof-k
 
 # Clone the repository 
 echo " Cloning the repository into ~/Git folder."
-cd ~/Git
+cd ~/Git/krystof-k
 git clone https://github.com/krystof-k/my-macos-setup.git
 cd ./my-macos-setup
 
