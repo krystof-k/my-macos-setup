@@ -23,7 +23,7 @@ if [[ $? != 0 ]]; then
   sleep 3
   open -a "App Store"
   sleep 15
-  echo " Press enter to continue."
+  echo " Press enter to continue."
   read _
 fi
 
@@ -38,7 +38,6 @@ echo " Install Bitwarden manually." | tee -a to-do.txt
 mas install 441258766                         # Magnet
 mas install 1000808993                        # Coca
 brew cask install atext                       # aText
-brew cask install vanilla                     # Vanilla
 brew cask install flux                        # Flux
 brew cask install lunar                       # Lunar
 brew cask install slack                       # Slack
@@ -63,9 +62,7 @@ mas install 409201541                         # Pages
 mas install 409203825                         # Numbers
 mas install 409183694                         # Keynote
 
-# Sketch
-echo " Please install Sketch manually." | tee -a to-do.txt
-
+brew cask install sketch                      # Sketch
 brew cask install cyberduck                   # Cyberduck
 brew cask install appcleaner                  # AppCleaner
 brew cask install gifox                       # Gifox
