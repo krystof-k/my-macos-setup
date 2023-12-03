@@ -120,3 +120,6 @@ fi
 
 message 'Set up Ruby'
 ./setup/ruby.sh
+
+message 'Set up Node.js'
+./setup/node.sh
