@@ -13,3 +13,4 @@ Just copy-paste this into your freshly installed Mac's terminal 🚀
 | `--skip-git` | Skip installing Git and cloning this repostiory |
 | `--skip-brew` | Skip installing apps from Brewfile |
 | `--skip-ruby` | Skip Ruby version manager setup |
+| `--skip-node-js` | Skip Node.js version manager setup |
