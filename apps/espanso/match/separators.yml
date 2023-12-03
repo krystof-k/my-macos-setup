@@ -1,0 +1,10 @@
+matches:
+  - label: en dash (`–`)
+    trigger: endash
+    replace: –
+  - label: em dash (`—`)
+    trigger: emdash
+    replace: —
+  - label: non-breaking hyphen (`‑`)
+    trigger: nonbreakinghyphen
+    replace: ‑

@@ -1,0 +1,11 @@
+matches:
+  - label: strikethrough ("combining long stroke overlay")
+    regex: '(?P<string>\S+)strikethrough'
+    replace: '{{ result }}'
+    vars:
+      - name: result
+        type: shell
+        params:
+          cmd: |
+            export LANG='cs_CZ.UTF-8'
+            echo "$ESPANSO_STRING" | sed 's/./&'$'\u0336''/g'
