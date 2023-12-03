@@ -1,0 +1,15 @@
+matches:
+  - label: transform to sub- and superscript digits
+    regex: '(?P<number>\d+)(?P<type>(sub|super)script)'
+    replace: '{{ result }}'
+    vars:
+      - name: result
+        type: shell
+        params:
+          cmd: |
+            export LANG='cs_CZ.UTF-8'
+            if [[ "$ESPANSO_TYPE" == "superscript" ]]; then
+              echo "$ESPANSO_NUMBER" | sed -e 'y/0123456789/⁰¹²³⁴⁵⁶⁷⁸⁹/'
+            else
+              echo "$ESPANSO_NUMBER" | sed -e 'y/0123456789/₀₁₂₃₄₅₆₇₈₉/'
+            fi
