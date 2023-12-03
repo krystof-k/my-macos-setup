@@ -1,0 +1,28 @@
+matches:
+  - label: not equal (`≠`)
+    trigger: notequalsign
+    replace: ≠
+  - label: approximately equal (`≈`)
+    trigger: approxsign
+    replace: ≈
+  - label: multiplication (`×`)
+    triggers:
+      - multiplicationsign
+      - xx
+    replace: ×
+  - label: plus-minus (`±`)
+    trigger: plusminussign
+    replace: ±
+  - label: summation (`∑`)
+    triggers:
+      - sigmasign
+      - sumsign
+    replace: ∑
+  - label: empty set (`∅`)
+    triggers:
+      - nullsign
+      - emptysetsign
+    replace: ∅
+  - label: diameter (`⌀`)
+    trigger: diametersign
+    replace: ⌀
