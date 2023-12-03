@@ -1,0 +1,40 @@
+matches:
+  - label: em space (` `)
+    trigger: emsp
+    replace: ' '
+  - label: 1/3 em space (` `)
+    trigger: thirdsp
+    replace: ' '
+  - label: 1/4 em space (` `)
+    trigger: quartersp
+    replace: ' '
+  - label: 1/6 em space (` `)
+    trigger: sixthsp
+    replace: ' '
+  - label: en space (` `)
+    trigger: ensp
+    replace: ' '
+  - label: thin space (` `)
+    trigger: thinsp
+    replace: ' '
+  - label: hair space (` `)
+    trigger: hairsp
+    replace: ' '
+  - label: figure space (` `)
+    trigger: numsp
+    replace: ' '
+  - label: punctuation space (` `)
+    trigger: puncsp
+    replace: ' '
+  - label: zero-width space (`​`)
+    trigger: zerosp
+    replace: '​'
+  - label: non-breaking space (` `)
+    trigger: nbsp
+    replace: ' '
+  - label: narrow non-breaking space (` `)
+    trigger: narrownbsp
+    replace: ' '
+  - label: tabulation character (`	`)
+    trigger: tabsp
+    replace: '	'
