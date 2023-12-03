@@ -117,3 +117,6 @@ if [[ ! $@ =~ --skip-brew ]]; then
 else
   message 'Skipping Homebrew apps installation' 'info'
 fi
+
+message 'Set up Ruby'
+./setup/ruby.sh
