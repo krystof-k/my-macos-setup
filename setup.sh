@@ -124,6 +124,9 @@ message 'Set up Ruby'
 message 'Set up Node.js'
 ./setup/node.sh
 
+message 'Set up Python'
+./setup/python.sh
+
 message 'Configure global preferences'
 ./preferences/global.sh
 
