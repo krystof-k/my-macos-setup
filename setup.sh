@@ -131,3 +131,6 @@ if [[ ! $@ =~ --skip-node-js ]]; then
 else
   message 'Skipping Node.js setup' 'info'
 fi
+
+message 'Configure global preferences'
+./preferences/global.sh
