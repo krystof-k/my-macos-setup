@@ -123,3 +123,6 @@ message 'Set up Ruby'
 
 message 'Set up Node.js'
 ./setup/node.sh
+
+message 'Configure global preferences'
+./preferences/global.sh
