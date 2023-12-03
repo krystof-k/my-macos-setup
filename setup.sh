@@ -50,6 +50,22 @@ Host *
 END
   message "Export public key to \`~/.ssh/${PRIVATE_KEY_FILENAME%.pem}.pub\`" 'substep'
   ssh-keygen -y -f ~/.ssh/$PRIVATE_KEY_FILENAME > ~/.ssh/${PRIVATE_KEY_FILENAME%.pem}.pub
+
+  message 'Add GitHub Packages token' 'step'
+  message 'Enter GitHub Packages token' 'substep' 'prompt'
+  read GITHUB_PACKAGES_TOKEN
+  message 'Enter GitHub Packages token username' 'substep' 'prompt'
+  read GITHUB_PACKAGES_TOKEN_USERNAME
+  message 'Add token to `~/.zshenv`' 'substep'
+  tee -a ~/.zshenv << END
+# GitHub Packages read-only token
+export GITHUB_PACKAGES_TOKEN=${GITHUB_PACKAGES_TOKEN}
+export GITHUB_PACKAGES_TOKEN_USERNAME=${GITHUB_PACKAGES_TOKEN_USERNAME}
+END
+  message 'Reload .zshenv' 'substep'
+  source ~/.zshenv
+  message 'Add token to ~/.npmrc' 'substep'
+  echo '//npm.pkg.github.com/:_authToken=${GITHUB_PACKAGES_TOKEN}' > ~/.npmrc
 else
   message 'Skipping authentication' 'info'
 fi
