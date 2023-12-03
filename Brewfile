@@ -78,8 +78,9 @@ cask 'codewhisperer'
 brew 'gh'
 # - Node version manager
 brew 'nvm'
-# - Python version manager
+# - Python version manager and virtualenv
 brew 'pyenv'
+brew 'pyenv-virtualenv'
 # - Ruby version manager
 brew 'rbenv'
 brew 'ruby-build'
