@@ -126,3 +126,6 @@ message 'Set up Node.js'
 
 message 'Configure global preferences'
 ./preferences/global.sh
+
+message 'Configure keyboard shortcuts'
+./preferences/keyboard-shortcuts.sh
