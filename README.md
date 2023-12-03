@@ -14,3 +14,4 @@ Just copy-paste this into your freshly installed Mac's terminal 🚀
 | `--skip-brew` | Skip installing apps from Brewfile |
 | `--skip-ruby` | Skip Ruby version manager setup |
 | `--skip-node-js` | Skip Node.js version manager setup |
+| `--skip-python` | Skip Python version manager setup |

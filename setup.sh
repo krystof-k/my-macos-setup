@@ -132,6 +132,13 @@ else
   message 'Skipping Node.js setup' 'info'
 fi
 
+if [[ ! $@ =~ --skip-python ]]; then
+  message 'Set up Python'
+  ./setup/python.sh
+else
+  message 'Skipping Python setup' 'info'
+fi
+
 message 'Configure global preferences'
 ./preferences/global.sh
 
