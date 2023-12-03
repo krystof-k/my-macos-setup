@@ -69,3 +69,18 @@ END
 else
   message 'Skipping authentication' 'info'
 fi
+
+if [[ ! $@ =~ --skip-homebrew-install ]]; then
+  message 'Install Homebrew' 'step'
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  message 'Add Homebrew to PATH' 'substep'
+  echo '# Homebrew' >> ~/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+  message 'Set number of Homebrew CURL retries to 10' 'substep'
+  echo 'HOMEBREW_CURL_RETRIES=10' >> ~/.zprofile
+  echo '' >> ~/.zprofile
+  message 'Reload .zprofile' 'substep'
+  source ~/.zprofile
+else
+  message 'Skipping Homebrew installation' 'info'
+fi
