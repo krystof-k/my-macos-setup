@@ -11,3 +11,4 @@ Just copy-paste this into your freshly installed Mac's terminal 🚀
 | `--skip-authentication` | Skip signing in, setting up SSH keys and other authentication steps |
 | `--skip-homebrew-install` | Skip installing and setting up Homebrew |
 | `--skip-git` | Skip installing Git and cloning this repostiory |
+| `--skip-brew` | Skip installing apps from Brewfile |
