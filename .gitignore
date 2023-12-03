@@ -1,5 +1,7 @@
 to-do.txt
 diffs/
 
+Brewfile.lock.json
+
 **/*.key
 **/*.pem

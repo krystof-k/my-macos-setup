@@ -110,3 +110,10 @@ message 'Install apps'
 
 message 'Install Rosetta' 'step'
 sudo softwareupdate --install-rosetta
+
+if [[ ! $@ =~ --skip-brew ]]; then
+  message 'Install apps from Brewfile' 'step'
+  brew bundle
+else
+  message 'Skipping Homebrew apps installation' 'info'
+fi
