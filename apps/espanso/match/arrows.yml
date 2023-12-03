@@ -1,0 +1,80 @@
+matches:
+  - label: left arrow (`←`)
+    trigger: leftarrow
+    replace: ←
+  - label: black left arrow (`⬅`)
+    trigger: blackleftarrow
+    replace: ⬅
+  - label: right arrow (`→`)
+    trigger: rightarrow
+    replace: →
+  - label: heavy right arrow (`➔`)
+    trigger: heavyrightarrow
+    replace: ➔
+  - label: black right arrow (`⮕`)
+    trigger: blackrightarrow
+    replace: ⮕
+  - label: up arrow (`↑`)
+    triggers:
+      - uparrow
+      - toparrow
+    replace: ↑
+  - label: black up arrow (`⬆`)
+    triggers:
+      - blackuparrow
+      - blacktoparrow
+    replace: ⬆
+  - label: down arrow (`↓`)
+    triggers:
+      - downarrow
+      - bottomarrow
+    replace: ↓
+  - label: black down arrow (`⬇`)
+    triggers:
+      - blackdownarrow
+      - blackbottomarrow
+    replace: ⬇
+  - label: horizontal arrow (`↔`)
+    triggers:
+      - leftrightarrow
+      - horizontalarrow
+    replace: ↔
+  - label: black horizontal arrow (`⬌`)
+    triggers:
+      - blackleftrightarrow
+      - blackhorizontalarrow
+    replace: ⬌
+  - label: vertical arrow (`↕`)
+    triggers:
+      - updownarrow
+      - verticalarrow
+    replace: ↕
+  - label: black vertical arrow (`⬍`)
+    triggers:
+      - blackupdownarrow
+      - blackverticalarrow
+    replace: ⬍
+  - label: top left arrow (`↖`)
+    trigger: topleftarrow
+    replace: ↖
+  - label: black  top left arrow (`⬉`)
+    trigger: blacktopleftarrow
+    replace: ⬉
+  - label: top right arrow (`↗`)
+    trigger: toprightarrow
+    replace: ↗
+  - label: black top right arrow (`⬈`)
+    trigger: blacktoprightarrow
+    replace: ⬈
+  - label: bottom left arrow (`↙`)
+    trigger: bottomleftarrow
+    replace: ↙
+  - label: black bottom left arrow (`⬋`)
+    trigger: blackbottomleftarrow
+    replace: ⬋
+  - label: bottom right arrow (`↘`)
+    trigger: bottomrightarrow
+    replace: ↘
+  - label: black bottom right arrow (`⬊`)
+    trigger: blackbottomrightarrow
+    replace: ⬊

@@ -1,0 +1,19 @@
+matches:
+  - label: ellipsis (`…`)
+    trigger: ellipsissign
+    replace: …
+  - label: degree (`°`)
+    trigger: degreesign
+    replace: °
+  - label: bullet (`•`)
+    trigger: bulletsign
+    replace: •
+  - label: checkmark (`✓`)
+    trigger: checkmarksign
+    replace: ✓
+  - label: cross (`✗`)
+    trigger: crosssign
+    replace: ✗
+  - label: copyright (`©`)
+    trigger: copysign
+    replace: ©
