@@ -102,3 +102,11 @@ if [[ ! $@ =~ --skip-git ]]; then
 else
   message 'Skipping Git setup' 'info'
 fi
+
+message 'Create an APFS snapshot before installing apps' 'step'
+tmutil localsnapshot
+
+message 'Install apps'
+
+message 'Install Rosetta' 'step'
+sudo softwareupdate --install-rosetta
