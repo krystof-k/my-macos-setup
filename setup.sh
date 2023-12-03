@@ -90,8 +90,6 @@ if [[ ! $@ =~ --skip-git ]]; then
   message "Currently using Git (`git --version`) at \``which git`\`" 'substep' 'info'
   message 'Install Git' 'substep'
   brew install git
-  message 'Reload .zprofile' 'substep'
-  source ~/.zprofile
   message "Currently using Git (`git --version`) at \``which git`\`" 'substep' 'info'
 
   message 'Clone the repository into `~/Git/krystof-k/my-macos-setup`' 'step'
