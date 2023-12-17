@@ -172,6 +172,7 @@ cask 'warp'
 cask 'nota'
 cask 'arc'
 brew 'openjdk@11'
+brew 'cmake'
 # asi neni treba brew 'python'
 
 # TODO

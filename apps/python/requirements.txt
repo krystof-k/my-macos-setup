@@ -1,0 +1,6 @@
+faker
+jupyterlab
+# tensorflow_datasets
+# tensorflow
+# gcsfs
+# matplotlib
