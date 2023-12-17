@@ -8,9 +8,11 @@ message 'Set up Node version manager' 'step'
 message "Currently using Node.js (`node --version`) at \``which node`\`" 'substep' 'info'
 message 'Add NVM to ~/.zprofile' 'substep'
 mkdir ~/.nvm
+echo '# Node version manager' >> ~/.zprofile
 echo 'export NVM_DIR=~/.nvm' >> ~/.zprofile
 echo 'source $(brew --prefix nvm)/nvm.sh' >> ~/.zprofile
 echo 'source $(brew --prefix nvm)/etc/bash_completion.d/nvm' >> ~/.zprofile
+echo '' >> ~/.zprofile
 message 'Reload .zprofile' 'substep'
 source ~/.zprofile
 message 'Install Node.js 20' 'substep'
