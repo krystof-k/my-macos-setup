@@ -112,8 +112,6 @@ sudo softwareupdate --install-rosetta
 if [[ ! $@ =~ --skip-brew ]]; then
   message 'Install apps from Brewfile' 'step'
   brew bundle
-  message 'Reload .zprofile' 'substep'
-  source ~/.zprofile
 else
   message 'Skipping Homebrew apps installation' 'info'
 fi
