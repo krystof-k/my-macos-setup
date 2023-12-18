@@ -144,3 +144,10 @@ message 'Configure global preferences'
 
 message 'Configure keyboard shortcuts'
 ./preferences/keyboard-shortcuts.sh
+
+message 'Configure all apps preferences'
+for script in ./preferences/apps/*; do
+  if [[ -x "$script" ]]; then    
+    "$script"
+  fi
+done
