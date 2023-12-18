@@ -335,6 +335,7 @@ brew 'openjdk@11'
 # pmix
 # poppler
 # postico
+# redisinsight
 # powershell
 # pycparser
 # python-certifi
