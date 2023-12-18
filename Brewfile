@@ -336,6 +336,7 @@ brew 'openjdk@11'
 # poppler
 # postico
 # redisinsight
+# mongodb-compass
 # powershell
 # pycparser
 # python-certifi
