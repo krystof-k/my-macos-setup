@@ -373,3 +373,5 @@ brew 'openjdk@11'
 # z3
 # zimg
 # zstd
+
+#mas install 42526455
