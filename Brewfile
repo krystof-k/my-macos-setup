@@ -176,7 +176,15 @@ cask '1kc-razer'
 # - eObčanka
 cask 'eobcanka'
 # - HP printers
+<<<<<<< HEAD
 # cask 'apple-hewlett-packard-printer-drivers'
 # - YubiKey
 cask 'yubico-yubikey-manager'
 brew 'yubico-piv-tool'
+=======
+cask 'apple-hewlett-packard-printer-drivers'
+# - YubiKey
+cask 'yubico-yubikey-manager'
+brew 'yubico-piv-tool'
+brew 'openjdk@11'
+>>>>>>> a32186e (java??)
