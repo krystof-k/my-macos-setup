@@ -78,9 +78,8 @@ cask 'codewhisperer'
 brew 'gh'
 # - Node version manager
 brew 'nvm'
-# - Python version manager and virtualenv
+# - Python version manager
 brew 'pyenv'
-brew 'pyenv-virtualenv'
 # - Ruby version manager
 brew 'rbenv'
 brew 'ruby-build'
@@ -164,3 +163,4 @@ cask 'apple-hewlett-packard-printer-drivers'
 # - YubiKey
 cask 'yubico-yubikey-manager'
 brew 'yubico-piv-tool'
+brew 'openjdk@11'
