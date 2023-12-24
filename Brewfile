@@ -129,6 +129,8 @@ cask 'hazel'
 brew 'ffmpeg'
 # - JSON processor
 brew 'jq'
+# - files deduplication
+cask 'dupeguru'
 
 # Fonts
 # -----
