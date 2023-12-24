@@ -151,3 +151,8 @@ for script in ./preferences/apps/*; do
     "$script"
   fi
 done
+
+message 'Finishing'
+message 'Clear cache' 'step'
+killall cfprefsd
+message 'Setup complete, please reboot and complete manual steps from to-do.txt after that' 'substep' 'info'
