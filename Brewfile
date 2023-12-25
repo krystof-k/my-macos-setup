@@ -128,6 +128,8 @@ cask 'gifox'
 cask 'hazel'
 # - video converter
 brew 'ffmpeg'
+# - JSON processor
+brew 'jq'
 
 # Fonts
 # -----
