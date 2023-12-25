@@ -97,6 +97,12 @@ tap 'cloudflare/cloudflare'
 brew 'cloudflare/cloudflare/cloudflared'
 # - Postman
 cask 'postman'
+# - PostgreSQL client
+cask 'postico'
+# - MongoDB client
+cask 'mongodb-compass'
+# - Redis client
+cask 'redisinsight'
 
 # Fun
 # ---
