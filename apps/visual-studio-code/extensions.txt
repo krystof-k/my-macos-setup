@@ -1,3 +1,4 @@
+bierner.markdown-mermaid
 GitHub.copilot
 GitHub.copilot-chat
 GitHub.vscode-github-actions
