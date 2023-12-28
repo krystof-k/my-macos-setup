@@ -55,6 +55,7 @@ cask 'microsoft-word'
 cask 'microsoft-excel'
 cask 'microsoft-powerpoint'
 cask 'microsoft-onenote'
+cask 'microsoft-outlook'
 # - Adobe Creative Cloud
 cask 'adobe-creative-cloud'
 # - 3D modeling
