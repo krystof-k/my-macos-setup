@@ -2,5 +2,6 @@ bierner.markdown-mermaid
 GitHub.copilot
 GitHub.copilot-chat
 GitHub.vscode-github-actions
+kddejong.vscode-cfn-lint
 ms-azuretools.vscode-docker
 testdouble.vscode-standard-ruby
