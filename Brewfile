@@ -43,6 +43,8 @@ cask 'messenger'
 cask 'telegram'
 # - Slack
 cask 'slack'
+# - email client
+cask 'thunderbird'
 
 # Office
 # ------
