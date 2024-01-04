@@ -106,6 +106,8 @@ cask 'postico'
 cask 'mongodb-compass'
 # - Redis client
 cask 'redisinsight'
+# - Stripe CLI
+brew 'stripe/stripe-cli/stripe'
 
 # Fun
 # ---
