@@ -142,6 +142,8 @@ cask 'hazel'
 brew 'ffmpeg'
 # - JSON processor
 brew 'jq'
+# - encryption
+brew 'gnupg'
 
 # Fonts
 # -----
