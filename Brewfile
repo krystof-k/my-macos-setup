@@ -109,6 +109,8 @@ cask 'redisinsight'
 # - Stripe CLI
 tap 'stripe/stripe-cli'
 brew 'stripe/stripe-cli/stripe'
+# - build system for C++
+brew 'cmake'
 
 # Fun
 # ---
