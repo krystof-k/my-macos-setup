@@ -30,3 +30,4 @@ vue.volar
 # wingrunr21.vscode-ruby
 # withfig.fig
 testdouble.vscode-standard-ruby
+ms-vscode.cpptools
