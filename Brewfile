@@ -61,7 +61,7 @@ cask 'microsoft-outlook'
 # - Adobe Creative Cloud
 cask 'adobe-creative-cloud'
 # - 3D modeling
-cask 'autodesk-fusion360'
+cask 'autodesk-fusion'
 # - Google Drive
 cask 'google-drive'
 
