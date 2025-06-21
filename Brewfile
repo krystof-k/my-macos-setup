@@ -107,6 +107,7 @@ cask 'mongodb-compass'
 # - Redis client
 cask 'redisinsight'
 # - Stripe CLI
+tap 'stripe/stripe-cli'
 brew 'stripe/stripe-cli/stripe'
 
 # Fun
