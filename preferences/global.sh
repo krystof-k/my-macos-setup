@@ -39,8 +39,8 @@ message 'Expand save and print panels' 'substep'
 defaults write -g 'NSNavPanelExpandedStateForSaveMode' -bool true
 defaults write -g 'PMPrintingExpandedStateForPrint' -bool true
 
-message 'Switch to a nearest NTP server' 'substep'
-sudo systemsetup -setnetworktimeserver ntp.nic.cz
+# message 'Switch to a nearest NTP server' 'substep'
+# sudo systemsetup -setnetworktimeserver ntp.nic.cz
 
 message 'Add ~/Git to Spotlight exclusions' 'substep'
 sudo /usr/libexec/PlistBuddy -c "Add :Exclusions:0 string '/Users/krystof-k/Git'" /System/Volumes/Data/.Spotlight-V100/VolumeConfiguration.plist
