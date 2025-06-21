@@ -129,8 +129,8 @@ mas 'Wireguard', id: 1451685025
 brew 'wireguard-tools'
 # - Ubiquiti WiFiman
 cask 'wifiman'
-# - remote desktop
-cask 'microsoft-remote-desktop'
+# - Microsoft Windows remote desktop
+cask 'windows-app'
 # - external display brightness control
 cask 'lunar'
 # - FTP client
