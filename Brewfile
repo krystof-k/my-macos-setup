@@ -84,7 +84,8 @@ brew 'gh'
 brew 'nvm'
 # - Python version manager and virtualenv
 brew 'pyenv'
-brew 'pyenv-virtualenv'# - Ruby version manager
+brew 'pyenv-virtualenv'
+# - Ruby version manager
 brew 'rbenv'
 brew 'ruby-build'
 # - AWS CLI + Session Manager plugin
