@@ -95,6 +95,7 @@ if [[ ! $@ =~ --skip-git ]]; then
   message 'Clone the repository into `~/Git/krystof-k/my-macos-setup`' 'step'
   mkdir -p ~/Git/krystof-k
   cd ~/Git/krystof-k
+  ssh-keyscan github.com >> ~/.ssh/known_hosts
   git clone git@github.com:krystof-k/my-macos-setup.git
   cd ./my-macos-setup
 else
