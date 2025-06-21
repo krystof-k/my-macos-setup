@@ -125,6 +125,8 @@ cask 'tunnelblick'
 # - WireGuard
 mas 'Wireguard', id: 1451685025
 brew 'wireguard-tools'
+# - Ubiquiti WiFiman
+cask 'wifiman'
 # - remote desktop
 cask 'microsoft-remote-desktop'
 # - external display brightness control
