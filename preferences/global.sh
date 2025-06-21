@@ -52,7 +52,6 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw \
   --setblockall off \
   --setallowsigned on \
   --setallowsignedapp on \
-  --setloggingmode on \
   --setstealthmode off \
   --setglobalstate on
 
