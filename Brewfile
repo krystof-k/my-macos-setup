@@ -157,6 +157,8 @@ brew 'gnupg'
 cask 'dupeguru'
 # - battery health monitoring
 cask 'coconutbattery'
+# - PostSignum certificate manager
+mas 'iSignum – PostSignum', id: 6502943626
 
 # Browser extensions
 # ------------------
