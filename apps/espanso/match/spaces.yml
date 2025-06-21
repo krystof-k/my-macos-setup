@@ -35,9 +35,6 @@ matches:
   - label: narrow non-breaking space (` `)
     trigger: narrownbsp
     replace: ' '
-  - label: zero non-breaking space (word joiner) (`⁠`)
-    trigger: zeronbsp
-    replace: '⁠'
   - label: tabulation character (`	`)
     trigger: tabsp
     replace: '	'

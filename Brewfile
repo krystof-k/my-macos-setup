@@ -6,7 +6,6 @@ brew 'mas'
 # Essentials
 # ----------
 # – browsers
-cask 'arc'
 cask 'google-chrome'
 cask 'firefox'
 # – archiver
@@ -43,8 +42,6 @@ cask 'messenger'
 cask 'telegram'
 # - Slack
 cask 'slack'
-# - email client
-cask 'thunderbird'
 
 # Office
 # ------
@@ -57,11 +54,10 @@ cask 'microsoft-word'
 cask 'microsoft-excel'
 cask 'microsoft-powerpoint'
 cask 'microsoft-onenote'
-cask 'microsoft-outlook'
 # - Adobe Creative Cloud
 cask 'adobe-creative-cloud'
 # - 3D modeling
-cask 'autodesk-fusion'
+cask 'autodesk-fusion360'
 # - Google Drive
 cask 'google-drive'
 
@@ -82,9 +78,8 @@ cask 'codewhisperer'
 brew 'gh'
 # - Node version manager
 brew 'nvm'
-# - Python version manager and virtualenv
+# - Python version manager
 brew 'pyenv'
-brew 'pyenv-virtualenv'
 # - Ruby version manager
 brew 'rbenv'
 brew 'ruby-build'
@@ -100,15 +95,6 @@ tap 'cloudflare/cloudflare'
 brew 'cloudflare/cloudflare/cloudflared'
 # - Postman
 cask 'postman'
-# - PostgreSQL client
-cask 'postico'
-# - MongoDB client
-cask 'mongodb-compass'
-# - Redis client
-cask 'redisinsight'
-# - Stripe CLI
-tap 'stripe/stripe-cli'
-brew 'stripe/stripe-cli/stripe'
 
 # Fun
 # ---
@@ -141,13 +127,10 @@ cask 'gifox'
 cask 'hazel'
 # - video converter
 brew 'ffmpeg'
-# - JSON processor
-brew 'jq'
-# - encryption
-brew 'gnupg'
 
 # Fonts
 # -----
+tap 'homebrew/cask-fonts'
 cask 'font-bebas-neue'
 cask 'font-exo-2'
 cask 'font-exo'
@@ -176,7 +159,213 @@ cask '1kc-razer'
 # - eObčanka
 cask 'eobcanka'
 # - HP printers
-# cask 'apple-hewlett-packard-printer-drivers'
+cask 'apple-hewlett-packard-printer-drivers'
 # - YubiKey
 cask 'yubico-yubikey-manager'
 brew 'yubico-piv-tool'
+
+# Evaluating
+# ----------
+
+cask 'orbstack'
+cask 'warp'
+cask 'nota'
+cask 'arc'
+brew 'openjdk@11'
+# asi neni treba brew 'python'
+
+# TODO
+# ----
+
+# ==> Formulae
+# apr
+# apr-util
+# autoconf
+# bash
+# c-ares
+# exiftool
+# gdbm
+# check
+# ipython
+# jupyterlab
+# lcdf-typetools
+# liblinear
+# libnghttp2
+# libp11				
+# libsodium
+# libssh2
+# libuv
+# libyaml
+# lua@5.3
+# m4
+# nmap
+# opel@3
+# opensc
+# pandoc
+# pcre
+# pcsc-lite
+# pkg-config
+# pygments
+# python-typing-extensions
+# python@3.10
+# python@3.11
+# python@3.9
+# pyyaml
+# subversion
+# telnet
+# utf8proc
+# zeromq
+# zlib
+
+# ==> Casks
+# aom
+# aribb24
+# brotli
+# ca-certificates
+# cairo
+# cffi
+# cfitsio
+# cgif
+# cjson
+# dav1d
+# docutils
+# fftw
+# flac
+# fontconfig
+# freetype
+# frei0r
+# fribidi
+# gcc
+# gdk-pixbuf
+# gettext
+# ghostscript
+# giflib
+# glib
+# gmp
+# gnutls
+# graphite2
+# harfbuzz
+# hdf5
+# highway
+# hot
+# hwloc
+# icu4c
+# imagemagick
+# imath
+# isl
+# jasper
+# jbig2dec
+# jpeg-turbo
+# jpeg-xl
+# jupyter-notebook-ql
+# lame
+# leptonica
+# libaec
+# libarchive
+# libass
+# libb2
+# libbluray
+# libde265
+# libdicom
+# libevent
+# libexif
+# libgit2
+# libgsf
+# libheif
+# libidn
+# libidn2
+# libimagequant
+# liblqr
+# libmatio
+# libmpc
+# libogg
+# libomp
+# libpng
+# libraw
+# librist
+# librsvg
+# libsamplerate
+# libsndfile
+# libsoxr
+# libspng
+# libtasn1
+# libtiff
+# libtool
+# libunibreak
+# libunistring
+# libvidstab
+# libvmaf
+# libvorbis
+# libvpx
+# libx11
+# libxau
+# libxcb
+# libxdmcp
+# libxext
+# libxml2
+# libxrender
+# little-cms2
+# llvm
+# lz4
+# lzo
+# mbedtls
+# minicom
+# mozjpeg
+# mpdecimal
+# mpfr
+# mpg123
+# ncurses
+# nettle
+# nspr
+# nss
+# open-mpi
+# opencore-amr
+# openexr
+# openjpeg
+# openslide
+# openssl@1.1
+# openssl@3
+# opus
+# orc
+# p11-kit
+# pango
+# pcre2
+# pgadmin4
+# pixman
+# pmix
+# poppler
+# postico
+# powershell
+# pycparser
+# python-certifi
+# python@3.12
+# qlmarkdown
+# rav1e
+# readline
+# rubberband
+# rust
+# sdl2
+# shared-mime-info
+# six
+# snappy
+# speex
+# sqlite
+# srt
+# stats
+# svt-av1
+# syntax-highlight
+# tesseract
+# theora
+# unbound
+# uthash
+# vips
+# webp
+# wireguard-go
+# x264
+# x265
+# xorgproto
+# xvid
+# xz
+# z3
+# zimg
+# zstd

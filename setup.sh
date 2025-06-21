@@ -24,11 +24,6 @@ fi
 message 'Create a clean APFS snapshot' 'step'
 tmutil localsnapshot
 
-if [ ! -f /etc/pam.d/sudo_local ]; then
-  message 'Enable Touch ID for sudo' 'step'
-  sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
-fi
-
 if [[ ! $@ =~ --skip-authentication ]]; then
   message 'Please sign into the App Store manually and press any key to continue' 'step' 'prompt'
   sleep 2
@@ -41,7 +36,7 @@ if [[ ! $@ =~ --skip-authentication ]]; then
   PRIVATE_KEY_FILENAME=`basename $PRIVATE_KEY_PATH`
   message 'Move private key to `~/.ssh`' 'substep'
   mkdir -p ~/.ssh
-  cp $PRIVATE_KEY_PATH ~/.ssh/$PRIVATE_KEY_FILENAME
+  mv $PRIVATE_KEY_PATH ~/.ssh/$PRIVATE_KEY_FILENAME
   chmod 600 ~/.ssh/$PRIVATE_KEY_FILENAME
   message 'Add it to SSH agent' 'substep'
   # -K option is deprecated in favor of --apple-use-keychain since macOS Monterey
@@ -100,7 +95,6 @@ if [[ ! $@ =~ --skip-git ]]; then
   message 'Clone the repository into `~/Git/krystof-k/my-macos-setup`' 'step'
   mkdir -p ~/Git/krystof-k
   cd ~/Git/krystof-k
-  ssh-keyscan github.com >> ~/.ssh/known_hosts
   git clone git@github.com:krystof-k/my-macos-setup.git
   cd ./my-macos-setup
 else
@@ -113,7 +107,7 @@ tmutil localsnapshot
 message 'Install apps'
 
 message 'Install Rosetta' 'step'
-sudo softwareupdate --install-rosetta --agree-to-license
+sudo softwareupdate --install-rosetta
 
 if [[ ! $@ =~ --skip-brew ]]; then
   message 'Install apps from Brewfile' 'step'
@@ -122,43 +116,17 @@ else
   message 'Skipping Homebrew apps installation' 'info'
 fi
 
-if [[ ! $@ =~ --skip-ruby ]]; then
-  message 'Set up Ruby'
-  ./setup/ruby.sh
-else
-  message 'Skipping Ruby setup' 'info'
-fi
+message 'Set up Ruby'
+./setup/ruby.sh
 
 message 'Set up Node.js'
 ./setup/node.sh
-if [[ ! $@ =~ --skip-node-js ]]; then
-  message 'Set up Node.js'
-  ./setup/node.sh
-else
-  message 'Skipping Node.js setup' 'info'
-fi
 
-if [[ ! $@ =~ --skip-python ]]; then
-  message 'Set up Python'
-  ./setup/python.sh
-else
-  message 'Skipping Python setup' 'info'
-fi
+message 'Set up Python'
+./setup/python.sh
 
 message 'Configure global preferences'
 ./preferences/global.sh
 
 message 'Configure keyboard shortcuts'
 ./preferences/keyboard-shortcuts.sh
-
-message 'Configure all apps preferences'
-for script in ./preferences/apps/*; do
-  if [[ -x "$script" ]]; then    
-    "$script"
-  fi
-done
-
-message 'Finishing'
-message 'Clear cache' 'step'
-killall cfprefsd
-message 'Setup complete, please reboot and complete manual steps from to-do.txt after that' 'substep' 'info'

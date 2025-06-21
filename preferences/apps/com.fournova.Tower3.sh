@@ -10,15 +10,9 @@ message 'Checkout branch after creating' 'substep'
 defaults write com.fournova.Tower3 GTUserDefaultsDialogueOptionCheckoutCreatedBranch -bool true
 
 message 'Show icons and text' 'substep'
-if /usr/libexec/PlistBuddy -c 'Print :"NSToolbar Configuration MainWindowToolbar.BigSur":"TB Display Mode"' ~/Library/Preferences/com.fournova.Tower3.plist 2> /dev/null; then
-  /usr/libexec/PlistBuddy -c 'Delete :"NSToolbar Configuration MainWindowToolbar.BigSur":"TB Display Mode" integer' ~/Library/Preferences/com.fournova.Tower3.plist
-fi
 /usr/libexec/PlistBuddy -c 'Add :"NSToolbar Configuration MainWindowToolbar.BigSur":"TB Display Mode" integer 1' ~/Library/Preferences/com.fournova.Tower3.plist
 
 message 'Show create branch button' 'substep'
-if /usr/libexec/PlistBuddy -c 'Print :"NSToolbar Configuration MainWindowToolbar.BigSur":"TB Item Identifiers"' ~/Library/Preferences/com.fournova.Tower3.plist 2> /dev/null; then
-  /usr/libexec/PlistBuddy -c 'Delete :"NSToolbar Configuration MainWindowToolbar.BigSur":"TB Item Identifiers" array' ~/Library/Preferences/com.fournova.Tower3.plist
-fi
 /usr/libexec/PlistBuddy -c 'Add :"NSToolbar Configuration MainWindowToolbar.BigSur":"TB Item Identifiers" array' ~/Library/Preferences/com.fournova.Tower3.plist
 /usr/libexec/PlistBuddy -c 'Add :"NSToolbar Configuration MainWindowToolbar.BigSur":"TB Item Identifiers":0 string NSToolbarFlexibleSpaceItem' ~/Library/Preferences/com.fournova.Tower3.plist
 /usr/libexec/PlistBuddy -c 'Add :"NSToolbar Configuration MainWindowToolbar.BigSur":"TB Item Identifiers":1 string GTToolbarItemGroupIdentifierDashboard' ~/Library/Preferences/com.fournova.Tower3.plist
