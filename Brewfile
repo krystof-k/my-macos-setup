@@ -35,6 +35,8 @@ cask 'mumu-x'
 # - night shift CLI
 tap 'smudge/smudge'
 brew 'smudge/smudge/nightlight'
+# - ChatGPT
+cask 'chatgpt'
 
 # Communication
 # -------------
