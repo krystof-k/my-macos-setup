@@ -135,6 +135,8 @@ cask 'lunar'
 cask 'cyberduck'
 # - OS images USB flasher
 cask 'balenaetcher'
+# - Raspberry Pi OS images USB flasher
+cask 'raspberry-pi-imager'
 # - YouTube video downloader
 brew 'yt-dlp'
 # - GIF recorder
