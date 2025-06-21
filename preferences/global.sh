@@ -44,8 +44,6 @@ defaults write -g 'PMPrintingExpandedStateForPrint' -bool true
 
 message 'Add ~/Git to Spotlight exclusions' 'substep'
 sudo /usr/libexec/PlistBuddy -c "Add :Exclusions:0 string '/Users/krystof-k/Git'" /System/Volumes/Data/.Spotlight-V100/VolumeConfiguration.plist
-sudo launchctl stop com.apple.metadata.mds
-sudo launchctl start com.apple.metadata.mds
 
 message 'Enable firewall' 'substep'
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw \
