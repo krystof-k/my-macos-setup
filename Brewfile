@@ -155,6 +155,8 @@ brew 'yq'
 brew 'gnupg'
 # - files deduplication
 cask 'dupeguru'
+# - image processor
+brew 'imagemagick'
 # - battery health monitoring
 cask 'coconutbattery'
 # - PostSignum certificate manager
