@@ -147,6 +147,8 @@ brew 'jq'
 brew 'gnupg'
 # - files deduplication
 cask 'dupeguru'
+# - battery health monitoring
+cask 'coconutbattery'
 
 # Fonts
 # -----
