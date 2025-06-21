@@ -117,6 +117,8 @@ cask 'spotify'
 # - media players
 cask 'iina'
 cask 'vlc'
+# - games
+cask 'steam'
 
 # Utilities
 # ---------
