@@ -107,7 +107,7 @@ tmutil localsnapshot
 message 'Install apps'
 
 message 'Install Rosetta' 'step'
-sudo softwareupdate --install-rosetta
+sudo softwareupdate --install-rosetta --agree-to-license
 
 if [[ ! $@ =~ --skip-brew ]]; then
   message 'Install apps from Brewfile' 'step'
