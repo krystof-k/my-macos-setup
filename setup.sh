@@ -24,6 +24,11 @@ fi
 message 'Create a clean APFS snapshot' 'step'
 tmutil localsnapshot
 
+if [ ! -f /etc/pam.d/sudo_local ]; then
+  message 'Enable Touch ID for sudo' 'step'
+  sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
+fi
+
 if [[ ! $@ =~ --skip-authentication ]]; then
   message 'Please sign into the App Store manually and press any key to continue' 'step' 'prompt'
   sleep 2
