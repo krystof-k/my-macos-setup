@@ -102,7 +102,7 @@ cask 'postico'
 # - MongoDB client
 cask 'mongodb-compass'
 # - Redis client
-cask 'redisinsight'
+cask 'redis-insight'
 # - Stripe CLI
 tap 'stripe/stripe-cli'
 brew 'stripe/stripe-cli/stripe'
