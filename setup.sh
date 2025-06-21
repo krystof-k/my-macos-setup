@@ -36,7 +36,7 @@ if [[ ! $@ =~ --skip-authentication ]]; then
   PRIVATE_KEY_FILENAME=`basename $PRIVATE_KEY_PATH`
   message 'Move private key to `~/.ssh`' 'substep'
   mkdir -p ~/.ssh
-  mv $PRIVATE_KEY_PATH ~/.ssh/$PRIVATE_KEY_FILENAME
+  cp $PRIVATE_KEY_PATH ~/.ssh/$PRIVATE_KEY_FILENAME
   chmod 600 ~/.ssh/$PRIVATE_KEY_FILENAME
   message 'Add it to SSH agent' 'substep'
   # -K option is deprecated in favor of --apple-use-keychain since macOS Monterey
