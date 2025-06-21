@@ -158,6 +158,11 @@ cask 'dupeguru'
 # - battery health monitoring
 cask 'coconutbattery'
 
+# Browser extensions
+# ------------------
+# - price checker
+mas 'Hlídač Shopů', id: 1488295734
+
 # Fonts
 # -----
 cask 'font-bebas-neue'
