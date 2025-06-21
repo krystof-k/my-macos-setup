@@ -6,7 +6,6 @@ brew 'mas'
 # Essentials
 # ----------
 # – browsers
-cask 'arc'
 cask 'google-chrome'
 cask 'firefox'
 # – archiver
