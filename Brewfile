@@ -15,6 +15,8 @@ cask 'keka'
 mas 'Bitwarden', id: 1352778147
 # - prevent sleep
 mas 'Coca', id: 1000808993
+# - prevent battery overcharge
+cask 'aldente'
 
 # Productivity
 # ------------
