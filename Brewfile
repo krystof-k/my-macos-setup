@@ -147,6 +147,8 @@ cask 'hazel'
 brew 'ffmpeg'
 # - JSON processor
 brew 'jq'
+# - YAML processor
+brew 'yq'
 # - encryption
 brew 'gnupg'
 # - files deduplication
