@@ -94,8 +94,7 @@ brew 'cfn-lint'
 # - Google Cloud SDK
 cask 'google-cloud-sdk'
 # - Cloudflare Tunnel
-tap 'cloudflare/cloudflare'
-brew 'cloudflare/cloudflare/cloudflared'
+brew 'cloudflared'
 # - Postman
 cask 'postman'
 # - PostgreSQL client
