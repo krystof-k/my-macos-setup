@@ -148,7 +148,6 @@ brew 'gnupg'
 
 # Fonts
 # -----
-tap 'homebrew/cask-fonts'
 cask 'font-bebas-neue'
 cask 'font-exo-2'
 cask 'font-exo'
