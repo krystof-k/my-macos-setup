@@ -37,13 +37,17 @@ defaults write -g 'AppleShowAllExtensions' -bool true
 
 message 'Expand save and print panels' 'substep'
 defaults write -g 'NSNavPanelExpandedStateForSaveMode' -bool true
+# TODO defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
 defaults write -g 'PMPrintingExpandedStateForPrint' -bool true
+# TODO defaults write -g PMPrintingExpandedStateForPrint2 -bool true
 
-# message 'Switch to a nearest NTP server' 'substep'
-# sudo systemsetup -setnetworktimeserver ntp.nic.cz
+message 'Switch to a nearest NTP server' 'substep'
+sudo systemsetup -setnetworktimeserver ntp.nic.cz
 
 message 'Add ~/Git to Spotlight exclusions' 'substep'
 sudo /usr/libexec/PlistBuddy -c "Add :Exclusions:0 string '/Users/krystof-k/Git'" /System/Volumes/Data/.Spotlight-V100/VolumeConfiguration.plist
+sudo launchctl stop com.apple.metadata.mds
+sudo launchctl start com.apple.metadata.mds
 
 message 'Enable firewall' 'substep'
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw \
@@ -53,22 +57,93 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw \
   --setstealthmode off \
   --setglobalstate on
 
-message 'Turn off display after 3 minutes' 'substep'
-sudo pmset -a displaysleep 3
+message 'Manually set ask for password delay to 5 seconds' 'substep' 'to-do'
+message 'Manually turn on encryption' 'substep' 'to-do'
 
-message 'Sleep after 3 minutes on battery' 'substep'
-sudo pmset -b sleep 3
+message 'Turn off display after 1 minute' 'substep'
+sudo pmset -a displaysleep 1
+
+message 'Sleep after 2 minutes on battery' 'substep'
+sudo pmset -b sleep 2
 
 message 'Sleep after 30 minutes on power' 'substep'
 sudo pmset -c sleep 30
 
-message 'Set computer name'
-sudo scutil --set ComputerName "Kryštof’s MacBook Pro"
-
-message 'Set hostname'
-sudo scutil --set LocalHostName krystofs-macbook-pro
 
 message 'Manually set keyboard backlight limit to 30 seconds' 'substep' 'to-do'
 message 'Manually disable Caps Lock for all keyboards' 'substep' 'to-do'
-message 'Manually set ask for password delay to 5 seconds' 'substep' 'to-do'
-message 'Manually turn on encryption' 'substep' 'to-do'
+
+# TODO
+# ↓ ↓ ↓ ↓ ↓ 
+
+
+
+
+# manually downloads column view & group by date added
+
+# manually set auto backlight and 10s timeout
+
+
+
+
+
+# # Increase window resize speed
+# defaults write NSGlobalDomain NSWindowResizeTime -float 0.01
+
+
+# # Don't offer new disks for TimeMachine backup
+# defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+
+# # Display host info after clicking clock on login screen
+# sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+# sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo IPAddress
+
+
+
+# defaults write -g com.apple.swipescrolldirection -bool true
+
+
+
+
+# scutil --set ComputerName "Kryštof's MacBook Pro"
+# scutil --set LocalHostName krystofs-macbook-pro
+# scutil --set HostName krystofs-macbook-pro
+# dscacheutil -flushcache
+
+# # Rename computer
+# sudo systemsetup -setcomputername "Kryštof's MacBook Pro"
+# sudo systemsetup -setlocalsubnetname "krystofs-macbook-pro"
+
+
+
+# # completeion
+# tee -a ~/.zshrc << END > /dev/null
+# if type brew &>/dev/null
+# then
+#   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+#   autoload -Uz compinit
+#   compinit
+# fi
+# END
+
+
+# cat ~/Library/Application\ Support/Code/User/settings.json 
+
+
+# # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html
+
+# aws configure --profile xyxy set aws_access_key_id `tail -1 ~/Downloads/krystof.korb_accessKeys.csv | cut -d ',' -f1`
+# aws configure --profile xyxy set aws_secret_access_key `tail -1 ~/Downloads/krystof.korb_accessKeys.csv | cut -d ',' -f2`
+# aws configure --profile xyxy set region eu-central-1
+# aws configure --profile xyxy set output yaml
+# # export AWS_PROFILE=xyxy
+
+# python3 -m pip install --upgrade setuptools
+# python3 -m pip install --upgrade pip
+
+
+
+
+
