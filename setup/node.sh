@@ -5,7 +5,9 @@ set -e # exit on any error
 source "$(dirname $0)/../utilities/message.sh"
 
 message 'Set up Node version manager' 'step'
-message "Currently using Node.js (`node --version`) at \``which node`\`" 'substep' 'info'
+if command -v node >/dev/null 2>&1; then
+  message "Currently using Node.js (`node --version`) at \``which node`\`" 'substep' 'info'
+fi
 message 'Add NVM to ~/.zprofile' 'substep'
 mkdir -p ~/.nvm
 echo '# Node version manager' >> ~/.zprofile
