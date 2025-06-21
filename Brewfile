@@ -180,3 +180,5 @@ cask 'eobcanka'
 # - YubiKey
 cask 'yubico-yubikey-manager'
 brew 'yubico-piv-tool'
+# USB to serial driver
+cask 'wch-ch34x-usb-serial-driver'
