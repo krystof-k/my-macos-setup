@@ -30,8 +30,6 @@ cask 'espanso'
 cask 'maccy'
 # - easier drag'n'drop
 mas 'Dropover', id: 1355679052
-# - emoji picker
-cask 'mumu-x'
 # - night shift CLI
 tap 'smudge/smudge'
 brew 'smudge/smudge/nightlight'
