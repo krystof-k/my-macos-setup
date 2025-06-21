@@ -170,7 +170,7 @@ cask 'font-yrsa'
 # Drivers
 # -------
 # - Logitech Options+
-cask 'logi-options-plus'
+cask 'logi-options+'
 # - Razer RGB control
 cask '1kc-razer'
 # - eObčanka
