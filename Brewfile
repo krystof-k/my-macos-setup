@@ -143,6 +143,8 @@ brew 'ffmpeg'
 brew 'jq'
 # - encryption
 brew 'gnupg'
+# - files deduplication
+cask 'dupeguru'
 
 # Fonts
 # -----
