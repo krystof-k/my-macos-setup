@@ -177,7 +177,7 @@ cask '1kc-razer'
 # - eObčanka
 cask 'eobcanka'
 # - HP printers
-cask 'apple-hewlett-packard-printer-drivers'
+# cask 'apple-hewlett-packard-printer-drivers'
 # - YubiKey
 cask 'yubico-yubikey-manager'
 brew 'yubico-piv-tool'
