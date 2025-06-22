@@ -2,8 +2,7 @@
 
 set -e # exit on any error
 
-# Download the ./utilities/message.sh file if not running inside a Git repository
-if ! git rev-parse --git-dir > /dev/null 2>&1; then
+if [ ! -f ./utilities/message.sh ]; then
   message=$(curl -fsSL -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/krystof-k/my-macos-setup/main/utilities/message.sh)
   eval "$message"
 else
