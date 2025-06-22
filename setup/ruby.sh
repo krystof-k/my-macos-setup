@@ -12,6 +12,6 @@ echo 'eval "$(rbenv init -)"' >> ~/.zprofile
 echo '' >> ~/.zprofile
 message 'Reload .zprofile' 'substep'
 source ~/.zprofile
-rbenv install 3.2.2
-rbenv global 3.2.2
+rbenv install 3.4.4
+rbenv global 3.4.4
 message "Currently using Ruby (`ruby --version`) at \``which ruby`\`" 'substep' 'info'
