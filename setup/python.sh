@@ -14,9 +14,9 @@ echo 'eval "$(pyenv init -)"' >> ~/.zprofile
 echo '' >> ~/.zprofile
 message 'Reload .zprofile' 'substep'
 source ~/.zprofile
-message 'Install Python 3.12' 'substep'
-pyenv install 3.12
-pyenv global 3.12
+message 'Install Python 3.13' 'substep'
+pyenv install 3.13
+pyenv global 3.13
 message "Currently using Python (`python3 --version`) at \``which python3`\`" 'substep' 'info'
 
 message 'Upgrade pip3' 'step'
