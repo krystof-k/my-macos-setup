@@ -20,8 +20,6 @@ cask 'aldente'
 
 # Productivity
 # ------------
-# - window management
-cask 'rectangle'
 # - clean-up menu bar
 cask 'bartender'
 # - text expander
