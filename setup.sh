@@ -76,7 +76,7 @@ fi
 
 if [[ ! $@ =~ --skip-homebrew-install ]]; then
   message 'Install Homebrew' 'step'
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   message 'Add Homebrew to PATH' 'substep'
   echo '# Homebrew' >> ~/.zprofile
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
