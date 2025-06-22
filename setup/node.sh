@@ -17,8 +17,8 @@ echo 'source $(brew --prefix nvm)/etc/bash_completion.d/nvm' >> ~/.zprofile
 echo '' >> ~/.zprofile
 message 'Reload .zprofile' 'substep'
 source ~/.zprofile
-message 'Install Node.js 21' 'substep'
-nvm install 21
+message 'Install Node.js 22' 'substep'
+nvm install 22
 message "Currently using Node.js (`node --version`) at \``which node`\`" 'substep' 'info'
 
 message 'Install Yarn' 'step'
