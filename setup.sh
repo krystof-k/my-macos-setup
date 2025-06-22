@@ -25,7 +25,7 @@ tmutil localsnapshot
 
 if [ ! -f /etc/pam.d/sudo_local ]; then
   message 'Enable Touch ID for sudo' 'step'
-  sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
+  sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local > /dev/null
 fi
 
 if [[ ! $@ =~ --skip-authentication ]]; then
