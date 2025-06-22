@@ -21,5 +21,8 @@ message 'Install Node.js 22' 'substep'
 nvm install 22
 message "Currently using Node.js (`node --version`) at \``which node`\`" 'substep' 'info'
 
+message 'Update npm' 'step'
+npm install -g npm@latest
+
 message 'Install Yarn' 'step'
 npm install --global yarn
