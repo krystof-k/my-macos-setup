@@ -15,6 +15,7 @@ Just copy-paste this into your freshly installed Mac's terminal 🚀
 | `--skip-ruby` | Skip Ruby version manager setup |
 | `--skip-node-js` | Skip Node.js version manager setup |
 | `--skip-python` | Skip Python version manager setup |
+| `--skip-docker` | Skip Docker setup |
 
 ## Encryption
 

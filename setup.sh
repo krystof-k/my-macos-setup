@@ -142,6 +142,13 @@ else
   message 'Skipping Python setup' 'info'
 fi
 
+if [[ ! $@ =~ --skip-docker ]]; then
+  message 'Set up Docker'
+  ./setup/docker.sh
+else
+  message 'Skipping Docker setup' 'info'
+fi
+
 message 'Configure global preferences'
 ./preferences/global.sh
 
