@@ -24,8 +24,6 @@ cask 'aldente'
 cask 'bartender'
 # - text expander
 cask 'espanso'
-# - clipboard manager
-cask 'maccy'
 # - easier drag'n'drop
 mas 'Dropover', id: 1355679052
 # - night shift CLI
