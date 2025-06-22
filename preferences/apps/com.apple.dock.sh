@@ -28,11 +28,5 @@ defaults write com.apple.dock 'mru-spaces' -bool false
 message 'Enable App Exposé gesture' 'substep'
 defaults write com.apple.dock 'showAppExposeGestureEnabled' -bool true
 
-# Launchpad
-
-message 'Set launchpad layout to 4 × 5' 'substep'
-defaults write com.apple.dock springboard-columns -int 4
-defaults write com.apple.dock springboard-rows -int 5
-
 message 'Restart dock' 'substep'
 killall Dock
