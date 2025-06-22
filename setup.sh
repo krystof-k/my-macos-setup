@@ -128,7 +128,6 @@ else
   message 'Skipping Ruby setup' 'info'
 fi
 
-message 'Set up Node.js'
 if [[ ! $@ =~ --skip-node-js ]]; then
   message 'Set up Node.js'
   ./setup/node.sh
