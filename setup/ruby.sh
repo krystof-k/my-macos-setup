@@ -15,3 +15,9 @@ source ~/.zprofile
 rbenv install 3.4.4
 rbenv global 3.4.4
 message "Currently using Ruby (`ruby --version`) at \``which ruby`\`" 'substep' 'info'
+
+message 'Update Ruby Gems' 'step'
+gem update --system
+
+message 'Install Standard Ruby' 'step'
+gem install standard
