@@ -40,6 +40,8 @@ cask 'messenger'
 cask 'telegram'
 # - Slack
 cask 'slack'
+# - Matrix
+cask 'element'
 
 # Office
 # ------
