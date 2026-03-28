@@ -72,8 +72,6 @@ cask 'visual-studio-code'
 cask 'docker-desktop'
 # - Git client
 cask 'tower'
-# - CLI autocomplete
-cask 'amazon-q'
 # - GitHub CLI
 brew 'gh'
 # - Node version manager
