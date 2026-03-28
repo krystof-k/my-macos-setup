@@ -83,11 +83,6 @@ else
 fi
 
 message 'Clone repository' 'step'
-# shellcheck disable=SC2016
-message 'Ensure GitHub is in `~/.ssh/known_hosts`' 'substep'
-if ! grep -q 'github.com' ~/.ssh/known_hosts 2>/dev/null; then
-  ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
-fi
 repository_directory="$HOME/Git/krystof-k/my-macos-setup"
 if [[ -d "$repository_directory" ]]; then
   message 'Repository already cloned' 'substep' 'info'
@@ -95,7 +90,7 @@ else
   # shellcheck disable=SC2016
   message 'Clone repository to `~/Git/krystof-k/my-macos-setup`' 'substep'
   mkdir -p ~/Git/krystof-k
-  git clone git@github.com:krystof-k/my-macos-setup.git "$repository_directory"
+  git clone https://github.com/krystof-k/my-macos-setup.git "$repository_directory"
 fi
 cd "$repository_directory"
 [[ -d .my-macos-setup ]] || mv "$OLDPWD/.my-macos-setup" . 2>/dev/null || mkdir -p .my-macos-setup
