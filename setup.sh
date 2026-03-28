@@ -71,18 +71,14 @@ source "$repository_directory/steps/python.sh"
 # shellcheck disable=SC1091
 source "$repository_directory/steps/docker.sh"
 
-message 'Configure global preferences'
-./preferences/global.sh
+# shellcheck disable=SC1091
+source "$repository_directory/steps/global-preferences.sh"
 
-message 'Configure keyboard shortcuts'
-./preferences/keyboard-shortcuts.sh
+# shellcheck disable=SC1091
+source "$repository_directory/steps/keyboard-shortcuts.sh"
 
-message 'Configure all apps preferences'
-for script in ./preferences/apps/*; do
-  if [[ -x "$script" ]]; then    
-    "$script"
-  fi
-done
+# shellcheck disable=SC1091
+source "$repository_directory/steps/app-preferences.sh"
 
 message 'Finishing'
 message 'Clear cache' 'step'

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -e # exit on any error
+
+script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck disable=SC1091
+source "$script_directory/../utilities/message.sh"
+
+message 'Configure all apps preferences'
+
+for script in "$script_directory/../preferences/apps/"*; do
+  if [[ -x "$script" ]]; then
+    "$script"
+  fi
+done
