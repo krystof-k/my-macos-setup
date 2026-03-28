@@ -13,7 +13,7 @@ git config --global user.name 'Kryštof Korb'
 git config --global user.email 'krystof@korb.cz'
 
 message 'Add global .gitignore' 'substep'
-cp .gitignore.global ~/.gitignore
+cp "$script_directory/../../.gitignore.global" ~/.gitignore
 git config --global core.excludesfile ~/.gitignore
 
 message 'Use origin for branches without tracking upstream' 'substep'
