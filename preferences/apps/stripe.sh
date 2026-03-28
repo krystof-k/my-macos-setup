@@ -14,7 +14,10 @@ mkdir -p ~/.stripe
 mv stripe-completion.zsh ~/.stripe
 
 message 'Add it to PATH' 'substep'
-echo '# Stripe CLI autocompletion' >> ~/.zprofile
-echo 'fpath=(~/.stripe $fpath)"' >> ~/.zprofile
-echo 'autoload -Uz compinit && compinit -i' >> ~/.zprofile
-echo '' >> ~/.zprofile
+# shellcheck disable=SC2016
+{
+  echo '# Stripe CLI autocompletion'
+  echo 'fpath=(~/.stripe $fpath)'
+  echo 'autoload -Uz compinit && compinit -i'
+  echo ''
+} >> ~/.zprofile
