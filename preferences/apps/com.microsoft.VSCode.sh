@@ -9,4 +9,4 @@ source "$script_directory/../../utilities/message.sh"
 message 'Configure Visual Studio Code' 'step'
 
 message 'Install extensions' 'substep'
-bash "$(dirname $0)/../../apps/visual-studio-code/install-extensions.sh"
+bash "$script_directory/../../apps/visual-studio-code/install-extensions.sh"

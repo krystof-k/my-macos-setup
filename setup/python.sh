@@ -31,4 +31,4 @@ pip3 install --upgrade pip
 message "Currently using pip ($(pip3 --version)) at \`$(which pip3)\`" 'substep' 'info'
 
 message 'Install Python packages' 'step'
-pip3 install -r "$(dirname $0)/../apps/python/requirements.txt"
+pip3 install -r "$script_directory/../apps/python/requirements.txt"

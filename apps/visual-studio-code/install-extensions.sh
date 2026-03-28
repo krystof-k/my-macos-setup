@@ -12,4 +12,4 @@ while IFS= read -r line || [[ -n "$line" ]]; do
   fi
   
   code --install-extension "$line"
-done < "$(dirname $0)/extensions.txt"
+done < "$script_directory/extensions.txt"
