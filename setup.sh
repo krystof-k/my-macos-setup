@@ -81,7 +81,7 @@ source "$repository_directory/stages/keyboard-shortcuts.sh"
 source "$repository_directory/stages/app-preferences.sh"
 
 message 'Finishing'
-message 'Clear cache' 'step'
-killall cfprefsd
+message 'Reload preferences cache' 'step'
+killall -HUP cfprefsd
 
 setup_footer
