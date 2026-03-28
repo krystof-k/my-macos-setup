@@ -10,7 +10,7 @@ source "$script_directory/../utilities/idempotent.sh"
 # shellcheck disable=SC1091
 source "$script_directory/../utilities/run.sh"
 
-node_version="${1:-22.22.2}"
+node_version="${1:-24.14.1}"
 
 message 'Set up Node.js'
 
