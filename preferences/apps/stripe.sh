@@ -1,12 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e # exit on any error
 
-script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck disable=SC1091
-source "$script_directory/../../utilities/message.sh"
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../utilities/message.sh"
 # shellcheck disable=SC1091
-source "$script_directory/../../utilities/idempotent.sh"
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../utilities/idempotent.sh"
 
 message 'Set up autocompletion for Stripe CLI' 'step'
 

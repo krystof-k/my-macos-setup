@@ -1,10 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e # exit on any error
 
-script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck disable=SC1091
-source "$script_directory/../utilities/message.sh"
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../utilities/message.sh"
 
 message 'Set Windows-like (option ⌥ + tab ⇥) keyboard shortcut for switching app windows' 'step'
 /usr/libexec/PlistBuddy -c 'Delete :AppleSymbolicHotKeys:27' ~/Library/Preferences/com.apple.symbolichotkeys.plist 2>/dev/null || true

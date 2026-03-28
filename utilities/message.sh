@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 BOLD=$(tput bold)
 RED=$(tput setaf 1)
@@ -22,6 +22,7 @@ _increment_step_count() {
 }
 
 setup_header() {
+  rm -f "$_msg_counter_file"
   _msg_start_time=$(date +%s)
   echo ""
   echo -e "${BOLD} My macOS setup${RESET}"
