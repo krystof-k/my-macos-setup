@@ -2,7 +2,6 @@
 
 set -e # exit on any error
 
-script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 if [ ! -f ./utilities/message.sh ]; then
   message=$(curl -fsSL -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/krystof-k/my-macos-setup/main/utilities/message.sh)
   eval "$message"
@@ -101,25 +100,25 @@ fi
 cd "$repository_directory"
 
 # shellcheck disable=SC1091
-source "$script_directory/steps/homebrew.sh"
+source "$repository_directory/steps/homebrew.sh"
 
 message 'Create an APFS snapshot before installing apps' 'step'
 tmutil localsnapshot
 
 # shellcheck disable=SC1091
-source "$script_directory/steps/apps.sh"
+source "$repository_directory/steps/apps.sh"
 
 # shellcheck disable=SC1091
-source "$script_directory/steps/ruby.sh"
+source "$repository_directory/steps/ruby.sh"
 
 # shellcheck disable=SC1091
-source "$script_directory/steps/node.sh"
+source "$repository_directory/steps/node.sh"
 
 # shellcheck disable=SC1091
-source "$script_directory/steps/python.sh"
+source "$repository_directory/steps/python.sh"
 
 # shellcheck disable=SC1091
-source "$script_directory/steps/docker.sh"
+source "$repository_directory/steps/docker.sh"
 
 message 'Configure global preferences'
 ./preferences/global.sh
