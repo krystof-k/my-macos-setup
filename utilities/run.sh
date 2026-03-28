@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck disable=SC1091
-source "$script_directory/message.sh"
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/message.sh"
 
 run() {
   local text="$1"
