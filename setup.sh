@@ -57,7 +57,8 @@ git remote set-url origin git@github.com:krystof-k/my-macos-setup.git
 # shellcheck disable=SC1091
 source "$repository_directory/stages/homebrew.sh"
 
-run 'Create an APFS snapshot before installing apps' tmutil localsnapshot
+message 'Checkpoint'
+run 'Create APFS snapshot' tmutil localsnapshot
 
 # shellcheck disable=SC1091
 source "$repository_directory/stages/apps.sh"
