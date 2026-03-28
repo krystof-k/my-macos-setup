@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 BOLD=$(tput bold)
 RED=$(tput setaf 1)
