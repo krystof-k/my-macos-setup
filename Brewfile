@@ -108,6 +108,8 @@ brew 'stripe/stripe-cli/stripe'
 brew 'cmake'
 # - shell script linter
 brew 'shellcheck'
+# - AI coding assistant
+cask 'claude-code'
 
 # Fun
 # ---
@@ -156,6 +158,8 @@ brew 'gnupg'
 cask 'dupeguru'
 # - image processor
 brew 'imagemagick'
+# - PDF processor
+brew 'ghostscript'
 # - battery health monitoring
 cask 'coconutbattery'
 # - PostSignum certificate manager
