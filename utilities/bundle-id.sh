@@ -8,7 +8,7 @@ source "$script_directory/message.sh"
 
 # Create folder for the diff
 message 'Insert app name:' 'prompt'
-read NAME
+read -r NAME
 
 # Retrieve bundle ID
 BUNDLE_ID=$(osascript -e "id of app \"$NAME\"")

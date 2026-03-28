@@ -8,7 +8,7 @@ source "$script_directory/message.sh"
 
 # Create folder for the diff
 message 'Insert diff name:' 'prompt'
-read NAME
+read -r NAME
 mkdir -p "diffs/$NAME"
 
 # Read and save existing values

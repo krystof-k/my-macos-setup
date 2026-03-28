@@ -36,7 +36,7 @@ if [[ ! $@ =~ --skip-authentication ]]; then
 
   message 'Add private key' 'step'
   message 'Enter absolute path to your private key' 'substep' 'prompt'
-  read PRIVATE_KEY_PATH
+  read -r PRIVATE_KEY_PATH
   PRIVATE_KEY_FILENAME=$(basename "$PRIVATE_KEY_PATH")
   # shellcheck disable=SC2016
   message 'Move private key to `~/.ssh`' 'substep'
@@ -60,9 +60,9 @@ END
 
   message 'Add GitHub Packages token' 'step'
   message 'Enter GitHub Packages token' 'substep' 'prompt'
-  read GITHUB_PACKAGES_TOKEN
+  read -r GITHUB_PACKAGES_TOKEN
   message 'Enter GitHub Packages token username' 'substep' 'prompt'
-  read GITHUB_PACKAGES_TOKEN_USERNAME
+  read -r GITHUB_PACKAGES_TOKEN_USERNAME
   # shellcheck disable=SC2016
   message 'Add token to `~/.zshenv`' 'substep'
   tee -a ~/.zshenv << END
