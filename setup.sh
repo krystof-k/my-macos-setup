@@ -83,9 +83,6 @@ else
   message 'Skipping authentication' 'info'
 fi
 
-# shellcheck disable=SC1091
-source "$script_directory/steps/homebrew.sh"
-
 message 'Clone repository' 'step'
 # shellcheck disable=SC2016
 message 'Ensure GitHub is in `~/.ssh/known_hosts`' 'substep'
@@ -102,6 +99,9 @@ else
   git clone git@github.com:krystof-k/my-macos-setup.git "$repository_directory"
 fi
 cd "$repository_directory"
+
+# shellcheck disable=SC1091
+source "$script_directory/steps/homebrew.sh"
 
 message 'Create an APFS snapshot before installing apps' 'step'
 tmutil localsnapshot
