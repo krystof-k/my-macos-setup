@@ -20,8 +20,6 @@ cask 'aldente'
 
 # Productivity
 # ------------
-# - clean-up menu bar
-cask 'bartender'
 # - text expander
 cask 'espanso'
 # - easier drag'n'drop
