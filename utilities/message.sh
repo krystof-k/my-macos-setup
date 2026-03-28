@@ -15,13 +15,13 @@ if [[ -z "${_msg_counter_file:-}" ]]; then
 fi
 
 _increment_step_count() {
+  mkdir -p .setup
   local count=0
   [[ -f "$_msg_counter_file" ]] && count=$(cat "$_msg_counter_file")
   echo $(( count + 1 )) > "$_msg_counter_file"
 }
 
 setup_header() {
-  mkdir -p .setup
   _msg_start_time=$(date +%s)
   echo ""
   echo -e "${BOLD} My macOS setup${RESET}"
