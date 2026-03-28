@@ -160,6 +160,8 @@ brew 'imagemagick'
 cask 'coconutbattery'
 # - PostSignum certificate manager
 mas 'iSignum – PostSignum', id: 6502943626
+# - Remote access
+cask 'teamviewer'
 
 # Browser extensions
 # ------------------
