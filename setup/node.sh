@@ -21,6 +21,7 @@ mkdir -p ~/.nvm
   echo ''
 } >> ~/.zprofile
 message 'Reload .zprofile' 'substep'
+# shellcheck disable=SC1090
 source ~/.zprofile
 message 'Install Node.js 22' 'substep'
 nvm install 22

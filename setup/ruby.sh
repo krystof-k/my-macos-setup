@@ -16,6 +16,7 @@ message 'Add rbenv to ~/.zprofile' 'substep'
   echo ''
 } >> ~/.zprofile
 message 'Reload .zprofile' 'substep'
+# shellcheck disable=SC1090
 source ~/.zprofile
 rbenv install 3.4.4
 rbenv global 3.4.4

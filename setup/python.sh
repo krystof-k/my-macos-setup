@@ -18,6 +18,7 @@ message 'Add pyenv to ~/.zprofile' 'substep'
   echo ''
 } >> ~/.zprofile
 message 'Reload .zprofile' 'substep'
+# shellcheck disable=SC1090
 source ~/.zprofile
 message 'Install Python 3.13' 'substep'
 pyenv install 3.13

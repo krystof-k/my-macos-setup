@@ -71,6 +71,7 @@ export GITHUB_PACKAGES_TOKEN=${GITHUB_PACKAGES_TOKEN}
 export GITHUB_PACKAGES_TOKEN_USERNAME=${GITHUB_PACKAGES_TOKEN_USERNAME}
 END
   message 'Reload .zshenv' 'substep'
+  # shellcheck disable=SC1090
   source ~/.zshenv
   message 'Add token to ~/.npmrc' 'substep'
   # shellcheck disable=SC2016
@@ -90,6 +91,7 @@ if [[ ! $@ =~ --skip-homebrew-install ]]; then
   echo 'HOMEBREW_CURL_RETRIES=10' >> ~/.zprofile
   echo '' >> ~/.zprofile
   message 'Reload .zprofile' 'substep'
+  # shellcheck disable=SC1090
   source ~/.zprofile
 else
   message 'Skipping Homebrew installation' 'info'
