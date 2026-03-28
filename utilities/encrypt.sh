@@ -2,7 +2,9 @@
 
 set -e # exit on any error
 
-source "$(dirname $0)/message.sh"
+script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck disable=SC1091
+source "$script_directory/message.sh"
 
 message 'Encrypt safe' 'step'
 
