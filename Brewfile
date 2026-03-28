@@ -56,6 +56,8 @@ cask 'microsoft-onenote'
 cask 'adobe-creative-cloud'
 # - 3D modeling
 cask 'autodesk-fusion'
+# – 3D printing
+cask 'prusaslicer'
 # - Google Drive
 cask 'google-drive'
 
