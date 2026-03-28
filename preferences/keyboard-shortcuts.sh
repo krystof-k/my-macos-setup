@@ -7,7 +7,7 @@ script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$script_directory/../utilities/message.sh"
 
 message 'Set Windows-like (option ⌥ + tab ⇥) keyboard shortcut for switching app windows' 'step'
-/usr/libexec/PlistBuddy -c 'Delete :AppleSymbolicHotKeys:27 dict' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c 'Delete :AppleSymbolicHotKeys:27' ~/Library/Preferences/com.apple.symbolichotkeys.plist 2>/dev/null || true
 /usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27 dict' ~/Library/Preferences/com.apple.symbolichotkeys.plist
 /usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:enabled bool true' ~/Library/Preferences/com.apple.symbolichotkeys.plist
 /usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value dict' ~/Library/Preferences/com.apple.symbolichotkeys.plist

@@ -12,8 +12,10 @@ message 'Set grouping by date added as default' 'substep'
 defaults write com.apple.finder 'FXPreferredGroupBy' -string 'Date Added'
 
 message 'Calculate folder sizes' 'substep'
-/usr/libexec/PlistBuddy -c 'Set :StandardViewSettings:ExtendedListViewSettingsV2:calculateAllSizes bool true' ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c 'Set :StandardViewSettings:ListViewSettings:calculateAllSizes bool true' ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c 'Delete :StandardViewSettings:ExtendedListViewSettingsV2:calculateAllSizes' ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
+/usr/libexec/PlistBuddy -c 'Add :StandardViewSettings:ExtendedListViewSettingsV2:calculateAllSizes bool true' ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c 'Delete :StandardViewSettings:ListViewSettings:calculateAllSizes' ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || true
+/usr/libexec/PlistBuddy -c 'Add :StandardViewSettings:ListViewSettings:calculateAllSizes bool true' ~/Library/Preferences/com.apple.finder.plist
 
 message 'Set column view style as default' 'substep'
 defaults write com.apple.finder 'FXPreferredViewStyle' -string 'clmv'
@@ -57,4 +59,4 @@ message 'Hide removable media on desktop' 'substep'
 defaults write com.apple.finder 'ShowRemovableMediaOnDesktop' -bool false
 
 message 'Restart Finder' 'substep'
-killall Finder
+killall Finder 2>/dev/null || true

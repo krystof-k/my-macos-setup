@@ -74,7 +74,9 @@ message() {
       echo -e "${GRAY_DARK}│${RESET}  ${GRAY_LIGHT}${text}${RESET}"
     elif [[ "$modifier" == 'to-do' ]]; then
       echo -e "${GRAY_DARK}│${RESET}  ${YELLOW}○${RESET} ${text} ${GRAY_DARK}(added to to-do list)${RESET}"
-      echo "○ ${text}" >> ./to-do.txt
+      if ! grep -qF "$text" ./to-do.txt 2>/dev/null; then
+        echo "○ ${text}" >> ./to-do.txt
+      fi
     else
       echo -e "${GRAY_DARK}│${RESET}  ${GRAY_MED}·${RESET} ${GRAY_LIGHT}${text}${RESET}"
     fi

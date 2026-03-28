@@ -31,4 +31,4 @@ message 'Enable App Exposé gesture' 'substep'
 defaults write com.apple.dock 'showAppExposeGestureEnabled' -bool true
 
 message 'Restart dock' 'substep'
-killall Dock
+killall Dock 2>/dev/null || true
