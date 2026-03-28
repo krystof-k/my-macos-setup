@@ -1,10 +1,8 @@
 # Prerequisites
-# -------------
 # - Mac App Store CLI
 brew 'mas'
 
 # Essentials
-# ----------
 # – browsers
 cask 'google-chrome'
 cask 'firefox'
@@ -19,7 +17,6 @@ mas 'Coca', id: 1000808993
 cask 'aldente'
 
 # Productivity
-# ------------
 # - text expander
 cask 'espanso'
 # - easier drag'n'drop
@@ -31,7 +28,6 @@ brew 'smudge/smudge/nightlight'
 cask 'chatgpt'
 
 # Communication
-# -------------
 # - Facebook Messenger
 cask 'messenger'
 # - Telegram
@@ -42,7 +38,6 @@ cask 'slack'
 cask 'element'
 
 # Office
-# ------
 # - Apple iWork
 mas 'Pages', id: 409201541
 mas 'Numbers', id: 409203825
@@ -62,7 +57,6 @@ cask 'prusaslicer'
 cask 'google-drive'
 
 # Development
-# -----------
 # - Git
 brew 'git'
 # - editors
@@ -110,7 +104,6 @@ brew 'shellcheck'
 cask 'claude-code'
 
 # Fun
-# ---
 # - music
 cask 'spotify'
 # - media players
@@ -120,7 +113,6 @@ cask 'vlc'
 cask 'steam'
 
 # Utilities
-# ---------
 # - OpenVPN client
 cask 'tunnelblick'
 # - WireGuard
@@ -166,12 +158,10 @@ mas 'iSignum – PostSignum', id: 6502943626
 cask 'teamviewer'
 
 # Browser extensions
-# ------------------
 # - price checker
 mas 'Hlídač Shopů', id: 1488295734
 
 # Fonts
-# -----
 cask 'font-bebas-neue'
 cask 'font-exo-2'
 cask 'font-exo'
@@ -193,7 +183,6 @@ cask 'font-roboto'
 cask 'font-yrsa'
 
 # Drivers
-# -------
 # - Logitech Options+
 cask 'logi-options+'
 # - Razer RGB control
