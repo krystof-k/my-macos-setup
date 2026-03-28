@@ -69,7 +69,7 @@ brew 'git'
 brew 'nano'
 cask 'visual-studio-code'
 # - Docker
-cask 'docker'
+cask 'docker-desktop'
 # - Git client
 cask 'tower'
 # - CLI autocomplete
