@@ -30,58 +30,6 @@ if [ ! -f /etc/pam.d/sudo_local ]; then
   sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local > /dev/null
 fi
 
-if [[ ! $* =~ --skip-authentication ]]; then
-  message 'Please sign into the App Store manually and press any key to continue' 'step' 'prompt'
-  sleep 2
-  open -a "App Store"
-  read -n 1 -s -r
-
-  message 'Add private key' 'step'
-  message 'Enter absolute path to your private key' 'substep' 'prompt'
-  read -r PRIVATE_KEY_PATH
-  PRIVATE_KEY_FILENAME=$(basename "$PRIVATE_KEY_PATH")
-  # shellcheck disable=SC2016
-  message 'Move private key to `~/.ssh`' 'substep'
-  mkdir -p ~/.ssh
-  cp "$PRIVATE_KEY_PATH" ~/.ssh/"$PRIVATE_KEY_FILENAME"
-  chmod 600 ~/.ssh/"$PRIVATE_KEY_FILENAME"
-  # shellcheck disable=SC2016
-  message 'Add it to SSH agent' 'substep'
-  # -K option is deprecated in favor of --apple-use-keychain since macOS Monterey
-  ssh-add --apple-use-keychain ~/.ssh/"$PRIVATE_KEY_FILENAME"
-  # shellcheck disable=SC2016
-  message 'Add it to `~/.ssh/config`' 'substep'
-  tee -a ~/.ssh/config << END > /dev/null
-Host *
-  UseKeychain yes
-  AddKeysToAgent yes
-  IdentityFile ~/.ssh/${PRIVATE_KEY_FILENAME}
-END
-  message "Export public key to \`~/.ssh/${PRIVATE_KEY_FILENAME%.pem}.pub\`" 'substep'
-  ssh-keygen -y -f ~/.ssh/"$PRIVATE_KEY_FILENAME" > ~/.ssh/"${PRIVATE_KEY_FILENAME%.pem}".pub
-
-  message 'Add GitHub Packages token' 'step'
-  message 'Enter GitHub Packages token' 'substep' 'prompt'
-  read -r GITHUB_PACKAGES_TOKEN
-  message 'Enter GitHub Packages token username' 'substep' 'prompt'
-  read -r GITHUB_PACKAGES_TOKEN_USERNAME
-  # shellcheck disable=SC2016
-  message 'Add token to `~/.zshenv`' 'substep'
-  tee -a ~/.zshenv << END
-# GitHub Packages read-only token
-export GITHUB_PACKAGES_TOKEN=${GITHUB_PACKAGES_TOKEN}
-export GITHUB_PACKAGES_TOKEN_USERNAME=${GITHUB_PACKAGES_TOKEN_USERNAME}
-END
-  message 'Reload .zshenv' 'substep'
-  # shellcheck disable=SC1090
-  source ~/.zshenv
-  message 'Add token to ~/.npmrc' 'substep'
-  # shellcheck disable=SC2016
-  echo '//npm.pkg.github.com/:_authToken=${GITHUB_PACKAGES_TOKEN}' > ~/.npmrc
-else
-  message 'Skipping authentication' 'info'
-fi
-
 message 'Clone repository' 'step'
 repository_directory="$HOME/Git/krystof-k/my-macos-setup"
 if [[ -d "$repository_directory" ]]; then
@@ -94,6 +42,12 @@ else
 fi
 cd "$repository_directory"
 [[ -d .my-macos-setup ]] || mv "$OLDPWD/.my-macos-setup" . 2>/dev/null || mkdir -p .my-macos-setup
+
+# shellcheck disable=SC1091
+source "$repository_directory/steps/authentication.sh"
+
+message 'Switch repository remote to SSH' 'step'
+git remote set-url origin git@github.com:krystof-k/my-macos-setup.git
 
 # shellcheck disable=SC1091
 source "$repository_directory/steps/homebrew.sh"
