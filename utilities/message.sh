@@ -1,6 +1,7 @@
 #!/bin/bash
 
 BOLD=$(tput bold)
+RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
 YELLOW=$(tput setaf 3)
 GRAY_DARK=$(tput setaf 240)
@@ -87,6 +88,11 @@ message() {
 
   if [[ "$level" == 'prompt' ]]; then
     echo -e "${YELLOW}?${RESET}  ${text}"
+    return
+  fi
+
+  if [[ "$level" == 'error' ]]; then
+    echo -e "${RED}✗${RESET}  ${text}"
     return
   fi
 }
