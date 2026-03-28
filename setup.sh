@@ -23,8 +23,10 @@ else
   exit 1
 fi
 
+mkdir -p .my-macos-setup/logs
+
 message 'Create a clean APFS snapshot' 'step'
-tmutil localsnapshot
+tmutil localsnapshot >> .my-macos-setup/logs/apfs-snapshot.log 2>&1
 
 if [ ! -f /etc/pam.d/sudo_local ]; then
   message 'Enable Touch ID for sudo' 'step'
@@ -43,6 +45,8 @@ else
 fi
 cd "$repository_directory"
 [[ -d .my-macos-setup ]] || mv "$OLDPWD/.my-macos-setup" . 2>/dev/null || mkdir -p .my-macos-setup
+# shellcheck disable=SC1091
+source "$repository_directory/utilities/run.sh"
 
 # shellcheck disable=SC1091
 source "$repository_directory/stages/authentication.sh"
@@ -53,8 +57,7 @@ git remote set-url origin git@github.com:krystof-k/my-macos-setup.git
 # shellcheck disable=SC1091
 source "$repository_directory/stages/homebrew.sh"
 
-message 'Create an APFS snapshot before installing apps' 'step'
-tmutil localsnapshot
+run 'Create an APFS snapshot before installing apps' tmutil localsnapshot
 
 # shellcheck disable=SC1091
 source "$repository_directory/stages/apps.sh"
