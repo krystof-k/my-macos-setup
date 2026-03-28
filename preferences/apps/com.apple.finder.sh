@@ -59,4 +59,4 @@ message 'Hide removable media on desktop' 'substep'
 defaults write com.apple.finder 'ShowRemovableMediaOnDesktop' -bool false
 
 message 'Restart Finder' 'substep'
-killall Finder
+killall Finder 2>/dev/null || true

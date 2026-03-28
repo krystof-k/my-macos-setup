@@ -86,6 +86,6 @@ source "$repository_directory/stages/app-preferences.sh"
 
 message 'Finishing'
 message 'Reload preferences cache' 'step'
-killall -HUP cfprefsd
+killall -HUP cfprefsd 2>/dev/null || true
 
 setup_footer
