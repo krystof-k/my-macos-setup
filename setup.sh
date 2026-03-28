@@ -142,12 +142,8 @@ source "$script_directory/steps/node.sh"
 # shellcheck disable=SC1091
 source "$script_directory/steps/python.sh"
 
-if [[ ! $* =~ --skip-docker ]]; then
-  message 'Set up Docker'
-  ./setup/docker.sh
-else
-  message 'Skipping Docker setup' 'info'
-fi
+# shellcheck disable=SC1091
+source "$script_directory/steps/docker.sh"
 
 message 'Configure global preferences'
 ./preferences/global.sh
