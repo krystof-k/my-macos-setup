@@ -28,7 +28,7 @@ if [ ! -f /etc/pam.d/sudo_local ]; then
   sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local > /dev/null
 fi
 
-if [[ ! $@ =~ --skip-authentication ]]; then
+if [[ ! $* =~ --skip-authentication ]]; then
   message 'Please sign into the App Store manually and press any key to continue' 'step' 'prompt'
   sleep 2
   open -a "App Store"
@@ -80,7 +80,7 @@ else
   message 'Skipping authentication' 'info'
 fi
 
-if [[ ! $@ =~ --skip-homebrew-install ]]; then
+if [[ ! $* =~ --skip-homebrew-install ]]; then
   message 'Install Homebrew' 'step'
   echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   message 'Add Homebrew to PATH' 'substep'
@@ -97,7 +97,7 @@ else
   message 'Skipping Homebrew installation' 'info'
 fi
 
-if [[ ! $@ =~ --skip-git ]]; then
+if [[ ! $* =~ --skip-git ]]; then
   message 'Install Git from Homebrew' 'step'
   message "Currently using Git ($(git --version)) at \`$(which git)\`" 'substep' 'info'
   message 'Install Git' 'substep'
@@ -123,35 +123,35 @@ message 'Install apps'
 message 'Install Rosetta' 'step'
 sudo softwareupdate --install-rosetta --agree-to-license
 
-if [[ ! $@ =~ --skip-brew ]]; then
+if [[ ! $* =~ --skip-brew ]]; then
   message 'Install apps from Brewfile' 'step'
   brew bundle
 else
   message 'Skipping Homebrew apps installation' 'info'
 fi
 
-if [[ ! $@ =~ --skip-ruby ]]; then
+if [[ ! $* =~ --skip-ruby ]]; then
   message 'Set up Ruby'
   ./setup/ruby.sh
 else
   message 'Skipping Ruby setup' 'info'
 fi
 
-if [[ ! $@ =~ --skip-node-js ]]; then
+if [[ ! $* =~ --skip-node-js ]]; then
   message 'Set up Node.js'
   ./setup/node.sh
 else
   message 'Skipping Node.js setup' 'info'
 fi
 
-if [[ ! $@ =~ --skip-python ]]; then
+if [[ ! $* =~ --skip-python ]]; then
   message 'Set up Python'
   ./setup/python.sh
 else
   message 'Skipping Python setup' 'info'
 fi
 
-if [[ ! $@ =~ --skip-docker ]]; then
+if [[ ! $* =~ --skip-docker ]]; then
   message 'Set up Docker'
   ./setup/docker.sh
 else
