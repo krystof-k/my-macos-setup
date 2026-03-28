@@ -2,7 +2,9 @@
 
 set -e # exit on any error
 
-source "$(dirname $0)/../../utilities/message.sh"
+script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck disable=SC1091
+source "$script_directory/../../utilities/message.sh"
 
 message 'Set up autocompletion for Stripe CLI' 'step'
 
@@ -12,7 +14,10 @@ mkdir -p ~/.stripe
 mv stripe-completion.zsh ~/.stripe
 
 message 'Add it to PATH' 'substep'
-echo '# Stripe CLI autocompletion' >> ~/.zprofile
-echo 'fpath=(~/.stripe $fpath)"' >> ~/.zprofile
-echo 'autoload -Uz compinit && compinit -i' >> ~/.zprofile
-echo '' >> ~/.zprofile
+# shellcheck disable=SC2016
+{
+  echo '# Stripe CLI autocompletion'
+  echo 'fpath=(~/.stripe $fpath)'
+  echo 'autoload -Uz compinit && compinit -i'
+  echo ''
+} >> ~/.zprofile

@@ -28,7 +28,7 @@ if [ ! -f /etc/pam.d/sudo_local ]; then
   sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local > /dev/null
 fi
 
-if [[ ! $@ =~ --skip-authentication ]]; then
+if [[ ! $* =~ --skip-authentication ]]; then
   message 'Please sign into the App Store manually and press any key to continue' 'step' 'prompt'
   sleep 2
   open -a "App Store"
@@ -36,30 +36,34 @@ if [[ ! $@ =~ --skip-authentication ]]; then
 
   message 'Add private key' 'step'
   message 'Enter absolute path to your private key' 'substep' 'prompt'
-  read PRIVATE_KEY_PATH
-  PRIVATE_KEY_FILENAME=`basename $PRIVATE_KEY_PATH`
+  read -r PRIVATE_KEY_PATH
+  PRIVATE_KEY_FILENAME=$(basename "$PRIVATE_KEY_PATH")
+  # shellcheck disable=SC2016
   message 'Move private key to `~/.ssh`' 'substep'
   mkdir -p ~/.ssh
-  cp $PRIVATE_KEY_PATH ~/.ssh/$PRIVATE_KEY_FILENAME
-  chmod 600 ~/.ssh/$PRIVATE_KEY_FILENAME
+  cp "$PRIVATE_KEY_PATH" ~/.ssh/"$PRIVATE_KEY_FILENAME"
+  chmod 600 ~/.ssh/"$PRIVATE_KEY_FILENAME"
+  # shellcheck disable=SC2016
   message 'Add it to SSH agent' 'substep'
   # -K option is deprecated in favor of --apple-use-keychain since macOS Monterey
-  ssh-add --apple-use-keychain ~/.ssh/$PRIVATE_KEY_FILENAME
+  ssh-add --apple-use-keychain ~/.ssh/"$PRIVATE_KEY_FILENAME"
+  # shellcheck disable=SC2016
   message 'Add it to `~/.ssh/config`' 'substep'
   tee -a ~/.ssh/config << END > /dev/null
 Host *
   UseKeychain yes
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/$PRIVATE_KEY_FILENAME
+  IdentityFile ~/.ssh/${PRIVATE_KEY_FILENAME}
 END
   message "Export public key to \`~/.ssh/${PRIVATE_KEY_FILENAME%.pem}.pub\`" 'substep'
-  ssh-keygen -y -f ~/.ssh/$PRIVATE_KEY_FILENAME > ~/.ssh/${PRIVATE_KEY_FILENAME%.pem}.pub
+  ssh-keygen -y -f ~/.ssh/"$PRIVATE_KEY_FILENAME" > ~/.ssh/"${PRIVATE_KEY_FILENAME%.pem}".pub
 
   message 'Add GitHub Packages token' 'step'
   message 'Enter GitHub Packages token' 'substep' 'prompt'
-  read GITHUB_PACKAGES_TOKEN
+  read -r GITHUB_PACKAGES_TOKEN
   message 'Enter GitHub Packages token username' 'substep' 'prompt'
-  read GITHUB_PACKAGES_TOKEN_USERNAME
+  read -r GITHUB_PACKAGES_TOKEN_USERNAME
+  # shellcheck disable=SC2016
   message 'Add token to `~/.zshenv`' 'substep'
   tee -a ~/.zshenv << END
 # GitHub Packages read-only token
@@ -67,35 +71,40 @@ export GITHUB_PACKAGES_TOKEN=${GITHUB_PACKAGES_TOKEN}
 export GITHUB_PACKAGES_TOKEN_USERNAME=${GITHUB_PACKAGES_TOKEN_USERNAME}
 END
   message 'Reload .zshenv' 'substep'
+  # shellcheck disable=SC1090
   source ~/.zshenv
   message 'Add token to ~/.npmrc' 'substep'
+  # shellcheck disable=SC2016
   echo '//npm.pkg.github.com/:_authToken=${GITHUB_PACKAGES_TOKEN}' > ~/.npmrc
 else
   message 'Skipping authentication' 'info'
 fi
 
-if [[ ! $@ =~ --skip-homebrew-install ]]; then
+if [[ ! $* =~ --skip-homebrew-install ]]; then
   message 'Install Homebrew' 'step'
   echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   message 'Add Homebrew to PATH' 'substep'
   echo '# Homebrew' >> ~/.zprofile
+  # shellcheck disable=SC2016
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
   message 'Set number of Homebrew CURL retries to 10' 'substep'
   echo 'HOMEBREW_CURL_RETRIES=10' >> ~/.zprofile
   echo '' >> ~/.zprofile
   message 'Reload .zprofile' 'substep'
+  # shellcheck disable=SC1090
   source ~/.zprofile
 else
   message 'Skipping Homebrew installation' 'info'
 fi
 
-if [[ ! $@ =~ --skip-git ]]; then
+if [[ ! $* =~ --skip-git ]]; then
   message 'Install Git from Homebrew' 'step'
-  message "Currently using Git (`git --version`) at \``which git`\`" 'substep' 'info'
+  message "Currently using Git ($(git --version)) at \`$(which git)\`" 'substep' 'info'
   message 'Install Git' 'substep'
   brew install git
-  message "Currently using Git (`git --version`) at \``which git`\`" 'substep' 'info'
+  message "Currently using Git ($(git --version)) at \`$(which git)\`" 'substep' 'info'
 
+  # shellcheck disable=SC2016
   message 'Clone the repository into `~/Git/krystof-k/my-macos-setup`' 'step'
   mkdir -p ~/Git/krystof-k
   cd ~/Git/krystof-k
@@ -114,35 +123,35 @@ message 'Install apps'
 message 'Install Rosetta' 'step'
 sudo softwareupdate --install-rosetta --agree-to-license
 
-if [[ ! $@ =~ --skip-brew ]]; then
+if [[ ! $* =~ --skip-brew ]]; then
   message 'Install apps from Brewfile' 'step'
   brew bundle
 else
   message 'Skipping Homebrew apps installation' 'info'
 fi
 
-if [[ ! $@ =~ --skip-ruby ]]; then
+if [[ ! $* =~ --skip-ruby ]]; then
   message 'Set up Ruby'
   ./setup/ruby.sh
 else
   message 'Skipping Ruby setup' 'info'
 fi
 
-if [[ ! $@ =~ --skip-node-js ]]; then
+if [[ ! $* =~ --skip-node-js ]]; then
   message 'Set up Node.js'
   ./setup/node.sh
 else
   message 'Skipping Node.js setup' 'info'
 fi
 
-if [[ ! $@ =~ --skip-python ]]; then
+if [[ ! $* =~ --skip-python ]]; then
   message 'Set up Python'
   ./setup/python.sh
 else
   message 'Skipping Python setup' 'info'
 fi
 
-if [[ ! $@ =~ --skip-docker ]]; then
+if [[ ! $* =~ --skip-docker ]]; then
   message 'Set up Docker'
   ./setup/docker.sh
 else

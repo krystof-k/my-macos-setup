@@ -2,12 +2,15 @@
 
 set -e # exit on any error
 
-source "$(dirname $0)/../../utilities/message.sh"
+script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck disable=SC1091
+source "$script_directory/../../utilities/message.sh"
 
 message 'Configure screen capture' 'step'
 
 message 'Set screen capture location to ~/Screenshots' 'substep'
 mkdir -p ~/Screenshots
+# shellcheck disable=SC2088
 defaults write com.apple.screencapture 'location' -string '~/Screenshots'
 
 message 'Disable shadow' 'substep'

@@ -2,7 +2,9 @@
 
 set -e # exit on any error
 
-source "$(dirname $0)/../../utilities/message.sh"
+script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck disable=SC1091
+source "$script_directory/../../utilities/message.sh"
 
 message 'Configure Finder' 'step'
 
@@ -36,6 +38,7 @@ defaults write com.apple.finder 'QuitMenuItem' -bool true
 
 message 'Show home folder for new windows' 'substep'
 defaults write com.apple.finder NewWindowTarget -string PfHm
+# shellcheck disable=SC2088
 defaults write com.apple.finder NewWindowTargetPath -string '~/'
 
 message 'Manually display Library folder in home folder preferences' 'substep' 'to-do'

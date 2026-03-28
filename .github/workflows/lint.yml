@@ -1,0 +1,12 @@
+name: Lint
+on: push
+jobs:
+  shellcheck:
+    name: ShellCheck
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+      - name: Run ShellCheck
+        run: find . -name '*.sh' -exec shellcheck {} +

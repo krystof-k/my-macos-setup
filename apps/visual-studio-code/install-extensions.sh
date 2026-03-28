@@ -2,7 +2,9 @@
 
 set -e # exit on any error
 
-source "$(dirname $0)/../../utilities/message.sh"
+script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck disable=SC1091
+source "$script_directory/../../utilities/message.sh"
 
 while IFS= read -r line || [[ -n "$line" ]]; do
   if [[ $line == \#* ]]; then
@@ -10,4 +12,4 @@ while IFS= read -r line || [[ -n "$line" ]]; do
   fi
   
   code --install-extension "$line"
-done < "$(dirname $0)/extensions.txt"
+done < "$script_directory/extensions.txt"
