@@ -107,9 +107,6 @@ fi
 message 'Create an APFS snapshot before installing apps' 'step'
 tmutil localsnapshot
 
-message 'Install Rosetta' 'step'
-sudo softwareupdate --install-rosetta --agree-to-license
-
 # shellcheck disable=SC1091
 source "$script_directory/steps/apps.sh"
 
