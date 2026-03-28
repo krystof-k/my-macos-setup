@@ -18,6 +18,7 @@ read -n 1 -s -r
 
 message 'Add private key' 'step'
 if ls ~/.ssh/*.pem &>/dev/null; then
+  # shellcheck disable=SC2016
   message 'Private key already exists in `~/.ssh`' 'substep' 'info'
 else
   message 'Enter absolute path to your private key' 'substep' 'prompt'
