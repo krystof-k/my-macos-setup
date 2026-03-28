@@ -14,6 +14,7 @@
   tap "smudge/smudge"
   brew "smudge/smudge/nightlight" # night shift CLI
   cask "chatgpt"
+  cask "claude"
   cask "espanso" # text expander
   mas "Dropover", id: 1355679052 # easier drag'n'drop
 
