@@ -11,11 +11,11 @@ GRAY_LIGHT=$(tput setaf 248)
 RESET=$(tput sgr0)
 
 if [[ -z "${_msg_counter_file:-}" ]]; then
-  export _msg_counter_file=".setup/step-count"
+  export _msg_counter_file=".my-macos-setup/step-count"
 fi
 
 _increment_step_count() {
-  mkdir -p .setup
+  mkdir -p .my-macos-setup
   local count=0
   [[ -f "$_msg_counter_file" ]] && count=$(cat "$_msg_counter_file")
   echo $(( count + 1 )) > "$_msg_counter_file"

@@ -14,8 +14,8 @@ run() {
   local log_name
   log_name=$(echo "$text" | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
   local log_file
-  log_file=$(printf ".setup/logs/%02d-%s.log" "$(( count + 1 ))" "$log_name")
-  mkdir -p .setup/logs
+  log_file=$(printf ".my-macos-setup/logs/%02d-%s.log" "$(( count + 1 ))" "$log_name")
+  mkdir -p .my-macos-setup/logs
 
   "$@" > "$log_file" 2>&1 &
   local pid=$!

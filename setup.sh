@@ -98,6 +98,7 @@ else
   git clone git@github.com:krystof-k/my-macos-setup.git "$repository_directory"
 fi
 cd "$repository_directory"
+[[ -d .my-macos-setup ]] || mv "$OLDPWD/.my-macos-setup" . 2>/dev/null || mkdir -p .my-macos-setup
 
 # shellcheck disable=SC1091
 source "$repository_directory/steps/homebrew.sh"
