@@ -90,7 +90,7 @@ cask 'session-manager-plugin'
 # - AWS CloudFormation linter
 brew 'cfn-lint'
 # - Google Cloud SDK
-cask 'google-cloud-sdk'
+cask 'gcloud-cli'
 # - Cloudflare Tunnel
 brew 'cloudflared'
 # - Postman
