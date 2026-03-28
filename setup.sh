@@ -2,6 +2,7 @@
 
 set -e # exit on any error
 
+script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 if [ ! -f ./utilities/message.sh ]; then
   message=$(curl -fsSL -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/krystof-k/my-macos-setup/main/utilities/message.sh)
   eval "$message"
@@ -132,12 +133,8 @@ else
   message 'Skipping Homebrew apps installation' 'info'
 fi
 
-if [[ ! $* =~ --skip-ruby ]]; then
-  message 'Set up Ruby'
-  ./setup/ruby.sh
-else
-  message 'Skipping Ruby setup' 'info'
-fi
+# shellcheck disable=SC1091
+source "$script_directory/steps/ruby.sh"
 
 if [[ ! $* =~ --skip-node-js ]]; then
   message 'Set up Node.js'
