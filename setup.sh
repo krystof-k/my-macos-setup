@@ -37,26 +37,26 @@ if [[ ! $@ =~ --skip-authentication ]]; then
   message 'Add private key' 'step'
   message 'Enter absolute path to your private key' 'substep' 'prompt'
   read PRIVATE_KEY_PATH
-  PRIVATE_KEY_FILENAME=`basename $PRIVATE_KEY_PATH`
+  PRIVATE_KEY_FILENAME=$(basename "$PRIVATE_KEY_PATH")
   # shellcheck disable=SC2016
   message 'Move private key to `~/.ssh`' 'substep'
   mkdir -p ~/.ssh
-  cp $PRIVATE_KEY_PATH ~/.ssh/$PRIVATE_KEY_FILENAME
-  chmod 600 ~/.ssh/$PRIVATE_KEY_FILENAME
+  cp "$PRIVATE_KEY_PATH" ~/.ssh/"$PRIVATE_KEY_FILENAME"
+  chmod 600 ~/.ssh/"$PRIVATE_KEY_FILENAME"
   # shellcheck disable=SC2016
   message 'Add it to SSH agent' 'substep'
   # -K option is deprecated in favor of --apple-use-keychain since macOS Monterey
-  ssh-add --apple-use-keychain ~/.ssh/$PRIVATE_KEY_FILENAME
+  ssh-add --apple-use-keychain ~/.ssh/"$PRIVATE_KEY_FILENAME"
   # shellcheck disable=SC2016
   message 'Add it to `~/.ssh/config`' 'substep'
   tee -a ~/.ssh/config << END > /dev/null
 Host *
   UseKeychain yes
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/$PRIVATE_KEY_FILENAME
+  IdentityFile ~/.ssh/${PRIVATE_KEY_FILENAME}
 END
   message "Export public key to \`~/.ssh/${PRIVATE_KEY_FILENAME%.pem}.pub\`" 'substep'
-  ssh-keygen -y -f ~/.ssh/$PRIVATE_KEY_FILENAME > ~/.ssh/${PRIVATE_KEY_FILENAME%.pem}.pub
+  ssh-keygen -y -f ~/.ssh/"$PRIVATE_KEY_FILENAME" > ~/.ssh/"${PRIVATE_KEY_FILENAME%.pem}".pub
 
   message 'Add GitHub Packages token' 'step'
   message 'Enter GitHub Packages token' 'substep' 'prompt'
@@ -99,10 +99,10 @@ fi
 
 if [[ ! $@ =~ --skip-git ]]; then
   message 'Install Git from Homebrew' 'step'
-  message "Currently using Git (`git --version`) at \``which git`\`" 'substep' 'info'
+  message "Currently using Git ($(git --version)) at \`$(which git)\`" 'substep' 'info'
   message 'Install Git' 'substep'
   brew install git
-  message "Currently using Git (`git --version`) at \``which git`\`" 'substep' 'info'
+  message "Currently using Git ($(git --version)) at \`$(which git)\`" 'substep' 'info'
 
   # shellcheck disable=SC2016
   message 'Clone the repository into `~/Git/krystof-k/my-macos-setup`' 'step'

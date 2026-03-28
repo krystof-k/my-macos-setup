@@ -8,7 +8,7 @@ source "$script_directory/../utilities/message.sh"
 
 message 'Set up Node version manager' 'step'
 if command -v node >/dev/null 2>&1; then
-  message "Currently using Node.js (`node --version`) at \``which node`\`" 'substep' 'info'
+  message "Currently using Node.js ($(node --version)) at \`$(which node)\`" 'substep' 'info'
 fi
 message 'Add NVM to ~/.zprofile' 'substep'
 mkdir -p ~/.nvm
@@ -25,7 +25,7 @@ message 'Reload .zprofile' 'substep'
 source ~/.zprofile
 message 'Install Node.js 22' 'substep'
 nvm install 22
-message "Currently using Node.js (`node --version`) at \``which node`\`" 'substep' 'info'
+message "Currently using Node.js ($(node --version)) at \`$(which node)\`" 'substep' 'info'
 
 message 'Update npm' 'step'
 npm install -g npm@latest

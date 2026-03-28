@@ -12,4 +12,4 @@ open -a Docker
 read -n 1 -s -r
 
 message 'Login to GitHub Container registry' 'substep'
-echo $GITHUB_PACKAGES_TOKEN | docker login ghcr.io -u $GITHUB_PACKAGES_TOKEN_USERNAME --password-stdin
+echo "$GITHUB_PACKAGES_TOKEN" | docker login ghcr.io -u "$GITHUB_PACKAGES_TOKEN_USERNAME" --password-stdin

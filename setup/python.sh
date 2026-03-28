@@ -7,7 +7,7 @@ script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$script_directory/../utilities/message.sh"
 
 message 'Set up Python version manager' 'step'
-message "Currently using Python (`python3 --version`) at \``which python3`\`" 'substep' 'info'
+message "Currently using Python ($(python3 --version)) at \`$(which python3)\`" 'substep' 'info'
 message 'Add pyenv to ~/.zprofile' 'substep'
 # shellcheck disable=SC2016
 {
@@ -23,12 +23,12 @@ source ~/.zprofile
 message 'Install Python 3.13' 'substep'
 pyenv install 3.13
 pyenv global 3.13
-message "Currently using Python (`python3 --version`) at \``which python3`\`" 'substep' 'info'
+message "Currently using Python ($(python3 --version)) at \`$(which python3)\`" 'substep' 'info'
 
 message 'Upgrade pip3' 'step'
-message "Currently using pip (`pip3 --version`) at \``which pip3`\`" 'substep' 'info'
+message "Currently using pip ($(pip3 --version)) at \`$(which pip3)\`" 'substep' 'info'
 pip3 install --upgrade pip
-message "Currently using pip (`pip3 --version`) at \``which pip3`\`" 'substep' 'info'
+message "Currently using pip ($(pip3 --version)) at \`$(which pip3)\`" 'substep' 'info'
 
 message 'Install Python packages' 'step'
 pip3 install -r "$(dirname $0)/../apps/python/requirements.txt"

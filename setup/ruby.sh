@@ -7,7 +7,7 @@ script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$script_directory/../utilities/message.sh"
 
 message 'Set up Ruby version manager' 'step'
-message "Currently using Ruby (`ruby --version`) at \``which ruby`\`" 'substep' 'info'
+message "Currently using Ruby ($(ruby --version)) at \`$(which ruby)\`" 'substep' 'info'
 message 'Add rbenv to ~/.zprofile' 'substep'
 # shellcheck disable=SC2016
 {
@@ -20,4 +20,4 @@ message 'Reload .zprofile' 'substep'
 source ~/.zprofile
 rbenv install 3.4.4
 rbenv global 3.4.4
-message "Currently using Ruby (`ruby --version`) at \``which ruby`\`" 'substep' 'info'
+message "Currently using Ruby ($(ruby --version)) at \`$(which ruby)\`" 'substep' 'info'
