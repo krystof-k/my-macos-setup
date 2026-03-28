@@ -8,10 +8,14 @@ run() {
   local text="$1"
   shift
 
+  local count=0
+  # shellcheck disable=SC2154
+  [[ -f "$_msg_counter_file" ]] && count=$(cat "$_msg_counter_file")
   local log_name
   log_name=$(echo "$text" | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
-  local log_file=".setup/logs/${log_name}.log"
-  mkdir -p .setup/logs
+  local log_file
+  log_file=$(printf ".my-macos-setup/logs/%02d-%s.log" "$(( count + 1 ))" "$log_name")
+  mkdir -p .my-macos-setup/logs
 
   "$@" > "$log_file" 2>&1 &
   local pid=$!
