@@ -38,13 +38,16 @@ if [[ ! $@ =~ --skip-authentication ]]; then
   message 'Enter absolute path to your private key' 'substep' 'prompt'
   read PRIVATE_KEY_PATH
   PRIVATE_KEY_FILENAME=`basename $PRIVATE_KEY_PATH`
+  # shellcheck disable=SC2016
   message 'Move private key to `~/.ssh`' 'substep'
   mkdir -p ~/.ssh
   cp $PRIVATE_KEY_PATH ~/.ssh/$PRIVATE_KEY_FILENAME
   chmod 600 ~/.ssh/$PRIVATE_KEY_FILENAME
+  # shellcheck disable=SC2016
   message 'Add it to SSH agent' 'substep'
   # -K option is deprecated in favor of --apple-use-keychain since macOS Monterey
   ssh-add --apple-use-keychain ~/.ssh/$PRIVATE_KEY_FILENAME
+  # shellcheck disable=SC2016
   message 'Add it to `~/.ssh/config`' 'substep'
   tee -a ~/.ssh/config << END > /dev/null
 Host *
@@ -60,6 +63,7 @@ END
   read GITHUB_PACKAGES_TOKEN
   message 'Enter GitHub Packages token username' 'substep' 'prompt'
   read GITHUB_PACKAGES_TOKEN_USERNAME
+  # shellcheck disable=SC2016
   message 'Add token to `~/.zshenv`' 'substep'
   tee -a ~/.zshenv << END
 # GitHub Packages read-only token
@@ -69,6 +73,7 @@ END
   message 'Reload .zshenv' 'substep'
   source ~/.zshenv
   message 'Add token to ~/.npmrc' 'substep'
+  # shellcheck disable=SC2016
   echo '//npm.pkg.github.com/:_authToken=${GITHUB_PACKAGES_TOKEN}' > ~/.npmrc
 else
   message 'Skipping authentication' 'info'
@@ -79,6 +84,7 @@ if [[ ! $@ =~ --skip-homebrew-install ]]; then
   echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   message 'Add Homebrew to PATH' 'substep'
   echo '# Homebrew' >> ~/.zprofile
+  # shellcheck disable=SC2016
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
   message 'Set number of Homebrew CURL retries to 10' 'substep'
   echo 'HOMEBREW_CURL_RETRIES=10' >> ~/.zprofile
@@ -96,6 +102,7 @@ if [[ ! $@ =~ --skip-git ]]; then
   brew install git
   message "Currently using Git (`git --version`) at \``which git`\`" 'substep' 'info'
 
+  # shellcheck disable=SC2016
   message 'Clone the repository into `~/Git/krystof-k/my-macos-setup`' 'step'
   mkdir -p ~/Git/krystof-k
   cd ~/Git/krystof-k
