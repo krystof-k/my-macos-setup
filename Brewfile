@@ -127,7 +127,6 @@
 # Hardware
   brew "yubico-piv-tool"
   cask "1kc-razer" # Razer RGB control
-  cask "apple-hewlett-packard-printer-drivers"
   cask "eobcanka"
   cask "logi-options+"
   cask "wch-ch34x-usb-serial-driver"

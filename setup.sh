@@ -64,6 +64,9 @@ run 'Create APFS snapshot' tmutil localsnapshot
 source "$repository_directory/stages/apps.sh"
 
 # shellcheck disable=SC1091
+source "$repository_directory/stages/hp-printer.sh"
+
+# shellcheck disable=SC1091
 source "$repository_directory/stages/ruby.sh"
 
 # shellcheck disable=SC1091
