@@ -86,23 +86,22 @@ fi
 # shellcheck disable=SC1091
 source "$script_directory/steps/homebrew.sh"
 
-if [[ ! $* =~ --skip-git ]]; then
-  message 'Install Git from Homebrew' 'step'
-  message "Currently using Git ($(git --version)) at \`$(which git)\`" 'substep' 'info'
-  message 'Install Git' 'substep'
-  brew install git
-  message "Currently using Git ($(git --version)) at \`$(which git)\`" 'substep' 'info'
-
-  # shellcheck disable=SC2016
-  message 'Clone the repository into `~/Git/krystof-k/my-macos-setup`' 'step'
-  mkdir -p ~/Git/krystof-k
-  cd ~/Git/krystof-k
-  ssh-keyscan github.com >> ~/.ssh/known_hosts
-  git clone git@github.com:krystof-k/my-macos-setup.git
-  cd ./my-macos-setup
-else
-  message 'Skipping Git setup' 'info'
+message 'Clone repository' 'step'
+# shellcheck disable=SC2016
+message 'Ensure GitHub is in `~/.ssh/known_hosts`' 'substep'
+if ! grep -q 'github.com' ~/.ssh/known_hosts 2>/dev/null; then
+  ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
 fi
+repository_directory="$HOME/Git/krystof-k/my-macos-setup"
+if [[ -d "$repository_directory" ]]; then
+  message 'Repository already cloned' 'substep' 'info'
+else
+  # shellcheck disable=SC2016
+  message 'Clone repository to `~/Git/krystof-k/my-macos-setup`' 'substep'
+  mkdir -p ~/Git/krystof-k
+  git clone git@github.com:krystof-k/my-macos-setup.git "$repository_directory"
+fi
+cd "$repository_directory"
 
 message 'Create an APFS snapshot before installing apps' 'step'
 tmutil localsnapshot
