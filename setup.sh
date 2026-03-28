@@ -139,12 +139,8 @@ source "$script_directory/steps/ruby.sh"
 # shellcheck disable=SC1091
 source "$script_directory/steps/node.sh"
 
-if [[ ! $* =~ --skip-python ]]; then
-  message 'Set up Python'
-  ./setup/python.sh
-else
-  message 'Skipping Python setup' 'info'
-fi
+# shellcheck disable=SC1091
+source "$script_directory/steps/python.sh"
 
 if [[ ! $* =~ --skip-docker ]]; then
   message 'Set up Docker'
