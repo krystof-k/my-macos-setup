@@ -32,8 +32,6 @@
   cask 'telegram'
   # Slack
   cask 'slack'
-  # Matrix
-  cask 'element'
 
 # Office
   # Apple iWork
