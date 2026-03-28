@@ -1,194 +1,194 @@
 # Prerequisites
   # Mac App Store CLI
-  brew 'mas'
+  brew "mas"
 
 # Essentials
   # browsers
-  cask 'google-chrome'
-  cask 'firefox'
+  cask "google-chrome"
+  cask "firefox"
   # archiver
-  cask 'keka'
+  cask "keka"
   # password manager
   # (Mac App Store required for browser integration)
-  mas 'Bitwarden', id: 1352778147
+  mas "Bitwarden", id: 1352778147
   # prevent sleep
-  mas 'Coca', id: 1000808993
+  mas "Coca", id: 1000808993
   # prevent battery overcharge
-  cask 'aldente'
+  cask "aldente"
 
 # Productivity
   # text expander
-  cask 'espanso'
+  cask "espanso"
   # easier drag'n'drop
-  mas 'Dropover', id: 1355679052
+  mas "Dropover", id: 1355679052
   # night shift CLI
-  tap 'smudge/smudge'
-  brew 'smudge/smudge/nightlight'
+  tap "smudge/smudge"
+  brew "smudge/smudge/nightlight"
   # ChatGPT
-  cask 'chatgpt'
+  cask "chatgpt"
 
 # Communication
   # Telegram
-  cask 'telegram'
+  cask "telegram"
   # Slack
-  cask 'slack'
+  cask "slack"
 
 # Office
   # Apple iWork
-  mas 'Pages', id: 409201541
-  mas 'Numbers', id: 409203825
-  mas 'Keynote', id: 409183694
+  mas "Pages", id: 409201541
+  mas "Numbers", id: 409203825
+  mas "Keynote", id: 409183694
   # Microsoft Office
-  cask 'microsoft-word'
-  cask 'microsoft-excel'
-  cask 'microsoft-powerpoint'
-  cask 'microsoft-onenote'
+  cask "microsoft-word"
+  cask "microsoft-excel"
+  cask "microsoft-powerpoint"
+  cask "microsoft-onenote"
   # Adobe Creative Cloud
-  cask 'adobe-creative-cloud'
+  cask "adobe-creative-cloud"
   # 3D modeling
-  cask 'autodesk-fusion'
+  cask "autodesk-fusion"
   # 3D printing
-  cask 'prusaslicer'
+  cask "prusaslicer"
   # Google Drive
-  cask 'google-drive'
+  cask "google-drive"
 
 # Development
   # Git
-  brew 'git'
+  brew "git"
   # editors
-  brew 'nano'
-  cask 'visual-studio-code'
+  brew "nano"
+  cask "visual-studio-code"
   # Docker
-  cask 'docker-desktop'
+  cask "docker-desktop"
   # Git client
-  cask 'tower'
+  cask "tower"
   # GitHub CLI
-  brew 'gh'
+  brew "gh"
   # Node version manager
-  brew 'nvm'
+  brew "nvm"
   # Python version manager and virtualenv
-  brew 'pyenv'
-  brew 'pyenv-virtualenv'
+  brew "pyenv"
+  brew "pyenv-virtualenv"
   # Ruby version manager
-  brew 'rbenv'
-  brew 'ruby-build'
+  brew "rbenv"
+  brew "ruby-build"
   # AWS CLI + Session Manager plugin
-  brew 'awscli'
-  cask 'session-manager-plugin'
+  brew "awscli"
+  cask "session-manager-plugin"
   # AWS CloudFormation linter
-  brew 'cfn-lint'
+  brew "cfn-lint"
   # Google Cloud SDK
-  cask 'gcloud-cli'
+  cask "gcloud-cli"
   # Cloudflare Tunnel
-  brew 'cloudflared'
+  brew "cloudflared"
   # Postman
-  cask 'postman'
+  cask "postman"
   # PostgreSQL client
-  cask 'postico'
+  cask "postico"
   # MongoDB client
-  cask 'mongodb-compass'
+  cask "mongodb-compass"
   # Redis client
-  cask 'redis-insight'
+  cask "redis-insight"
   # Stripe CLI
-  tap 'stripe/stripe-cli'
-  brew 'stripe/stripe-cli/stripe'
+  tap "stripe/stripe-cli"
+  brew "stripe/stripe-cli/stripe"
   # build system for C++
-  brew 'cmake'
+  brew "cmake"
   # shell script linter
-  brew 'shellcheck'
+  brew "shellcheck"
   # AI coding assistant
-  cask 'claude-code'
+  cask "claude-code"
 
 # Fun
   # music
-  cask 'spotify'
+  cask "spotify"
   # media players
-  cask 'iina'
-  cask 'vlc'
+  cask "iina"
+  cask "vlc"
   # games
-  cask 'steam'
+  cask "steam"
 
 # Utilities
   # OpenVPN client
-  cask 'tunnelblick'
+  cask "tunnelblick"
   # WireGuard
-  mas 'Wireguard', id: 1451685025
-  brew 'wireguard-tools'
+  mas "Wireguard", id: 1451685025
+  brew "wireguard-tools"
   # Ubiquiti WiFiman
-  cask 'wifiman'
+  cask "wifiman"
   # Microsoft Windows remote desktop
-  cask 'windows-app'
+  cask "windows-app"
   # external display brightness control
-  cask 'lunar'
+  cask "lunar"
   # FTP client
-  cask 'cyberduck'
+  cask "cyberduck"
   # OS images USB flasher
-  cask 'balenaetcher'
+  cask "balenaetcher"
   # Raspberry Pi OS images USB flasher
-  cask 'raspberry-pi-imager'
+  cask "raspberry-pi-imager"
   # YouTube video downloader
-  brew 'yt-dlp'
+  brew "yt-dlp"
   # GIF recorder
-  cask 'gifox'
+  cask "gifox"
   # file organizer
-  cask 'hazel'
+  cask "hazel"
   # video converter
-  brew 'ffmpeg'
+  brew "ffmpeg"
   # JSON processor
-  brew 'jq'
+  brew "jq"
   # YAML processor
-  brew 'yq'
+  brew "yq"
   # encryption
-  brew 'gnupg'
+  brew "gnupg"
   # files deduplication
-  cask 'dupeguru'
+  cask "dupeguru"
   # image processor
-  brew 'imagemagick'
+  brew "imagemagick"
   # PDF processor
-  brew 'ghostscript'
+  brew "ghostscript"
   # battery health monitoring
-  cask 'coconutbattery'
+  cask "coconutbattery"
   # PostSignum certificate manager
-  mas 'iSignum – PostSignum', id: 6502943626
+  mas "iSignum – PostSignum", id: 6502943626
   # Remote access
-  cask 'teamviewer'
+  cask "teamviewer"
 
 # Browser extensions
   # price checker
-  mas 'Hlídač Shopů', id: 1488295734
+  mas "Hlídač Shopů", id: 1488295734
 
 # Fonts
-  cask 'font-bebas-neue'
-  cask 'font-exo-2'
-  cask 'font-exo'
-  cask 'font-fira-code'
-  cask 'font-fira-mono'
-  cask 'font-fira-sans-condensed'
-  cask 'font-fira-sans-extra-condensed'
-  cask 'font-fira-sans'
-  cask 'font-monaspace'
-  cask 'font-montserrat-alternates'
-  cask 'font-montserrat-subrayada'
-  cask 'font-montserrat'
-  cask 'font-radio-canada'
-  cask 'font-roboto-flex'
-  cask 'font-roboto-mono'
-  cask 'font-roboto-serif'
-  cask 'font-roboto-slab'
-  cask 'font-roboto'
-  cask 'font-yrsa'
+  cask "font-bebas-neue"
+  cask "font-exo-2"
+  cask "font-exo"
+  cask "font-fira-code"
+  cask "font-fira-mono"
+  cask "font-fira-sans-condensed"
+  cask "font-fira-sans-extra-condensed"
+  cask "font-fira-sans"
+  cask "font-monaspace"
+  cask "font-montserrat-alternates"
+  cask "font-montserrat-subrayada"
+  cask "font-montserrat"
+  cask "font-radio-canada"
+  cask "font-roboto-flex"
+  cask "font-roboto-mono"
+  cask "font-roboto-serif"
+  cask "font-roboto-slab"
+  cask "font-roboto"
+  cask "font-yrsa"
 
 # Drivers
   # Logitech Options+
-  cask 'logi-options+'
+  cask "logi-options+"
   # Razer RGB control
-  cask '1kc-razer'
+  cask "1kc-razer"
   # eObčanka
-  cask 'eobcanka'
+  cask "eobcanka"
   # HP printers
-  # cask 'apple-hewlett-packard-printer-drivers'
+  # cask "apple-hewlett-packard-printer-drivers"
   # YubiKey
-  cask 'yubico-yubikey-manager'
-  brew 'yubico-piv-tool'
+  cask "yubico-yubikey-manager"
+  brew "yubico-piv-tool"
   # USB to serial driver
-  cask 'wch-ch34x-usb-serial-driver'
+  cask "wch-ch34x-usb-serial-driver"
