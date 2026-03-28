@@ -30,8 +30,8 @@ run() {
   printf "\r"
   tput el
 
-  wait "$pid"
-  local exit_code=$?
+  local exit_code
+  wait "$pid" && exit_code=0 || exit_code=$?
 
   if [[ $exit_code -eq 0 ]]; then
     _increment_step_count
