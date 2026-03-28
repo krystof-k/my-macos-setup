@@ -38,6 +38,7 @@ defaults write com.apple.finder 'QuitMenuItem' -bool true
 
 message 'Show home folder for new windows' 'substep'
 defaults write com.apple.finder NewWindowTarget -string PfHm
+# shellcheck disable=SC2088
 defaults write com.apple.finder NewWindowTargetPath -string '~/'
 
 message 'Manually display Library folder in home folder preferences' 'substep' 'to-do'

@@ -10,6 +10,7 @@ message 'Configure screen capture' 'step'
 
 message 'Set screen capture location to ~/Screenshots' 'substep'
 mkdir -p ~/Screenshots
+# shellcheck disable=SC2088
 defaults write com.apple.screencapture 'location' -string '~/Screenshots'
 
 message 'Disable shadow' 'substep'
