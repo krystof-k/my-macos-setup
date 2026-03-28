@@ -107,17 +107,11 @@ fi
 message 'Create an APFS snapshot before installing apps' 'step'
 tmutil localsnapshot
 
-message 'Install apps'
-
 message 'Install Rosetta' 'step'
 sudo softwareupdate --install-rosetta --agree-to-license
 
-if [[ ! $* =~ --skip-brew ]]; then
-  message 'Install apps from Brewfile' 'step'
-  brew bundle
-else
-  message 'Skipping Homebrew apps installation' 'info'
-fi
+# shellcheck disable=SC1091
+source "$script_directory/steps/apps.sh"
 
 # shellcheck disable=SC1091
 source "$script_directory/steps/ruby.sh"
