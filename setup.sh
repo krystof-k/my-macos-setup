@@ -13,10 +13,11 @@ setup_header
 
 message 'Prepare for setup'
 
-message 'Have you enabled full disk access for terminal? [Y/n]' 'step' 'prompt'
-read -n 1 -s -r REPLY
-if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-  message 'Please enable it, restart terminal and rerun the setup script' 'substep' 'prompt'
+message 'Full disk access' 'step'
+if plutil -lint /Library/Preferences/com.apple.TimeMachine.plist &>/dev/null; then
+  message 'Already granted' 'substep' 'info'
+else
+  message 'Please enable full disk access for terminal and rerun the setup script' 'substep' 'prompt'
   sleep 2
   open 'x-apple.systempreferences:com.apple.preference.security?Privacy_AllFiles'
   exit 1
