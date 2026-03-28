@@ -9,6 +9,8 @@ else
   source ./utilities/message.sh
 fi
 
+setup_header
+
 message 'Prepare for setup'
 
 message 'Have you enabled full disk access for terminal? [Y/n]' 'step' 'prompt'
@@ -174,4 +176,5 @@ done
 message 'Finishing'
 message 'Clear cache' 'step'
 killall cfprefsd
-message 'Setup complete, please reboot and complete manual steps from to-do.txt after that' 'substep' 'info'
+
+setup_footer
