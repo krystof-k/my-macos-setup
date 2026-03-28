@@ -9,11 +9,14 @@ source "$script_directory/../utilities/message.sh"
 message 'Set up Python version manager' 'step'
 message "Currently using Python (`python3 --version`) at \``which python3`\`" 'substep' 'info'
 message 'Add pyenv to ~/.zprofile' 'substep'
-echo '# Python version manager' >> ~/.zprofile
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
-echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
-echo 'eval "$(pyenv init -)"' >> ~/.zprofile
-echo '' >> ~/.zprofile
+# shellcheck disable=SC2016
+{
+  echo '# Python version manager'
+  echo 'export PYENV_ROOT="$HOME/.pyenv"'
+  echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"'
+  echo 'eval "$(pyenv init -)"'
+  echo ''
+} >> ~/.zprofile
 message 'Reload .zprofile' 'substep'
 source ~/.zprofile
 message 'Install Python 3.13' 'substep'
