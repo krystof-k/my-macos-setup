@@ -136,12 +136,8 @@ fi
 # shellcheck disable=SC1091
 source "$script_directory/steps/ruby.sh"
 
-if [[ ! $* =~ --skip-node-js ]]; then
-  message 'Set up Node.js'
-  ./setup/node.sh
-else
-  message 'Skipping Node.js setup' 'info'
-fi
+# shellcheck disable=SC1091
+source "$script_directory/steps/node.sh"
 
 if [[ ! $* =~ --skip-python ]]; then
   message 'Set up Python'
