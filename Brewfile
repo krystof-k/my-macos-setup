@@ -28,8 +28,6 @@
   cask 'chatgpt'
 
 # Communication
-  # Facebook Messenger
-  cask 'messenger'
   # Telegram
   cask 'telegram'
   # Slack
