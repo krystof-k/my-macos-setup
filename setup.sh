@@ -45,40 +45,40 @@ cd "$repository_directory"
 [[ -d .my-macos-setup ]] || mv "$OLDPWD/.my-macos-setup" . 2>/dev/null || mkdir -p .my-macos-setup
 
 # shellcheck disable=SC1091
-source "$repository_directory/steps/authentication.sh"
+source "$repository_directory/stages/authentication.sh"
 
 message 'Switch repository remote to SSH' 'step'
 git remote set-url origin git@github.com:krystof-k/my-macos-setup.git
 
 # shellcheck disable=SC1091
-source "$repository_directory/steps/homebrew.sh"
+source "$repository_directory/stages/homebrew.sh"
 
 message 'Create an APFS snapshot before installing apps' 'step'
 tmutil localsnapshot
 
 # shellcheck disable=SC1091
-source "$repository_directory/steps/apps.sh"
+source "$repository_directory/stages/apps.sh"
 
 # shellcheck disable=SC1091
-source "$repository_directory/steps/ruby.sh"
+source "$repository_directory/stages/ruby.sh"
 
 # shellcheck disable=SC1091
-source "$repository_directory/steps/node.sh"
+source "$repository_directory/stages/node.sh"
 
 # shellcheck disable=SC1091
-source "$repository_directory/steps/python.sh"
+source "$repository_directory/stages/python.sh"
 
 # shellcheck disable=SC1091
-source "$repository_directory/steps/docker.sh"
+source "$repository_directory/stages/docker.sh"
 
 # shellcheck disable=SC1091
-source "$repository_directory/steps/global-preferences.sh"
+source "$repository_directory/stages/global-preferences.sh"
 
 # shellcheck disable=SC1091
-source "$repository_directory/steps/keyboard-shortcuts.sh"
+source "$repository_directory/stages/keyboard-shortcuts.sh"
 
 # shellcheck disable=SC1091
-source "$repository_directory/steps/app-preferences.sh"
+source "$repository_directory/stages/app-preferences.sh"
 
 message 'Finishing'
 message 'Clear cache' 'step'
