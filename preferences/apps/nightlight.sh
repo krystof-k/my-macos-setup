@@ -7,6 +7,7 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../utilities/message.sh
 
 if ! command -v nightlight &>/dev/null; then
   message 'nightlight is not installed, skipping' 'info'
+  # shellcheck disable=SC2317
   return 0 2>/dev/null || exit 0
 fi
 

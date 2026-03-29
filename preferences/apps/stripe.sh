@@ -9,6 +9,7 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../utilities/idempotent
 
 if ! command -v stripe &>/dev/null; then
   message 'Stripe CLI is not installed, skipping' 'info'
+  # shellcheck disable=SC2317
   return 0 2>/dev/null || exit 0
 fi
 
