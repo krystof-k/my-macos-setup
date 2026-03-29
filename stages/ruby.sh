@@ -43,3 +43,7 @@ fi
 message "Set Ruby $ruby_version as global default" 'substep'
 rbenv global "$ruby_version"
 message "Currently using Ruby $(ruby -e 'puts RUBY_VERSION') at \`$(which ruby)\`" 'substep' 'info'
+
+run 'Update RubyGems' gem update --system
+
+run 'Install Standard Ruby' gem install standard
