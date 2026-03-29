@@ -11,7 +11,7 @@ fi
 
 setup_header
 
-message 'Prepare for setup'
+message 'Preflight check'
 
 message 'Full disk access' 'step'
 if plutil -lint /Library/Preferences/com.apple.TimeMachine.plist &>/dev/null; then

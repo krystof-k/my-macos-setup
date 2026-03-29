@@ -10,7 +10,8 @@ GRAY_LIGHT=$(tput setaf 248)
 
 RESET=$(tput sgr0)
 
-SUDO_PROMPT="$(echo -e "\r${GRAY_DARK}│${RESET}  ${YELLOW}›${RESET} Password: ")"
+EL=$(tput el)
+SUDO_PROMPT="$(echo -e "\r${GRAY_DARK}│${RESET}  ${YELLOW}›${RESET} Password: ${EL}")"
 export SUDO_PROMPT
 
 if [[ -z "${_msg_counter_file:-}" ]]; then
