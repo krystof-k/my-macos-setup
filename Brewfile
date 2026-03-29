@@ -2,7 +2,6 @@
   brew "mas" # Mac App Store CLI
 
 # Essentials
-  cask "aldente" # prevent battery overcharge
   cask "keka" # archiver
   mas "Bitwarden", id: 1352778147 # password manager (App Store required for browser integration)
   mas "Coca", id: 1000808993 # prevent sleep
