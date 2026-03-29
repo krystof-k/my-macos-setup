@@ -29,8 +29,8 @@ message 'Ensure NVM is in `~/.zprofile`' 'substep'
 mkdir -p ~/.nvm
 # shellcheck disable=SC2016
 append_block_if_missing ~/.zprofile "nvm" 'export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-source $(brew --prefix nvm)/etc/bash_completion.d/nvm'
+source "$(brew --prefix nvm)/nvm.sh"
+source "$(brew --prefix nvm)/etc/bash_completion.d/nvm"'
 
 # shellcheck disable=SC2016
 message 'Reload `~/.zprofile`' 'substep'
