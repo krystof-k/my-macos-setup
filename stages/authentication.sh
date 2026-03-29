@@ -30,6 +30,7 @@ else
   chmod 600 ~/.ssh/"$PRIVATE_KEY_FILENAME"
   # shellcheck disable=SC2016
   message 'Add it to SSH agent' 'substep'
+  message 'Enter your private key passphrase' 'substep' 'prompt'
   # -K option is deprecated in favor of --apple-use-keychain since macOS Monterey
   ssh-add --apple-use-keychain ~/.ssh/"$PRIVATE_KEY_FILENAME" 2>/dev/null
   # shellcheck disable=SC2016
