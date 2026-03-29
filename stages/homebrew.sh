@@ -11,6 +11,9 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../utilities/run.sh"
 
 message 'Setup Homebrew'
 
+# shellcheck disable=SC1090
+[[ -f ~/.zprofile ]] && source ~/.zprofile
+
 if command -v brew &>/dev/null; then
   message 'Homebrew already installed' 'info'
 else
