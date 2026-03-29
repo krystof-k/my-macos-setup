@@ -15,4 +15,10 @@ if ! command -v brew &>/dev/null; then
   return 1 2>/dev/null || exit 1
 fi
 
+sudo -v
+# Keep sudo alive during long-running brew bundle
+while true; do sudo -n true; sleep 50; done 2>/dev/null &
+_sudo_keepalive_pid=$!
+trap 'kill $_sudo_keepalive_pid 2>/dev/null' EXIT
+
 run 'Install apps from Brewfile' brew bundle
