@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e # exit on any error
+set -euo pipefail
 
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../utilities/message.sh"
@@ -15,4 +15,10 @@ if ! command -v brew &>/dev/null; then
   return 1 2>/dev/null || exit 1
 fi
 
-run 'Install apps from Brewfile' brew bundle
+sudo -v
+# Keep sudo alive during long-running brew bundle
+while true; do sudo -n true; sleep 50; done 2>/dev/null &
+_sudo_keepalive_pid=$!
+trap 'kill $_sudo_keepalive_pid 2>/dev/null' EXIT
+
+run 'Install apps from Brewfile' brew bundle --file "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../Brewfile"

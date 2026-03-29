@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e # exit on any error
+set -euo pipefail
 
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../utilities/message.sh"
@@ -34,7 +34,7 @@ message 'Reload `~/.zprofile`' 'substep'
 # shellcheck disable=SC1090
 source ~/.zprofile
 
-if rbenv versions --bare | grep -q "$ruby_version"; then
+if rbenv versions --bare | grep -qx "$ruby_version"; then
   message "Ruby $ruby_version already installed" 'substep' 'info'
 else
   run "Install Ruby $ruby_version" rbenv install -s "$ruby_version"

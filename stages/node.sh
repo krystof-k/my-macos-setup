@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e # exit on any error
+set -euo pipefail
 
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../utilities/message.sh"
@@ -47,4 +47,6 @@ nvm alias default "$node_version" &>/dev/null
 message "Currently using Node.js $(node --version) at \`$(which node)\`" 'substep' 'info'
 
 run 'Update npm' npm install -g npm@latest
-run 'Install Yarn' npm install --global yarn
+run 'Enable Corepack' corepack enable
+
+run 'Update Yarn' corepack prepare yarn@stable --activate

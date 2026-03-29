@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e # exit on any error
+set -euo pipefail
 
 if [ ! -f ./utilities/message.sh ]; then
   message=$(curl -fsSL -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/krystof-k/my-macos-setup/main/utilities/message.sh)
@@ -30,7 +30,16 @@ tmutil localsnapshot >> .my-macos-setup/logs/apfs-snapshot.log 2>&1
 
 if [ ! -f /etc/pam.d/sudo_local ]; then
   message 'Enable Touch ID for sudo' 'step'
+  message 'Enter your password' 'substep' 'prompt'
   sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local > /dev/null
+fi
+
+message 'Install Xcode Command Line Tools' 'step'
+if xcode-select -p &>/dev/null; then
+  message 'Already installed' 'substep' 'info'
+else
+  label=$(softwareupdate -l 2>&1 | grep -o 'Command Line Tools for Xcode-[0-9.]*' | head -1)
+  run 'Install Xcode Command Line Tools' sudo softwareupdate -i "$label"
 fi
 
 message 'Clone repository' 'step'

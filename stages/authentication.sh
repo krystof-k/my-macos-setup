@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e # exit on any error
+set -euo pipefail
 
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../utilities/message.sh"
@@ -55,7 +55,8 @@ if grep -q 'GITHUB_PACKAGES_TOKEN' ~/.zshenv 2>/dev/null; then
   source ~/.zshenv
 else
   message 'Enter GitHub Packages token' 'substep' 'prompt'
-  read -r GITHUB_PACKAGES_TOKEN
+  read -rs GITHUB_PACKAGES_TOKEN
+  echo
   message 'Enter GitHub Packages token username' 'substep' 'prompt'
   read -r GITHUB_PACKAGES_TOKEN_USERNAME
   # shellcheck disable=SC2016

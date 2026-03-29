@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
-set -e # exit on any error
+set -euo pipefail
 
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../utilities/message.sh"
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../utilities/idempotent.sh"
+
+if ! command -v stripe &>/dev/null; then
+  message 'Stripe CLI is not installed, skipping' 'info'
+  # shellcheck disable=SC2317
+  return 0 2>/dev/null || exit 0
+fi
 
 message 'Set up autocompletion for Stripe CLI' 'step'
 

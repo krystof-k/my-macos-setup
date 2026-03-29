@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e # exit on any error
+set -euo pipefail
 
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/message.sh"
@@ -26,5 +26,5 @@ message 'Here is your diff:' 'info'
 
 diff "diffs/$NAME/old.plist" "diffs/$NAME/new.plist"
 # shellcheck disable=SC2016
-message 'snd here with the `-currentHost` option:' 'info'
+message 'and here with the `-currentHost` option:' 'info'
 diff "diffs/$NAME/host-old.plist" "diffs/$NAME/host-new.plist"

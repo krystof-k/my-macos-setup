@@ -10,6 +10,9 @@ GRAY_LIGHT=$(tput setaf 248)
 
 RESET=$(tput sgr0)
 
+SUDO_PROMPT="$(echo -e "   ${YELLOW}›${RESET} Password: ")"
+export SUDO_PROMPT
+
 if [[ -z "${_msg_counter_file:-}" ]]; then
   export _msg_counter_file=".my-macos-setup/step-count"
 fi
