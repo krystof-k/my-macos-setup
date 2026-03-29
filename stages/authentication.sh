@@ -59,7 +59,7 @@ else
   read -rs GITHUB_PACKAGES_TOKEN
   echo
   message 'Enter GitHub Packages token username' 'substep' 'prompt'
-  read -r GITHUB_PACKAGES_TOKEN_USERNAME
+  read -r -p "$(echo -e "${GRAY_DARK}│${RESET}    ")" GITHUB_PACKAGES_TOKEN_USERNAME
   # shellcheck disable=SC2016
   message 'Ensure token is in `~/.zshenv`' 'substep'
   append_block_if_missing ~/.zshenv "github-packages" "export GITHUB_PACKAGES_TOKEN=${GITHUB_PACKAGES_TOKEN}
