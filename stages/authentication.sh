@@ -39,7 +39,7 @@ else
   AddKeysToAgent yes
   IdentityFile ~/.ssh/${PRIVATE_KEY_FILENAME}"
   message "Export public key to \`~/.ssh/${PRIVATE_KEY_FILENAME%.pem}.pub\`" 'substep'
-  ssh-keygen -y -f ~/.ssh/"$PRIVATE_KEY_FILENAME" > ~/.ssh/"${PRIVATE_KEY_FILENAME%.pem}".pub
+  ssh-keygen -y -f ~/.ssh/"$PRIVATE_KEY_FILENAME" > ~/.ssh/"${PRIVATE_KEY_FILENAME%.pem}".pub 2>/dev/null
 fi
 
 # shellcheck disable=SC2016
