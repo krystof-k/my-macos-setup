@@ -31,7 +31,7 @@ else
   # shellcheck disable=SC2016
   message 'Add it to SSH agent' 'substep'
   # -K option is deprecated in favor of --apple-use-keychain since macOS Monterey
-  ssh-add --apple-use-keychain ~/.ssh/"$PRIVATE_KEY_FILENAME"
+  ssh-add --apple-use-keychain ~/.ssh/"$PRIVATE_KEY_FILENAME" 2>/dev/null
   # shellcheck disable=SC2016
   message 'Ensure SSH config is in `~/.ssh/config`' 'substep'
   append_block_if_missing ~/.ssh/config "ssh-host" "Host *
