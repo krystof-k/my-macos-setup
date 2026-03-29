@@ -130,4 +130,4 @@
   cask "eobcanka"
   cask "logi-options+"
   cask "wch-ch34x-usb-serial-driver"
-  cask "yubico-yubikey-manager"
+  cask "yubico-authenticator"
