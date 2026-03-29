@@ -15,5 +15,12 @@ if ! command -v brew &>/dev/null; then
   return 1 2>/dev/null || exit 1
 fi
 
+message 'Install Rosetta' 'step'
+if arch -arch x86_64 /usr/bin/true 2>/dev/null; then
+  message 'Already installed' 'substep' 'info'
+else
+  sudo softwareupdate --install-rosetta --agree-to-license
+fi
+
 message 'Install apps from Brewfile' 'step'
 brew bundle --file "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../Brewfile" >> .my-macos-setup/logs/brew-bundle.log 2>&1

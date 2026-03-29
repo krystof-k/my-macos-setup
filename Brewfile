@@ -2,7 +2,6 @@
   brew "mas" # Mac App Store CLI
 
 # Essentials
-  cask "aldente" # prevent battery overcharge
   cask "keka" # archiver
   mas "Bitwarden", id: 1352778147 # password manager (App Store required for browser integration)
   mas "Coca", id: 1000808993 # prevent sleep
@@ -83,6 +82,7 @@
   cask "lunar" # external display brightness control
   cask "raspberry-pi-imager"
   cask "teamviewer"
+  cask "virtualbuddy" # macOS VM
   cask "wifiman" # Ubiquiti WiFiman
   cask "windows-app" # Microsoft Windows remote desktop
   mas "iSignum – PostSignum", id: 6502943626 # PostSignum certificate manager
@@ -130,4 +130,4 @@
   cask "eobcanka"
   cask "logi-options+"
   cask "wch-ch34x-usb-serial-driver"
-  cask "yubico-yubikey-manager"
+  cask "yubico-authenticator"
