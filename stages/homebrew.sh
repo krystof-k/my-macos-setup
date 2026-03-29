@@ -6,14 +6,16 @@ set -e # exit on any error
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../utilities/message.sh"
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../utilities/idempotent.sh"
+# shellcheck disable=SC1091
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../utilities/run.sh"
 
 message 'Setup Homebrew'
 
 if command -v brew &>/dev/null; then
   message 'Homebrew already installed' 'info'
 else
-  message 'Install Homebrew' 'step'
-  echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  sudo -v
+  run 'Install Homebrew' env NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # shellcheck disable=SC2016
