@@ -37,7 +37,7 @@ message 'Reload `~/.zprofile`' 'substep'
 # shellcheck disable=SC1090
 source ~/.zprofile
 
-if pyenv versions --bare | grep -q "$python_version"; then
+if pyenv versions --bare | grep -qx "$python_version"; then
   message "Python $python_version already installed" 'substep' 'info'
 else
   run "Install Python $python_version" pyenv install -s "$python_version"
