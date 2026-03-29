@@ -6,6 +6,11 @@ script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../utilities/message.sh"
 
+if ! command -v git &>/dev/null; then
+  message 'Git is not installed, skipping' 'info'
+  return 0 2>/dev/null || exit 0
+fi
+
 message 'Configure Git' 'step'
 
 message 'Set Git defaults' 'substep'
