@@ -22,7 +22,7 @@ fi
 message 'Ensure Homebrew is in `~/.zprofile`' 'substep'
 # shellcheck disable=SC2016
 append_block_if_missing ~/.zprofile "homebrew" 'eval "$(/opt/homebrew/bin/brew shellenv)"
-HOMEBREW_CURL_RETRIES=10'
+export HOMEBREW_CURL_RETRIES=10'
 
 # shellcheck disable=SC2016
 message 'Reload `~/.zprofile`' 'substep'
