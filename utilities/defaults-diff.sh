@@ -26,5 +26,5 @@ message 'Here is your diff:' 'info'
 
 diff "diffs/$NAME/old.plist" "diffs/$NAME/new.plist"
 # shellcheck disable=SC2016
-message 'snd here with the `-currentHost` option:' 'info'
+message 'and here with the `-currentHost` option:' 'info'
 diff "diffs/$NAME/host-old.plist" "diffs/$NAME/host-new.plist"
