@@ -38,11 +38,11 @@ message 'Install Xcode Command Line Tools' 'step'
 if xcode-select -p &>/dev/null; then
   message 'Already installed' 'substep' 'info'
 else
-  touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
-  label=$(softwareupdate -l 2>&1 | grep -o 'Command Line Tools for Xcode-[0-9.]*' | head -1)
-  rm -f /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
-  sudo -v
-  sudo softwareupdate -i "$label"
+  xcode-select --install 2>/dev/null
+  message 'Please accept the installation dialog' 'substep' 'prompt'
+  until xcode-select -p &>/dev/null; do
+    sleep 5
+  done
 fi
 
 message 'Clone repository' 'step'
