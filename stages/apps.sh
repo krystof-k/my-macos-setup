@@ -15,6 +15,7 @@ if ! command -v brew &>/dev/null; then
   return 1 2>/dev/null || exit 1
 fi
 
+message 'Authenticate for installation' 'step' 'prompt'
 sudo -v
 # Keep sudo alive during long-running brew bundle
 while true; do sudo -n true; sleep 50; done 2>/dev/null &

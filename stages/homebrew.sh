@@ -14,6 +14,7 @@ message 'Setup Homebrew'
 if command -v brew &>/dev/null; then
   message 'Homebrew already installed' 'info'
 else
+  message 'Authenticate for installation' 'step' 'prompt'
   sudo -v
   run 'Install Homebrew' env NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi

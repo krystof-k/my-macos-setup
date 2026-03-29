@@ -21,7 +21,7 @@ if ls ~/.ssh/*.pem &>/dev/null; then
   message 'Private key already exists in `~/.ssh`' 'substep' 'info'
 else
   message 'Enter absolute path to your private key' 'substep' 'prompt'
-  read -r PRIVATE_KEY_PATH
+  read -r -p "$(echo -e "${GRAY_DARK}│${RESET}    ")" PRIVATE_KEY_PATH
   PRIVATE_KEY_FILENAME=$(basename "$PRIVATE_KEY_PATH")
   # shellcheck disable=SC2016
   message 'Move private key to `~/.ssh`' 'substep'
@@ -30,8 +30,9 @@ else
   chmod 600 ~/.ssh/"$PRIVATE_KEY_FILENAME"
   # shellcheck disable=SC2016
   message 'Add it to SSH agent' 'substep'
+  message 'Enter your private key passphrase' 'substep' 'prompt'
   # -K option is deprecated in favor of --apple-use-keychain since macOS Monterey
-  ssh-add --apple-use-keychain ~/.ssh/"$PRIVATE_KEY_FILENAME"
+  ssh-add --apple-use-keychain ~/.ssh/"$PRIVATE_KEY_FILENAME" 2>/dev/null
   # shellcheck disable=SC2016
   message 'Ensure SSH config is in `~/.ssh/config`' 'substep'
   append_block_if_missing ~/.ssh/config "ssh-host" "Host *
@@ -39,7 +40,7 @@ else
   AddKeysToAgent yes
   IdentityFile ~/.ssh/${PRIVATE_KEY_FILENAME}"
   message "Export public key to \`~/.ssh/${PRIVATE_KEY_FILENAME%.pem}.pub\`" 'substep'
-  ssh-keygen -y -f ~/.ssh/"$PRIVATE_KEY_FILENAME" > ~/.ssh/"${PRIVATE_KEY_FILENAME%.pem}".pub
+  ssh-keygen -y -f ~/.ssh/"$PRIVATE_KEY_FILENAME" > ~/.ssh/"${PRIVATE_KEY_FILENAME%.pem}".pub 2>/dev/null
 fi
 
 # shellcheck disable=SC2016
@@ -58,7 +59,7 @@ else
   read -rs GITHUB_PACKAGES_TOKEN
   echo
   message 'Enter GitHub Packages token username' 'substep' 'prompt'
-  read -r GITHUB_PACKAGES_TOKEN_USERNAME
+  read -r -p "$(echo -e "${GRAY_DARK}│${RESET}    ")" GITHUB_PACKAGES_TOKEN_USERNAME
   # shellcheck disable=SC2016
   message 'Ensure token is in `~/.zshenv`' 'substep'
   append_block_if_missing ~/.zshenv "github-packages" "export GITHUB_PACKAGES_TOKEN=${GITHUB_PACKAGES_TOKEN}

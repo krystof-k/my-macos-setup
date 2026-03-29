@@ -53,7 +53,7 @@ else
   # shellcheck disable=SC2016
   message 'Clone repository to `~/Git/krystof-k/my-macos-setup`' 'substep'
   mkdir -p ~/Git/krystof-k
-  git clone https://github.com/krystof-k/my-macos-setup.git "$repository_directory"
+  git clone https://github.com/krystof-k/my-macos-setup.git "$repository_directory" >> .my-macos-setup/logs/git-clone.log 2>&1
 fi
 cd "$repository_directory"
 [[ -d .my-macos-setup ]] || mv "$OLDPWD/.my-macos-setup" . 2>/dev/null || mkdir -p .my-macos-setup
