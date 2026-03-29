@@ -21,4 +21,4 @@ while true; do sudo -n true; sleep 50; done 2>/dev/null &
 _sudo_keepalive_pid=$!
 trap 'kill $_sudo_keepalive_pid 2>/dev/null' EXIT
 
-run 'Install apps from Brewfile' brew bundle
+run 'Install apps from Brewfile' brew bundle --file "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../Brewfile"
