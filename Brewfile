@@ -83,6 +83,7 @@
   cask "lunar" # external display brightness control
   cask "raspberry-pi-imager"
   cask "teamviewer"
+  cask "virtualbuddy" # macOS VM
   cask "wifiman" # Ubiquiti WiFiman
   cask "windows-app" # Microsoft Windows remote desktop
   mas "iSignum – PostSignum", id: 6502943626 # PostSignum certificate manager
