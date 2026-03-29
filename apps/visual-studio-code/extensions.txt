@@ -4,4 +4,5 @@ github.copilot
 github.copilot-chat
 github.vscode-github-actions
 prisma.prisma
+testdouble.vscode-standard-ruby
 yoavbls.pretty-ts-errors
