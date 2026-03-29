@@ -21,7 +21,7 @@ if ls ~/.ssh/*.pem &>/dev/null; then
   message 'Private key already exists in `~/.ssh`' 'substep' 'info'
 else
   message 'Enter absolute path to your private key' 'substep' 'prompt'
-  read -r PRIVATE_KEY_PATH
+  read -r -p "$(echo -e "${GRAY_DARK}│${RESET}    ")" PRIVATE_KEY_PATH
   PRIVATE_KEY_FILENAME=$(basename "$PRIVATE_KEY_PATH")
   # shellcheck disable=SC2016
   message 'Move private key to `~/.ssh`' 'substep'
