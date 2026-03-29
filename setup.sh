@@ -33,6 +33,14 @@ if [ ! -f /etc/pam.d/sudo_local ]; then
   sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local > /dev/null
 fi
 
+message 'Install Xcode Command Line Tools' 'step'
+if xcode-select -p &>/dev/null; then
+  message 'Already installed' 'substep' 'info'
+else
+  label=$(softwareupdate -l 2>&1 | grep -o 'Command Line Tools for Xcode-[0-9.]*' | head -1)
+  run 'Install Xcode Command Line Tools' sudo softwareupdate -i "$label"
+fi
+
 message 'Clone repository' 'step'
 repository_directory="$HOME/Git/krystof-k/my-macos-setup"
 if [[ -d "$repository_directory" ]]; then
