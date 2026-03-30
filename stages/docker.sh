@@ -30,5 +30,5 @@ elif [[ -z "${GITHUB_PACKAGES_TOKEN:-}" ]] || [[ -z "${GITHUB_PACKAGES_TOKEN_USE
   # shellcheck disable=SC2317
   return 1 2>/dev/null || exit 1
 else
-  echo "$GITHUB_PACKAGES_TOKEN" | docker login ghcr.io -u "$GITHUB_PACKAGES_TOKEN_USERNAME" --password-stdin
+  echo "$GITHUB_PACKAGES_TOKEN" | docker login ghcr.io -u "$GITHUB_PACKAGES_TOKEN_USERNAME" --password-stdin 2>/dev/null
 fi
