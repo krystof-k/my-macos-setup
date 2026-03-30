@@ -65,10 +65,10 @@ sudo pmset -b sleep 3
 message 'Sleep after 30 minutes on power' 'substep'
 sudo pmset -c sleep 30
 
-message 'Set computer name'
+message ‘Set computer name’ ‘step’
 sudo scutil --set ComputerName "Kryštof’s MacBook Pro"
 
-message 'Set hostname'
+message ‘Set hostname’ ‘step’
 sudo scutil --set LocalHostName krystofs-macbook-pro
 
 message 'Manually set keyboard backlight limit to 30 seconds' 'substep' 'to-do'
