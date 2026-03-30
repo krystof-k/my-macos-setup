@@ -13,7 +13,7 @@ node_version="${1:-24.14.1}"
 
 message 'Set up Node.js'
 
-if ! [[ -s "${NVM_DIR:-$HOME/.nvm}/nvm.sh" ]] && ! command -v nvm &>/dev/null; then
+if ! [[ -s "${NVM_DIR:-$HOME/.nvm}/nvm.sh" ]] && ! [[ -s "$(brew --prefix 2>/dev/null)/opt/nvm/nvm.sh" ]] && ! command -v nvm &>/dev/null; then
   message 'nvm is not installed' 'error'
   # shellcheck disable=SC2317
   return 1 2>/dev/null || exit 1
