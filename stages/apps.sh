@@ -19,7 +19,8 @@ message 'Install Rosetta' 'step'
 if arch -arch x86_64 /usr/bin/true 2>/dev/null; then
   message 'Already installed' 'substep' 'info'
 else
-  sudo softwareupdate --install-rosetta --agree-to-license
+  # shellcheck disable=SC2024
+  sudo softwareupdate --install-rosetta --agree-to-license >> .my-macos-setup/logs/rosetta.log 2>&1
 fi
 
 message 'Install apps from Brewfile' 'step'

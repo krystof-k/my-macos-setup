@@ -16,10 +16,12 @@ fi
 if docker info &>/dev/null; then
   message 'Docker daemon already running' 'substep' 'info'
 else
-  message 'Open Docker, wait for the daemon to start and press any key to continue' 'step' 'prompt'
-  sleep 2
+  message 'Start Docker daemon' 'step'
   open -a Docker
-  read -n 1 -s -r
+  message 'Waiting for Docker daemon to start' 'substep'
+  until docker info &>/dev/null; do
+    sleep 3
+  done
 fi
 
 message 'Authenticate GitHub Container registry' 'step'
@@ -30,5 +32,5 @@ elif [[ -z "${GITHUB_PACKAGES_TOKEN:-}" ]] || [[ -z "${GITHUB_PACKAGES_TOKEN_USE
   # shellcheck disable=SC2317
   return 1 2>/dev/null || exit 1
 else
-  echo "$GITHUB_PACKAGES_TOKEN" | docker login ghcr.io -u "$GITHUB_PACKAGES_TOKEN_USERNAME" --password-stdin
+  echo "$GITHUB_PACKAGES_TOKEN" | docker login ghcr.io -u "$GITHUB_PACKAGES_TOKEN_USERNAME" --password-stdin 2>/dev/null
 fi
