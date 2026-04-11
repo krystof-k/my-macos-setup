@@ -33,9 +33,10 @@ append_block_if_missing ~/.zprofile "pyenv" 'export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"'
 
 # shellcheck disable=SC2016
-message 'Reload `~/.zprofile`' 'substep'
-# shellcheck disable=SC1090
-source ~/.zprofile
+message 'Load pyenv' 'substep'
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 if pyenv versions --bare | grep -qx "$python_version"; then
   message "Python $python_version already installed" 'substep' 'info'

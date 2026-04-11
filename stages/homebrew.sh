@@ -12,7 +12,7 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../utilities/run.sh"
 message 'Setup Homebrew'
 
 # shellcheck disable=SC1090
-[[ -f ~/.zprofile ]] && source ~/.zprofile
+[[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 if command -v brew &>/dev/null; then
   message 'Homebrew already installed' 'info'
@@ -29,6 +29,5 @@ append_block_if_missing ~/.zprofile "homebrew" 'eval "$(/opt/homebrew/bin/brew s
 export HOMEBREW_CURL_RETRIES=10'
 
 # shellcheck disable=SC2016
-message 'Reload `~/.zprofile`' 'substep'
-# shellcheck disable=SC1090
-source ~/.zprofile
+message 'Load Homebrew' 'substep'
+eval "$(/opt/homebrew/bin/brew shellenv)"
