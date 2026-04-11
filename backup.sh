@@ -54,4 +54,7 @@ FAIL_LOG="$BACKUP_DIR/failures.log"
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/backup/raw-dumps.sh" "$BACKUP_DIR/raw-dumps"
 
+# shellcheck disable=SC1091
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/backup/dumps.sh" "$BACKUP_DIR/dumps"
+
 footer
