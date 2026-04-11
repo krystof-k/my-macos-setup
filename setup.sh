@@ -9,7 +9,7 @@ else
   source ./utilities/message.sh
 fi
 
-header
+header 'setup'
 
 message 'Preflight check'
 
