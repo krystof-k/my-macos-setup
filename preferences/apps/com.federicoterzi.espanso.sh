@@ -8,4 +8,4 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../utilities/message.sh
 message 'Configure Espanso' 'step'
 
 message 'Link the config folder to the Git repository' 'substep'
-ln -sf ~/Git/krystof-k/my-macos-setup/apps/espanso ~/Library/Application\ Support/espanso
+ln -sfn ~/Git/krystof-k/my-macos-setup/apps/espanso ~/Library/Application\ Support/espanso
