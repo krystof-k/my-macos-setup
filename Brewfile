@@ -81,6 +81,7 @@
   cask "gifox" # GIF recorder
   cask "hazel" # file organizer
   cask "lunar" # external display brightness control
+  cask "maccy" # clipboard manager
   cask "raspberry-pi-imager"
   cask "teamviewer"
   cask "virtualbuddy" # macOS VM
