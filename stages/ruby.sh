@@ -30,9 +30,8 @@ message 'Ensure rbenv is in `~/.zprofile`' 'substep'
 append_block_if_missing ~/.zprofile "rbenv" 'eval "$(rbenv init -)"'
 
 # shellcheck disable=SC2016
-message 'Reload `~/.zprofile`' 'substep'
-# shellcheck disable=SC1090
-source ~/.zprofile
+message 'Load rbenv' 'substep'
+eval "$(rbenv init -)"
 
 if rbenv versions --bare | grep -qx "$ruby_version"; then
   message "Ruby $ruby_version already installed" 'substep' 'info'

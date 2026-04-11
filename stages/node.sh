@@ -33,9 +33,10 @@ source "$(brew --prefix nvm)/nvm.sh"
 source "$(brew --prefix nvm)/etc/bash_completion.d/nvm"'
 
 # shellcheck disable=SC2016
-message 'Reload `~/.zprofile`' 'substep'
-# shellcheck disable=SC1090
-source ~/.zprofile
+message 'Load NVM' 'substep'
+export NVM_DIR=~/.nvm
+# shellcheck disable=SC1091
+source "$(brew --prefix nvm)/nvm.sh"
 
 if nvm version "$node_version" &>/dev/null; then
   message "Node.js $node_version already installed" 'substep' 'info'
