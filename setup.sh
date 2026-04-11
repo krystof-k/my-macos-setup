@@ -103,4 +103,4 @@ message 'Finishing'
 message 'Reload preferences cache' 'step'
 killall -HUP cfprefsd 2>/dev/null || true
 
-footer
+footer 'Please reboot and complete manual steps from the to-do list (to-do.txt)'

@@ -47,7 +47,9 @@ footer() {
   else
     message "Done! ${GRAY_MED}(${count} steps in ${seconds}s)${RESET}" 'step'
   fi
-  message 'Please reboot and complete manual steps from the to-do list (to-do.txt)' 'substep' 'info'
+  if [[ -n "${1:-}" ]]; then
+    message "$1" 'substep' 'info'
+  fi
   echo ""
 }
 
