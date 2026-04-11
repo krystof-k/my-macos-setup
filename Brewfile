@@ -44,6 +44,7 @@
   brew "fzf" # fuzzy finder
   brew "nano" # terminal text editor
   brew "shellcheck" # shell script linter
+  brew "zoxide" # smarter cd
   tap "stripe/stripe-cli"
   brew "stripe/stripe-cli/stripe"
   cask "claude-code"
