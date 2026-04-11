@@ -9,7 +9,7 @@ else
   source ./utilities/message.sh
 fi
 
-setup_header
+header
 
 message 'Preflight check'
 
@@ -103,4 +103,4 @@ message 'Finishing'
 message 'Reload preferences cache' 'step'
 killall -HUP cfprefsd 2>/dev/null || true
 
-setup_footer
+footer

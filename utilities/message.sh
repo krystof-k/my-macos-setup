@@ -25,14 +25,14 @@ _increment_step_count() {
   echo $(( count + 1 )) > "$_msg_counter_file"
 }
 
-setup_header() {
+header() {
   rm -f "$_msg_counter_file"
   _msg_start_time=$(date +%s)
   echo ""
-  echo -e "${BOLD} My macOS setup${RESET}"
+  echo -e "${BOLD} My macOS ${1:-setup}${RESET}"
 }
 
-setup_footer() {
+footer() {
   local end_time count elapsed minutes seconds
   end_time=$(date +%s)
   count=0
