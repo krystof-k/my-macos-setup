@@ -88,6 +88,18 @@ source "$repository_directory/stages/node.sh"
 source "$repository_directory/stages/python.sh"
 
 # shellcheck disable=SC1091
+source "$repository_directory/stages/starship.sh"
+
+# shellcheck disable=SC1091
+source "$repository_directory/stages/fzf.sh"
+
+# shellcheck disable=SC1091
+source "$repository_directory/stages/zoxide.sh"
+
+# shellcheck disable=SC1091
+source "$repository_directory/stages/atuin.sh"
+
+# shellcheck disable=SC1091
 source "$repository_directory/stages/docker.sh"
 
 # shellcheck disable=SC1091

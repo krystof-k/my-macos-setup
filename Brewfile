@@ -38,15 +38,24 @@
     cask "microsoft-word"
 
 # Development
+  brew "atuin" # shell history
+  brew "bat" # better cat
   brew "cmake" # build system for C++
   brew "gh" # GitHub CLI
   brew "git"
+  brew "eza" # better ls
+  brew "fd" # better find
+  brew "fzf" # fuzzy finder
   brew "nano" # terminal text editor
+  brew "ripgrep" # better grep
   brew "shellcheck" # shell script linter
+  brew "starship" # cross-shell prompt
+  brew "zoxide" # smarter cd
   tap "stripe/stripe-cli"
   brew "stripe/stripe-cli/stripe"
   cask "claude-code"
   cask "docker-desktop"
+  cask "ghostty" # terminal
   cask "postman"
   cask "tower" # Git client
   cask "visual-studio-code" # code editor
@@ -81,6 +90,7 @@
   cask "gifox" # GIF recorder
   cask "hazel" # file organizer
   cask "lunar" # external display brightness control
+  cask "maccy" # clipboard manager
   cask "raspberry-pi-imager"
   cask "teamviewer"
   cask "virtualbuddy" # macOS VM
