@@ -47,4 +47,11 @@ if [[ "$DRY_RUN" == 1 ]]; then
   exit 0
 fi
 
+mkdir -p "$BACKUP_DIR"
+FAIL_LOG="$BACKUP_DIR/failures.log"
+: > "$FAIL_LOG"
+
+# shellcheck disable=SC1091
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/backup/raw-dumps.sh" "$BACKUP_DIR/raw-dumps"
+
 footer
