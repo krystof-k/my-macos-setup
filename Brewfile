@@ -41,6 +41,7 @@
   brew "cmake" # build system for C++
   brew "gh" # GitHub CLI
   brew "git"
+  brew "fzf" # fuzzy finder
   brew "nano" # terminal text editor
   brew "shellcheck" # shell script linter
   tap "stripe/stripe-cli"
