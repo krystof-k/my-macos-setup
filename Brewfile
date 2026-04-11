@@ -51,6 +51,7 @@
   brew "stripe/stripe-cli/stripe"
   cask "claude-code"
   cask "docker-desktop"
+  cask "ghostty" # terminal
   cask "postman"
   cask "tower" # Git client
   cask "visual-studio-code" # code editor
