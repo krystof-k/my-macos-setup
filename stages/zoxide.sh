@@ -15,6 +15,7 @@ if ! command -v zoxide &>/dev/null; then
   return 1 2>/dev/null || exit 1
 fi
 
+# shellcheck disable=SC2016
 message 'Ensure zoxide is in `~/.zprofile`' 'step'
 # shellcheck disable=SC2016
 append_block_if_missing ~/.zprofile "zoxide" 'eval "$(zoxide init zsh)"'

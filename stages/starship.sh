@@ -15,6 +15,7 @@ if ! command -v starship &>/dev/null; then
   return 1 2>/dev/null || exit 1
 fi
 
+# shellcheck disable=SC2016
 message 'Ensure Starship is in `~/.zprofile`' 'step'
 # shellcheck disable=SC2016
 append_block_if_missing ~/.zprofile "starship" 'eval "$(starship init zsh)"'
