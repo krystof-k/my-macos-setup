@@ -47,6 +47,7 @@
   brew "fd" # better find
   brew "fzf" # fuzzy finder
   brew "nano" # terminal text editor
+  brew "ripgrep" # better grep
   brew "shellcheck" # shell script linter
   brew "starship" # cross-shell prompt
   brew "zoxide" # smarter cd
