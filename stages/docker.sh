@@ -19,7 +19,13 @@ else
   message 'Start Docker daemon' 'step'
   open -a Docker
   message 'Waiting for Docker daemon to start' 'substep'
-  until docker info &>/dev/null; do
+  for i in {1..60}; do
+    docker info &>/dev/null && break
+    if [[ "$i" -eq 60 ]]; then
+      message 'Docker daemon failed to start within 3 minutes' 'error'
+      # shellcheck disable=SC2317
+      return 1 2>/dev/null || exit 1
+    fi
     sleep 3
   done
 fi

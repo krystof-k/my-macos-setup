@@ -44,8 +44,8 @@ defaults write -g 'PMPrintingExpandedStateForPrint' -bool true
 # sudo systemsetup -setnetworktimeserver ntp.nic.cz
 
 message 'Add ~/Git to Spotlight exclusions' 'substep'
-if ! sudo /usr/libexec/PlistBuddy -c "Print :Exclusions" /System/Volumes/Data/.Spotlight-V100/VolumeConfiguration.plist 2>/dev/null | grep -q '/Users/krystof-k/Git'; then
-  sudo /usr/libexec/PlistBuddy -c "Add :Exclusions:0 string '/Users/krystof-k/Git'" /System/Volumes/Data/.Spotlight-V100/VolumeConfiguration.plist
+if ! sudo /usr/libexec/PlistBuddy -c "Print :Exclusions" /System/Volumes/Data/.Spotlight-V100/VolumeConfiguration.plist 2>/dev/null | grep -q "$HOME/Git"; then
+  sudo /usr/libexec/PlistBuddy -c "Add :Exclusions:0 string '$HOME/Git'" /System/Volumes/Data/.Spotlight-V100/VolumeConfiguration.plist
 fi
 
 message 'Enable firewall' 'substep'
