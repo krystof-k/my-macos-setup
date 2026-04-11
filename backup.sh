@@ -57,4 +57,7 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/backup/raw-dumps.sh" "$BAC
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/backup/dumps.sh" "$BACKUP_DIR/dumps"
 
+# shellcheck disable=SC1091
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/backup/manifest.sh" "$BACKUP_DIR/manifest"
+
 footer
