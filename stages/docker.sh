@@ -23,6 +23,7 @@ else
     docker info &>/dev/null && break
     if [[ "$i" -eq 60 ]]; then
       message 'Docker daemon failed to start within 3 minutes' 'error'
+      # shellcheck disable=SC2317
       return 1 2>/dev/null || exit 1
     fi
     sleep 3
