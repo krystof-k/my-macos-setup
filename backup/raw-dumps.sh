@@ -40,3 +40,4 @@ try_copy "$HOME/.config" dot-config
 message 'Shell history' 'step'
 try_copy "$HOME/.zsh_history" dot-zsh_history.txt
 try_copy "$HOME/.bash_history" dot-bash_history.txt
+try_copy "$HOME/.local/share/atuin" dot-local-share-atuin

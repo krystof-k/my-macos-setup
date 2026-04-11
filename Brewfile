@@ -38,6 +38,7 @@
     cask "microsoft-word"
 
 # Development
+  brew "atuin" # shell history
   brew "cmake" # build system for C++
   brew "gh" # GitHub CLI
   brew "git"
