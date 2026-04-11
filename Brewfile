@@ -1,5 +1,6 @@
 # Prerequisites
   brew "mas" # Mac App Store CLI
+  brew "rsync"
 
 # Essentials
   cask "keka" # archiver
