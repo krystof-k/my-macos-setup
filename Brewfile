@@ -39,9 +39,12 @@
 
 # Development
   brew "atuin" # shell history
+  brew "bat" # better cat
   brew "cmake" # build system for C++
   brew "gh" # GitHub CLI
   brew "git"
+  brew "eza" # better ls
+  brew "fd" # better find
   brew "fzf" # fuzzy finder
   brew "nano" # terminal text editor
   brew "shellcheck" # shell script linter
