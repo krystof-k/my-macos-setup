@@ -101,9 +101,9 @@ for dir in Desktop Documents Downloads Screenshots; do
   message "\`~/$dir\`" 'substep'
   mkdir -p "$PHASE_DIR/directories/$dir"
   if /opt/homebrew/bin/rsync --version &>/dev/null 2>&1; then
-    /opt/homebrew/bin/rsync -a --no-specials --info=progress2 "$HOME/$dir/" "$PHASE_DIR/directories/$dir/" 2>/dev/null || true
+    /opt/homebrew/bin/rsync -rlt --no-specials --no-xattrs --info=progress2 "$HOME/$dir/" "$PHASE_DIR/directories/$dir/" 2>/dev/null || true
   else
-    rsync -a --no-specials "$HOME/$dir/" "$PHASE_DIR/directories/$dir/" >/dev/null 2>&1 || true
+    rsync -rlt --no-specials --no-xattrs "$HOME/$dir/" "$PHASE_DIR/directories/$dir/" >/dev/null 2>&1 || true
   fi
 done
 
