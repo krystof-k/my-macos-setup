@@ -35,7 +35,16 @@ try_copy "$HOME/.yarnrc.yml" configs/dot-yarnrc.yml
 try_copy "$HOME/.bundle/config" configs/dot-bundle-config.txt
 
 message 'Claude Code config' 'step'
-try_copy "$HOME/.claude" claude/dot-claude
+if [[ -d "$HOME/.claude" ]]; then
+  message "\`~/.claude\`" 'substep'
+  mkdir -p "$PHASE_DIR/claude"
+  if ! tar czf "$PHASE_DIR/claude/dot-claude.tar.gz" -C "$HOME" .claude 2>/dev/null; then
+    rm -f "$PHASE_DIR/claude/dot-claude.tar.gz"
+    echo "FAILED: compress ~/.claude -> claude/dot-claude.tar.gz" >> "$FAIL_LOG"
+    # shellcheck disable=SC2016
+    message 'Failed: `claude/dot-claude.tar.gz`' 'substep' 'prompt'
+  fi
+fi
 try_copy "$HOME/.claude.json" claude/dot-claude.json
 
 message 'VS Code settings' 'step'
