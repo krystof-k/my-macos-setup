@@ -62,8 +62,21 @@ try_copy --sudo /Library/LaunchAgents launch/agents-system
 try_copy --sudo /Library/LaunchDaemons launch/daemons
 
 message 'Mail' 'step'
-try_copy "$HOME/Library/Mail" mail/Mail
-try_copy "$HOME/Library/Containers/com.apple.mail" mail/Mail-container
+mkdir -p "$PHASE_DIR/mail"
+for mail_dir in "$HOME/Library/Mail" "$HOME/Library/Containers/com.apple.mail"; do
+  if [[ -d "$mail_dir" ]]; then
+    archive_name="$(basename "$mail_dir").tar.gz"
+    message "\`${mail_dir}\`" 'substep'
+    if ! tar czf "$PHASE_DIR/mail/$archive_name" -C "$(dirname "$mail_dir")" "$(basename "$mail_dir")" 2>/dev/null; then
+      rm -f "$PHASE_DIR/mail/$archive_name"
+      echo "FAILED: compress $mail_dir -> mail/$archive_name" >> "$FAIL_LOG"
+      # shellcheck disable=SC2016
+      message "Failed: \`mail/${archive_name}\`" 'substep' 'prompt'
+    fi
+  else
+    message "Skipped (not found): \`${mail_dir}\`" 'substep'
+  fi
+done
 
 message 'Application data' 'step'
 app_support_map=(
