@@ -33,14 +33,14 @@ try_copy() {
   message "\`${src}\`" 'substep'
 
   if [[ -d "$src" ]]; then
-    if "${sudo_prefix[@]}" rsync -a --no-specials "$src/" "$dest/" >/dev/null 2>&1; then
+    if "${sudo_prefix[@]}" rsync -rlt --no-specials "$src/" "$dest/" >/dev/null 2>&1; then
       :
     else
       echo "FAILED: copy $src -> $rel_path" >> "$FAIL_LOG"
       message "Failed: \`${rel_path}\`" 'substep' 'prompt'
     fi
   else
-    if "${sudo_prefix[@]}" cp -p "$src" "$dest" 2>/dev/null; then
+    if "${sudo_prefix[@]}" cp "$src" "$dest" 2>/dev/null; then
       :
     else
       echo "FAILED: copy $src -> $rel_path" >> "$FAIL_LOG"
