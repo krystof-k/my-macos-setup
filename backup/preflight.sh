@@ -37,16 +37,37 @@ message 'Estimate backup size' 'step'
 total_kb=0
 for dir in \
   "$HOME/Library/Preferences" \
+  /Library/Preferences \
   "$HOME/Library/Keychains" \
   "$HOME/.config" \
   "$HOME/.ssh" \
   "$HOME/.gnupg" \
   "$HOME/Library/Fonts" \
   "$HOME/Library/LaunchAgents" \
+  /Library/LaunchAgents \
+  /Library/LaunchDaemons \
   "$HOME/Library/Mail" \
+  "$HOME/Library/Containers/com.apple.mail" \
+  "$HOME/Library/Containers/at.eggerapps.Postico" \
+  "$HOME/Library/Containers/com.wireguard.macos" \
   "$HOME/.claude" \
+  "$HOME/.local/share/atuin" \
+  "$HOME/Desktop" \
+  "$HOME/Documents" \
+  "$HOME/Downloads" \
+  "$HOME/Screenshots" \
   "$HOME/Git" \
 ; do
+  if [[ -d "$dir" ]]; then
+    dir_kb=$(du -sk "$dir" 2>/dev/null | cut -f1)
+    total_kb=$(( total_kb + dir_kb ))
+  fi
+done
+for support_dir in \
+  AlDente "Docker Desktop" espanso Firefox Lunar Postman PrusaSlicer \
+  RedisInsight Slack Spotify com.fournova.Tower3 org.videolan.vlc coconutBattery \
+; do
+  dir="$HOME/Library/Application Support/$support_dir"
   if [[ -d "$dir" ]]; then
     dir_kb=$(du -sk "$dir" 2>/dev/null | cut -f1)
     total_kb=$(( total_kb + dir_kb ))
