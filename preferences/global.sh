@@ -28,7 +28,7 @@ message 'Set shell preferences' 'step'
 
 # shellcheck disable=SC2016
 message 'Set default terminal editor to `nano` in `~/.zshenv`' 'substep'
-append_block_if_missing ~/.zshenv "default-editor" "export EDITOR=nano"
+append_block_if_missing ~/.zshenv "default-editor" "export EDITOR=/opt/homebrew/bin/nano"
 
 message 'Set other preferences' 'step'
 
