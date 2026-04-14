@@ -1,0 +1,8 @@
+font-family = SF Mono
+font-size = 12
+
+window-width = 80
+window-height = 20
+window-padding-x = 8
+window-padding-y = 8
+window-padding-balance = false
