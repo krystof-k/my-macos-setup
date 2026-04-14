@@ -2,9 +2,8 @@
 
 set -euo pipefail
 
-script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck disable=SC1091
-source "$script_directory/../../utilities/message.sh"
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../utilities/message.sh"
 
 if [[ -d /Applications/Ghostty.app ]]; then
   message 'Configure Ghostty' 'step'
