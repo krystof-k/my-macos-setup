@@ -2,18 +2,17 @@
 
 set -euo pipefail
 
-script_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck disable=SC1091
-source "$script_directory/../../utilities/message.sh"
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../../utilities/message.sh"
 
 if [[ -d /Applications/Ghostty.app ]]; then
   message 'Configure Ghostty' 'step'
 
   config_dir="$HOME/Library/Application Support/com.mitchellh.ghostty"
 
-  message 'Copy Ghostty config' 'substep'
-  mkdir -p "$config_dir"
-  cp "$script_directory/../../apps/ghostty/config.ghostty" "$config_dir/config.ghostty"
+  message 'Symlink Ghostty config' 'substep'
+  mkdir -p "$(dirname "$config_dir")"
+  ln -sfn ~/Git/krystof-k/my-macos-setup/apps/ghostty "$config_dir"
 
   message 'Set Ghostty as default terminal' 'substep' 'to-do'
 fi
