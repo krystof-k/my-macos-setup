@@ -4,6 +4,8 @@ set -euo pipefail
 
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../utilities/message.sh"
+# shellcheck disable=SC1091
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../utilities/idempotent.sh"
 
 message 'Set input preferences' 'step'
 
@@ -21,6 +23,12 @@ defaults write -g 'NSAutomaticDashSubstitutionEnabled' -bool false
 
 message 'Enable double spacebar period' 'substep'
 defaults write -g 'NSAutomaticPeriodSubstitutionEnabled' -bool true
+
+message 'Set shell preferences' 'step'
+
+# shellcheck disable=SC2016
+message 'Set default terminal editor to `nano` in `~/.zshenv`' 'substep'
+append_block_if_missing ~/.zshenv "default-editor" "export EDITOR=nano"
 
 message 'Set other preferences' 'step'
 
