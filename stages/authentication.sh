@@ -38,7 +38,8 @@ else
   append_block_if_missing ~/.ssh/config "ssh-host" "Host *
   UseKeychain yes
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/${PRIVATE_KEY_FILENAME}"
+  IdentityFile ~/.ssh/${PRIVATE_KEY_FILENAME}
+  SetEnv TERM=xterm-256color"
   message "Export public key to \`~/.ssh/${PRIVATE_KEY_FILENAME%.pem}.pub\`" 'substep'
   ssh-keygen -y -f ~/.ssh/"$PRIVATE_KEY_FILENAME" > ~/.ssh/"${PRIVATE_KEY_FILENAME%.pem}".pub 2>/dev/null
 fi
