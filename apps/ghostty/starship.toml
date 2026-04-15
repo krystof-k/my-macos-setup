@@ -1,0 +1,11 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$directory$git_branch$character"
+
+[directory]
+style = "white"
+
+[git_branch]
+symbol = ""
+format = "[on $branch]($style) "
+style = "white"

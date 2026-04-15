@@ -16,6 +16,12 @@ if ! command -v starship &>/dev/null; then
 fi
 
 # shellcheck disable=SC2016
+message 'Symlink Starship config' 'step'
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+mkdir -p ~/.config
+ln -sf "$SCRIPT_DIR/../apps/ghostty/starship.toml" ~/.config/starship.toml
+
+# shellcheck disable=SC2016
 message 'Ensure Starship is in `~/.zshrc`' 'step'
 # shellcheck disable=SC2016
 append_block_if_missing ~/.zshrc "starship" 'eval "$(starship init zsh)"'
