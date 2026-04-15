@@ -16,6 +16,6 @@ if ! command -v fzf &>/dev/null; then
 fi
 
 # shellcheck disable=SC2016
-message 'Ensure fzf is in `~/.zprofile`' 'step'
+message 'Ensure fzf is in `~/.zshrc`' 'step'
 # shellcheck disable=SC2016
-append_block_if_missing ~/.zprofile "fzf" 'source <(fzf --zsh)'
+append_block_if_missing ~/.zshrc "fzf" 'source <(fzf --zsh)'
