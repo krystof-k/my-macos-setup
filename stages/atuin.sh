@@ -16,6 +16,6 @@ if ! command -v atuin &>/dev/null; then
 fi
 
 # shellcheck disable=SC2016
-message 'Ensure Atuin is in `~/.zprofile`' 'step'
+message 'Ensure Atuin is in `~/.zshrc`' 'step'
 # shellcheck disable=SC2016
-append_block_if_missing ~/.zprofile "atuin" 'eval "$(atuin init zsh)"'
+append_block_if_missing ~/.zshrc "atuin" 'eval "$(atuin init zsh)"'
