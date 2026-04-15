@@ -1,3 +1,4 @@
+anthropic.claude-code
 bierner.markdown-mermaid
 biomejs.biome
 github.copilot
