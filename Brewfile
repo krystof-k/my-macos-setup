@@ -54,6 +54,7 @@
   tap "stripe/stripe-cli"
   brew "stripe/stripe-cli/stripe"
   cask "claude-code"
+  cask "codex"
   cask "docker-desktop"
   cask "ghostty" # terminal
   cask "postman"
