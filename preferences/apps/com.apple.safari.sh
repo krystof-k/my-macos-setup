@@ -9,3 +9,8 @@ message 'Configure Safari' 'step'
 
 message 'Disable autocorrect' 'substep'
 defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
+
+message 'Enable Developer Mode' 'substep'
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari WebKitPreferences.developerExtrasEnabled -bool true
