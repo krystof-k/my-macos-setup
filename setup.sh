@@ -103,6 +103,9 @@ source "$repository_directory/stages/atuin.sh"
 source "$repository_directory/stages/docker.sh"
 
 # shellcheck disable=SC1091
+source "$repository_directory/stages/codex.sh"
+
+# shellcheck disable=SC1091
 source "$repository_directory/stages/global-preferences.sh"
 
 # shellcheck disable=SC1091
