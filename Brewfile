@@ -137,6 +137,7 @@
   cask "font-yrsa"
 
 # Hardware
+  brew "ykman" # YubiKey Manager CLI
   brew "yubico-piv-tool"
   cask "1kc-razer" # Razer RGB control
   cask "eobcanka"
