@@ -108,6 +108,7 @@
     brew "gnupg" # encryption
     brew "imagemagick" # image processor
     brew "jq" # JSON processor
+    brew "openai-whisper" # speech recognition
     brew "yq" # YAML processor
     brew "yt-dlp" # YouTube video downloader
     cask "dupeguru" # files deduplication
