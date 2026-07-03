@@ -53,7 +53,7 @@
   brew "zoxide" # smarter cd
   tap "stripe/stripe-cli"
   brew "stripe/stripe-cli/stripe"
-  cask "claude-code"
+  cask "claude-code@latest"
   cask "codex"
   cask "docker-desktop"
   cask "ghostty" # terminal
