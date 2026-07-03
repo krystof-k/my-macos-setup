@@ -50,4 +50,6 @@ message "Currently using Node.js $(node --version) at \`$(which node)\`" 'subste
 run 'Update npm' npm install -g npm@latest
 run 'Enable Corepack' corepack enable
 
+run 'Install Herb language tools' npm install -g @herb-tools/language-server @herb-tools/linter
+
 run 'Update Yarn' corepack prepare yarn@stable --activate
