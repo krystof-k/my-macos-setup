@@ -97,6 +97,7 @@
   cask "virtualbuddy" # macOS VM
   cask "wifiman" # Ubiquiti WiFiman
   cask "windows-app" # Microsoft Windows remote desktop
+  mas "Smart Banka", id: 1122443334 # banking
   mas "iSignum – PostSignum", id: 6502943626 # PostSignum certificate manager
   # VPN
     brew "wireguard-tools"
