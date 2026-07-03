@@ -15,6 +15,12 @@ if ! command -v codex &>/dev/null; then
   return 1 2>/dev/null || exit 1
 fi
 
+if ! command -v claude &>/dev/null; then
+  message 'Claude Code is not installed' 'error'
+  # shellcheck disable=SC2317
+  return 1 2>/dev/null || exit 1
+fi
+
 message 'Install Codex plugin for Claude Code' 'step'
 run 'Add plugin marketplace' claude plugin marketplace add openai/codex-plugin-cc
 run 'Install plugin' claude plugin install codex@openai-codex
