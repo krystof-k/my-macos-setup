@@ -137,6 +137,8 @@
   cask "font-yrsa"
 
 # Hardware
+  brew "libp11" # PKCS#11 wrapper library
+  brew "opensc" # smart card tools and libraries
   brew "yubico-piv-tool"
   cask "1kc-razer" # Razer RGB control
   cask "eobcanka"
