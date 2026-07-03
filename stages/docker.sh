@@ -18,6 +18,7 @@ if docker info &>/dev/null; then
 else
   message 'Start Docker daemon' 'step'
   open -a Docker
+  message 'Accept the Docker Desktop service agreement dialog if it appears' 'substep' 'prompt'
   message 'Waiting for Docker daemon to start' 'substep'
   for i in {1..60}; do
     docker info &>/dev/null && break
