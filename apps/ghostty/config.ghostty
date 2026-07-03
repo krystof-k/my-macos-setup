@@ -14,3 +14,6 @@ shell-integration-features = no-cursor
 macos-option-as-alt = false
 
 copy-on-select = false
+
+window-inherit-working-directory = false
+working-directory = home
