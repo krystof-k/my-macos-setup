@@ -39,3 +39,8 @@ run 'Patch installer for macOS 15+' bash -c "
 message 'Authenticate for installation' 'step' 'prompt'
 sudo -v
 run 'Install HP printer drivers' sudo -n installer -pkg "$tmp_dir/hp_patched.pkg" -target /
+
+# This script is sourced, so drop the trap to keep it from firing (or being
+# clobbered) later in the parent shell
+cleanup
+trap - EXIT
