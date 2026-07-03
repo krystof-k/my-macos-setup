@@ -30,3 +30,4 @@ try_copy "$HOME/.aws/credentials" aws/credentials.txt
 message 'Other credentials' 'step'
 try_copy "$HOME/.netrc" dot-netrc.txt
 try_copy "$HOME/.docker/config.json" docker/config.json
+try_copy "$HOME/.zshenv" shell/dot-zshenv.txt

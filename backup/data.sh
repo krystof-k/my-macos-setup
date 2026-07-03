@@ -18,7 +18,8 @@ mkdir -p "$PHASE_DIR"
 FAIL_LOG="${FAIL_LOG:-$PHASE_DIR/failures.log}"
 
 message 'Shell configs' 'step'
-for f in .zshrc .zprofile .zshenv .zcompdump .bashrc .bash_profile .profile; do
+# .zshenv is backed up by sensitive.sh — it contains tokens
+for f in .zshrc .zprofile .zcompdump .bashrc .bash_profile .profile; do
   try_copy "$HOME/$f" "shell/dot-${f#.}.txt"
 done
 try_copy "$HOME/.zfunc" shell/dot-zfunc
