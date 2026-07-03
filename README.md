@@ -15,9 +15,11 @@ Sensitive files can be put in the `safe` folder and encrypted using GPG and the 
 Run the following to generate the symmetric key and encrypt it with the SSH private key:
 
 ```console
-openssl rand 256 > my-macos-setup.key
+openssl rand -hex 64 > my-macos-setup.key
 openssl pkeyutl -encrypt -in my-macos-setup.key -out my-macos-setup.key.enc -inkey ~/.ssh/krystof-k.pem
 ```
+
+The key must be hex (not raw bytes): `openssl enc -pass file:` reads the passphrase only up to the first newline byte, so a raw random key could be silently truncated.
 
 Then run
 
