@@ -11,5 +11,7 @@ message 'Configure all apps preferences'
 for script in "$script_directory/../preferences/apps/"*; do
   if [[ -x "$script" ]]; then
     "$script"
+  else
+    message "Skipped \`$(basename "$script")\` (not executable)" 'substep' 'prompt'
   fi
 done
