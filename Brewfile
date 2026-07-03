@@ -57,6 +57,7 @@
   cask "codex"
   cask "docker-desktop"
   cask "ghostty" # terminal
+  cask "ollama-app" # local LLMs
   cask "postman"
   cask "tower" # Git client
   cask "visual-studio-code" # code editor
