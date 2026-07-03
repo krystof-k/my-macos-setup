@@ -20,7 +20,12 @@ if arch -arch x86_64 /usr/bin/true 2>/dev/null; then
   message 'Already installed' 'substep' 'info'
 else
   # shellcheck disable=SC2024
-  sudo softwareupdate --install-rosetta --agree-to-license >> .my-macos-setup/logs/rosetta.log 2>&1
+  sudo softwareupdate --install-rosetta --agree-to-license >> .my-macos-setup/logs/rosetta.log 2>&1 || true
+  # `--agree-to-license` is broken on macOS 26 Tahoe (prints help output) — retry with `--quiet`
+  if ! arch -arch x86_64 /usr/bin/true 2>/dev/null; then
+    # shellcheck disable=SC2024
+    sudo softwareupdate --install-rosetta --quiet >> .my-macos-setup/logs/rosetta.log 2>&1
+  fi
 fi
 
 message 'Install apps from Brewfile' 'step'
