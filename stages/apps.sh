@@ -24,4 +24,7 @@ else
 fi
 
 message 'Install apps from Brewfile' 'step'
-brew bundle --file "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../Brewfile" >> .my-macos-setup/logs/brew-bundle.log 2>&1
+if ! brew bundle --file "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../Brewfile" >> .my-macos-setup/logs/brew-bundle.log 2>&1; then
+  # shellcheck disable=SC2016
+  message 'Some apps failed to install — check `.my-macos-setup/logs/brew-bundle.log` and rerun the setup' 'substep' 'prompt'
+fi
