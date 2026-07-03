@@ -46,6 +46,7 @@
   brew "eza" # better ls
   brew "fd" # better find
   brew "fzf" # fuzzy finder
+  brew "lima" # Linux virtual machines
   brew "nano" # terminal text editor
   brew "ripgrep" # better grep
   brew "shellcheck" # shell script linter
